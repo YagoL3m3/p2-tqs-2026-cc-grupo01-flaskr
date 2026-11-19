@@ -1,0 +1,4 @@
+Comando: node tools/gerar_marco3.mjs | 2026-11-19T11:07:47-0300 | Node v24.22.3
+Inspect result written to file: /Users/henrique/Desktop/Trabalho Elvio/p2-tqs-2026-cc-grupo01-flaskr/entrega/04_CASOS_E_RASTREABILIDADE/Requisitos_Casos_e_Rastreabilidade_Flaskr.xlsx.inspect.ndjson
+Etapa 3: 10 requisitos, 28 casos e 17 relações requisito-risco verificadas.
+Especificação gravada em /Users/henrique/Desktop/Trabalho Elvio/p2-tqs-2026-cc-grupo01-flaskr/entrega/04_CASOS_E_RASTREABILIDADE/Requisitos_Casos_e_Rastreabilidade_Flaskr.xlsx.
