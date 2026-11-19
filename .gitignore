@@ -8,3 +8,5 @@ artefatos-ci/
 # Relatórios reproduzíveis ficam em evidencias/ quando versionados.
 coverage.xml
 !evidencias/**/coverage.xml
+.codex-finalizer/
+artefatos/

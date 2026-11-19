@@ -65,13 +65,17 @@ Abra `http://127.0.0.1:5050`.
 
 ```bash
 python -m pytest flaskr-app/tests testes_grupo/unitarios --cov --cov-config=.coveragerc
+python tools/executar_postman.py --relatorio-json artefatos-ci/postman.json --junitxml artefatos-ci/postman.xml
+python -m pytest testes_grupo/sistema_selenium --junitxml=artefatos-ci/selenium.xml
 ```
 
 Os testes em `flaskr-app/tests/` são do Flask. As suítes do grupo ficam em `testes_grupo/`. Para execução manual, use o [guia de execução](entrega/05_EXECUCAO_MANUAL/Guia_de_Execucao_Manual.md).
 
 ## Pipeline
 
-[GitHub Actions do Grupo 1](https://github.com/YagoL3m3/p2-tqs-2026-cc-grupo01-flaskr/actions)
+O workflow executa as três suítes e publica cobertura, JUnit e capturas quando disponíveis. Ao rodar localmente, use `bash tools/executar_ci.sh` na raiz.
+
+[GitHub Actions do Grupo 1](https://github.com/YagoL3m3/p2-tqs-2026-cc-grupo01-flaskr/actions) · [Falha controlada](https://github.com/YagoL3m3/p2-tqs-2026-cc-grupo01-flaskr/actions/runs/44590229007) · [Execução aprovada](https://github.com/YagoL3m3/p2-tqs-2026-cc-grupo01-flaskr/actions/runs/44590346309)
 
 ## Documentos
 
@@ -87,5 +91,7 @@ As pastas numeradas em [entrega](entrega) seguem a estrutura do manual. Os dados
 ## Problemas conhecidos e contato
 
 A execução manual mais recente aprovou 28 casos. A primeira tentativa de CT-028 ficou bloqueada pela configuração de navegação por Tab do Safari. O reteste EX-029 passou após ajuste temporário, posteriormente restaurado. As duas tentativas estão no [registro da Etapa 4B](evidencias/etapa4b/2026-11-19_indice_execucoes_atualizado.md).
+
+A aceitação aguarda um representante independente. Há duas análises Sonar locais verificadas e a execução na conta SonarQube Cloud do grupo depende de configuração. A implementação da regra de título e a análise estão na [pasta 12](entrega/12_TDD_CICD_MELHORIA) e na [pasta 11](entrega/11_METRICAS_E_QUALIDADE).
 
 [Contato do grupo no GitHub Issues](https://github.com/YagoL3m3/p2-tqs-2026-cc-grupo01-flaskr/issues)
