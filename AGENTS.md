@@ -122,10 +122,10 @@ Cada requisito deve se ligar a risco, caso, execução, evidência e, se houver,
 
 | Papel (manual, item 4.2) | Integrante |
 |---|---|
-| Coordenação e planejamento | `[PENDENTE-HUMANO: indicar o integrante responsável por este papel | grupo]` |
-| Análise e execução manual | `[PENDENTE-HUMANO: indicar o integrante responsável por este papel | grupo]` |
-| Automação e qualidade | `[PENDENTE-HUMANO: indicar o integrante responsável por este papel | grupo]` |
-| Documentação, relatório e apresentação | `[PENDENTE-HUMANO: indicar o integrante responsável por este papel | grupo]` |
+| Coordenação e planejamento | Victor Hugo de Deus Machado |
+| Análise e execução manual | Henrique Motta Canho |
+| Automação e qualidade | Henrique Motta Canho |
+| Documentação, relatório e apresentação | Yago da Silva Leme |
 
 Todos devem compreender o projeto completo e responder perguntas na apresentação.
 

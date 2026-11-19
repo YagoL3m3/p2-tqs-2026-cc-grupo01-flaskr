@@ -1,0 +1,12 @@
+Comandos: Python valida XLSX e DOCX, git diff --exit-code -- flaskr-app, git status --short --branch | 2026-11-19T10:34:29-03:00 | Python 3.12.14
+Riscos com prioridade verificada: {'Alto': 8, 'Médio': 3, 'Baixo': 1}
+Catálogo com dez entradas e quatro papéis pendentes, conforme AGENTS.md.
+## etapa-2-planejamento
+?? .DS_Store
+?? entrega/02_REQUISITOS_ESCOPO_RISCOS/Matriz_de_Riscos_Flaskr.xlsx
+?? entrega/03_PLANO_DE_TESTES/Plano_de_Testes_Flaskr.docx
+?? evidencias/.DS_Store
+?? evidencias/etapa0/.DS_Store
+?? evidencias/etapa2/
+?? tools/gerar_matriz_riscos.mjs
+?? tools/gerar_plano_testes.py
