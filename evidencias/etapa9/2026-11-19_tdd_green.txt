@@ -1,0 +1,6 @@
+2026-11-19T15:40:12-0300 | /private/tmp/flaskr-etapa5-venv/bin/python -m pytest flaskr-app/tests testes_grupo/unitarios -q --junitxml=evidencias/etapa9/2026-11-19_tdd_green.xml
+Python 3.12.13
+Commit anterior 7a63c3046c6b963ccf42e1f707c77b28da84cfdb [E9-RED] Especifica rejeição de título composto de espaços
+..................................                                       [100%]
+34 passed in 1.32s
+Código de saída pytest: 0
