@@ -1,0 +1,12 @@
+Comandos: git status --short --branch, diff -qr --exclude=instance, cmp | 2026-11-19T10:26:33-03:00 | Python 3.12.14
+## No commits yet on etapa-1-fundamentos
+?? .DS_Store
+?? .github/
+?? AGENTS.md
+?? LICENSE-FLASK.txt
+?? entrega/
+?? evidencias/
+?? flaskr-app/
+?? testes_grupo/
+?? tools/
+Código e testes correspondem ao tutorial oficial. Os dois DOCX têm conteúdo idêntico.
