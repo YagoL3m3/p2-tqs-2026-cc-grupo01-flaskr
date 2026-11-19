@@ -1,0 +1,244 @@
+2026-11-19T19:41:29-0300 | python -m pytest testes_grupo/sistema_selenium/roteiro_aceitacao.py -s -v
+Executor Codex | Ensaio com dados fictícios e um SQLite descartável por cenário
+3ddcc91d095e825b9e1550ac7805862cbe8d43c9
+ProductName:		macOS
+ProductVersion:		26.4
+BuildVersion:		25E246
+Python 3.12.13
+============================= test session starts ==============================
+platform darwin -- Python 3.12.13, pytest-9.2.0, pluggy-1.7.0 -- /private/tmp/flaskr-etapa5-venv/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/henrique/Desktop/Trabalho Elvio/p2-tqs-2026-cc-grupo01-flaskr
+plugins: cov-7.1.0
+collecting ... collected 4 items
+
+testes_grupo/sistema_selenium/roteiro_aceitacao.py::test_ac_01_publicar_como_novo_autor Chrome 157.0.8103.79 | ChromeDriver 157.0.8103.78 (4b3d0dabb8250b6f152d2d85d79e7706e309d087-refs/branch-heads/8103@{#1573})
+FAILED
+testes_grupo/sistema_selenium/roteiro_aceitacao.py::test_ac_02_ler_o_aviso_mais_recente Chrome 157.0.8103.79 | ChromeDriver 157.0.8103.78 (4b3d0dabb8250b6f152d2d85d79e7706e309d087-refs/branch-heads/8103@{#1573})
+AC-02 | Sem sessão, Post B apareceu antes de Post A. Os dois títulos, corpos e autorias estavam visíveis.
+PASSED
+testes_grupo/sistema_selenium/roteiro_aceitacao.py::test_ac_03_corrigir_como_autor Chrome 157.0.8103.79 | ChromeDriver 157.0.8103.78 (4b3d0dabb8250b6f152d2d85d79e7706e309d087-refs/branch-heads/8103@{#1573})
+FAILED
+testes_grupo/sistema_selenium/roteiro_aceitacao.py::test_ac_04_cancelar_e_confirmar_exclusao Chrome 157.0.8103.79 | ChromeDriver 157.0.8103.78 (4b3d0dabb8250b6f152d2d85d79e7706e309d087-refs/branch-heads/8103@{#1573})
+AC-04 | Cancelar preservou os dois avisos. Confirmar retirou o Post A e conservou o Post B, seu corpo e autoria.
+PASSED
+
+=================================== FAILURES ===================================
+_____________________ test_ac_01_publicar_como_novo_autor ______________________
+
+navegador = <selenium.webdriver.chrome.webdriver.WebDriver (session="f21fe8c101ee165837b88dc4968e8b9d")>
+servidor_selenium = 'http://127.0.0.1:57928'
+espera = <selenium.webdriver.support.wait.WebDriverWait (session="f21fe8c101ee165837b88dc4968e8b9d")>
+capturar = <function capturar.<locals>.salvar at 0x109263060>
+
+    def test_ac_01_publicar_como_novo_autor(navegador, servidor_selenium, espera, capturar):
+        navegador.get(servidor_selenium)
+        assert titulos(navegador) == []
+        clicar(espera, (By.LINK_TEXT, "Register"))
+        enviar_credenciais(espera, CONTA_A)
+>       titulo_pagina(espera, "Log In")
+
+testes_grupo/sistema_selenium/roteiro_aceitacao.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+espera = <selenium.webdriver.support.wait.WebDriverWait (session="f21fe8c101ee165837b88dc4968e8b9d")>
+titulo = 'Log In'
+
+    def titulo_pagina(espera, titulo):
+>       assert espera.until(condicao.visibility_of_element_located(TITULO_PAGINA)).text == titulo
+E       AssertionError: assert 'Register' == 'Log In'
+E         
+E         - Log In
+E         + Register
+
+testes_grupo/sistema_selenium/roteiro_aceitacao.py:69: AssertionError
+------------------------------ Captured log call -------------------------------
+INFO     werkzeug:_internal.py:97 127.0.0.1 - - [19/Nov/2026 19:41:31] "GET / HTTP/1.1" 200 -
+INFO     werkzeug:_internal.py:97 127.0.0.1 - - [19/Nov/2026 19:41:31] "GET /static/style.css HTTP/1.1" 200 -
+INFO     werkzeug:_internal.py:97 127.0.0.1 - - [19/Nov/2026 19:41:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO     werkzeug:_internal.py:97 127.0.0.1 - - [19/Nov/2026 19:41:31] "GET /auth/register HTTP/1.1" 200 -
+INFO     werkzeug:_internal.py:97 127.0.0.1 - - [19/Nov/2026 19:41:31] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO     werkzeug:_internal.py:97 127.0.0.1 - - [19/Nov/2026 19:41:32] "[32mPOST /auth/register HTTP/1.1[0m" 302 -
+INFO     werkzeug:_internal.py:97 127.0.0.1 - - [19/Nov/2026 19:41:32] "GET /auth/login HTTP/1.1" 200 -
+INFO     werkzeug:_internal.py:97 127.0.0.1 - - [19/Nov/2026 19:41:32] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+----------------------------- Captura do Selenium ------------------------------
+evidencias/etapa10/aceitacao-2026-11-19/falhas/test_ac_01_publicar_como_novo_autor_call_20261119_194132_189324.png
+________________________ test_ac_03_corrigir_como_autor ________________________
+
+navegador = <selenium.webdriver.chrome.webdriver.WebDriver (session="faf5de4152574cab4a46b6d512ba47dd")>
+servidor_selenium = 'http://127.0.0.1:57978'
+espera = <selenium.webdriver.support.wait.WebDriverWait (session="faf5de4152574cab4a46b6d512ba47dd")>
+capturar = <function capturar.<locals>.salvar at 0x109309440>
+
+    @pytest.mark.usefixtures("publicacoes_iniciais")
+    def test_ac_03_corrigir_como_autor(navegador, servidor_selenium, espera, capturar):
+        navegador.get(servidor_selenium)
+>       entrar(espera, CONTA_A)
+
+testes_grupo/sistema_selenium/roteiro_aceitacao.py:143: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+testes_grupo/sistema_selenium/roteiro_aceitacao.py:81: in entrar
+    titulo_pagina(espera, "Posts")
+testes_grupo/sistema_selenium/roteiro_aceitacao.py:69: in titulo_pagina
+    assert espera.until(condicao.visibility_of_element_located(TITULO_PAGINA)).text == titulo
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/private/tmp/flaskr-etapa5-venv/lib/python3.12/site-packages/selenium/webdriver/support/wait.py:112: in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+/private/tmp/flaskr-etapa5-venv/lib/python3.12/site-packages/selenium/webdriver/support/expected_conditions.py:188: in _predicate
+    return _element_if_visible(driver.find_element(*locator))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/private/tmp/flaskr-etapa5-venv/lib/python3.12/site-packages/selenium/webdriver/support/expected_conditions.py:227: in _element_if_visible
+    return element if element.is_displayed() == visibility else False
+                      ^^^^^^^^^^^^^^^^^^^^^^
+/private/tmp/flaskr-etapa5-venv/lib/python3.12/site-packages/selenium/webdriver/remote/webelement.py:309: in is_displayed
+    return self.parent.execute_script(f"/* isDisplayed */return ({isDisplayed_js}).apply(null, arguments);", self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/private/tmp/flaskr-etapa5-venv/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py:680: in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/private/tmp/flaskr-etapa5-venv/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py:569: in execute
+    self.error_handler.check_response(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x10930c860>
+response = {'status': 500, 'value': '{"value":{"error":"unknown error","message":"unknown error: unhandled inspector error: {\\"c...00018108bc54 _pthread_start + 132\\n26  libsystem_pthread.dylib             0x0000000181086c18 thread_start + 4\\n"}}'}
+
+    def check_response(self, response: dict[str, Any]) -> None:
+        """Check that a JSON response from the WebDriver does not have an error.
+    
+        Args:
+            response: The JSON response from the WebDriver server as a dictionary
+                object.
+    
+        Raises:
+            WebDriverException: If the response contains an error message.
+        """
+        status = response.get("status", None)
+        if not status or status == ErrorCode.SUCCESS:
+            return
+        value = None
+        message = response.get("message", "")
+        screen: str = response.get("screen", "")
+        stacktrace = None
+        if isinstance(status, int):
+            value_json = response.get("value", None)
+            if value_json and isinstance(value_json, str):
+                try:
+                    value = json.loads(value_json)
+                    if isinstance(value, dict):
+                        if len(value) == 1:
+                            value = value["value"]
+                        status = value.get("error", None)
+                        if not status:
+                            status = value.get("status", ErrorCode.UNKNOWN_ERROR)
+                            message = value.get("value") or value.get("message")
+                            if not isinstance(message, str):
+                                value = message
+                                message = message.get("message") if isinstance(message, dict) else None
+                        else:
+                            message = value.get("message", None)
+                except ValueError:
+                    pass
+    
+        exception_class: type[WebDriverException]
+        e = ErrorCode()
+        error_codes = [item for item in dir(e) if not item.startswith("__")]
+        for error_code in error_codes:
+            error_info = getattr(ErrorCode, error_code)
+            if isinstance(error_info, list) and status in error_info:
+                exception_class = getattr(ExceptionMapping, error_code, WebDriverException)
+                break
+        else:
+            exception_class = WebDriverException
+    
+        if not value:
+            value = response.get("value")
+        if isinstance(value, str):
+            raise exception_class(value)
+        if isinstance(value, dict):
+            if message == "" and "message" in value:
+                message = value["message"]
+    
+            screen = None  # type: ignore[assignment]
+            if "screen" in value:
+                screen = value["screen"]
+    
+            stacktrace = None
+            st_value = value.get("stackTrace") or value.get("stacktrace")
+            if st_value:
+                if isinstance(st_value, str):
+                    stacktrace = st_value.split("\n")
+                else:
+                    stacktrace = []
+                    try:
+                        for frame in st_value:
+                            line = frame.get("lineNumber", "")
+                            file = frame.get("fileName", "<anonymous>")
+                            if line:
+                                file = f"{file}:{line}"
+                            meth = frame.get("methodName", "<anonymous>")
+                            if "className" in frame:
+                                meth = f"{frame['className']}.{meth}"
+                            msg = "    at %s (%s)"
+                            msg = msg % (meth, file)
+                            stacktrace.append(msg)
+                    except TypeError:
+                        pass
+        if exception_class == UnexpectedAlertPresentException:
+            alert_text = None
+            if isinstance(value, dict):
+                if "data" in value:
+                    alert_text = value["data"].get("text")
+                elif "alert" in value:
+                    alert_text = value["alert"].get("text")
+            raise exception_class(message, screen, stacktrace, alert_text)
+>       raise exception_class(message, screen, stacktrace)
+E       selenium.common.exceptions.WebDriverException: Message: unknown error: unhandled inspector error: {"code":-32000,"message":"Node with given id does not belong to the document"}
+E         (Session info: chrome=157.0.8103.79)
+E       Stacktrace:
+E       0   chromedriver                        0x0000000102897284 chromedriver + 3060356
+E       1   chromedriver                        0x0000000102bf60f0 __crubit_thunk_3b7060de5b04864c__uRNvNtCs56ojWEWzMFk_u16web_upackage_urust6parser23parse_umagic_uand_uversion + 153972
+E       2   chromedriver                        0x0000000102bea500 __crubit_thunk_3b7060de5b04864c__uRNvNtCs56ojWEWzMFk_u16web_upackage_urust6parser23parse_umagic_uand_uversion + 105860
+E       3   chromedriver                        0x0000000102be95c4 __crubit_thunk_3b7060de5b04864c__uRNvNtCs56ojWEWzMFk_u16web_upackage_urust6parser23parse_umagic_uand_uversion + 101960
+E       4   chromedriver                        0x0000000102be9a0c __crubit_thunk_3b7060de5b04864c__uRNvNtCs56ojWEWzMFk_u16web_upackage_urust6parser23parse_umagic_uand_uversion + 103056
+E       5   chromedriver                        0x0000000102c01674 __crubit_thunk_3b7060de5b04864c__uRNvNtCs56ojWEWzMFk_u16web_upackage_urust6parser23parse_umagic_uand_uversion + 200440
+E       6   chromedriver                        0x0000000102c0333c __crubit_thunk_3b7060de5b04864c__uRNvNtCs56ojWEWzMFk_u16web_upackage_urust6parser23parse_umagic_uand_uversion + 207808
+E       7   chromedriver                        0x0000000102c02a0c __crubit_thunk_3b7060de5b04864c__uRNvNtCs56ojWEWzMFk_u16web_upackage_urust6parser23parse_umagic_uand_uversion + 205456
+E       8   chromedriver                        0x0000000102bfaf3c __crubit_thunk_3b7060de5b04864c__uRNvNtCs56ojWEWzMFk_u16web_upackage_urust6parser23parse_umagic_uand_uversion + 174016
+E       9   chromedriver                        0x0000000102bfaf3c __crubit_thunk_3b7060de5b04864c__uRNvNtCs56ojWEWzMFk_u16web_upackage_urust6parser23parse_umagic_uand_uversion + 174016
+E       10  chromedriver                        0x0000000102bfa0e4 __crubit_thunk_3b7060de5b04864c__uRNvNtCs56ojWEWzMFk_u16web_upackage_urust6parser23parse_umagic_uand_uversion + 170344
+E       11  chromedriver                        0x0000000102bfc6a8 __crubit_thunk_3b7060de5b04864c__uRNvNtCs56ojWEWzMFk_u16web_upackage_urust6parser23parse_umagic_uand_uversion + 180012
+E       12  chromedriver                        0x0000000102c5f060 __crubit_thunk_3b7060de5b04864c__uRNvNtCs56ojWEWzMFk_u16web_upackage_urust6parser23parse_umagic_uand_uversion + 583908
+E       13  chromedriver                        0x0000000102bdb4fc __crubit_thunk_3b7060de5b04864c__uRNvNtCs56ojWEWzMFk_u16web_upackage_urust6parser23parse_umagic_uand_uversion + 44416
+E       14  chromedriver                        0x0000000102c5e834 __crubit_thunk_3b7060de5b04864c__uRNvNtCs56ojWEWzMFk_u16web_upackage_urust6parser23parse_umagic_uand_uversion + 581816
+E       15  chromedriver                        0x0000000102bdb4fc __crubit_thunk_3b7060de5b04864c__uRNvNtCs56ojWEWzMFk_u16web_upackage_urust6parser23parse_umagic_uand_uversion + 44416
+E       16  chromedriver                        0x0000000102c24818 __crubit_thunk_3b7060de5b04864c__uRNvNtCs56ojWEWzMFk_u16web_upackage_urust6parser23parse_umagic_uand_uversion + 344220
+E       17  chromedriver                        0x00000001028661bc chromedriver + 2859452
+E       18  chromedriver                        0x0000000102869488 chromedriver + 2872456
+E       19  chromedriver                        0x000000010284ff54 chromedriver + 2768724
+E       20  chromedriver                        0x0000000102869d48 chromedriver + 2874696
+E       21  chromedriver                        0x0000000102843ac4 chromedriver + 2718404
+E       22  chromedriver                        0x0000000102885cd8 chromedriver + 2989272
+E       23  chromedriver                        0x0000000102885e38 chromedriver + 2989624
+E       24  chromedriver                        0x0000000102896f44 chromedriver + 3059524
+E       25  libsystem_pthread.dylib             0x000000018108bc54 _pthread_start + 132
+E       26  libsystem_pthread.dylib             0x0000000181086c18 thread_start + 4
+
+/private/tmp/flaskr-etapa5-venv/lib/python3.12/site-packages/selenium/webdriver/remote/errorhandler.py:234: WebDriverException
+------------------------------ Captured log call -------------------------------
+INFO     werkzeug:_internal.py:97 127.0.0.1 - - [19/Nov/2026 19:41:35] "GET / HTTP/1.1" 200 -
+INFO     werkzeug:_internal.py:97 127.0.0.1 - - [19/Nov/2026 19:41:35] "GET /static/style.css HTTP/1.1" 200 -
+INFO     werkzeug:_internal.py:97 127.0.0.1 - - [19/Nov/2026 19:41:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO     werkzeug:_internal.py:97 127.0.0.1 - - [19/Nov/2026 19:41:35] "GET /auth/login HTTP/1.1" 200 -
+INFO     werkzeug:_internal.py:97 127.0.0.1 - - [19/Nov/2026 19:41:35] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO     werkzeug:_internal.py:97 127.0.0.1 - - [19/Nov/2026 19:41:35] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+INFO     werkzeug:_internal.py:97 127.0.0.1 - - [19/Nov/2026 19:41:35] "GET / HTTP/1.1" 200 -
+INFO     werkzeug:_internal.py:97 127.0.0.1 - - [19/Nov/2026 19:41:35] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+----------------------------- Captura do Selenium ------------------------------
+evidencias/etapa10/aceitacao-2026-11-19/falhas/test_ac_03_corrigir_como_autor_call_20261119_194135_488326.png
+- generated xml file: /Users/henrique/Desktop/Trabalho Elvio/p2-tqs-2026-cc-grupo01-flaskr/evidencias/etapa10/aceitacao-2026-11-19/junit.xml -
+=========================== short test summary info ============================
+FAILED testes_grupo/sistema_selenium/roteiro_aceitacao.py::test_ac_01_publicar_como_novo_autor
+FAILED testes_grupo/sistema_selenium/roteiro_aceitacao.py::test_ac_03_corrigir_como_autor
+========================= 2 failed, 2 passed in 7.92s ==========================

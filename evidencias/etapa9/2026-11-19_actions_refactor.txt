@@ -1,0 +1,860 @@
+2026-11-19T19:08:20-0300 | gh run view 44590346309 --log
+pytest, Newman e Selenium	UNKNOWN STEP	﻿2026-11-19T18:40:50.3281479Z Current runner version: '2.338.2'
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:50.3300008Z ##[group]Runner Image Provisioner
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:50.3300629Z Hosted Compute Agent
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:50.3301113Z Version: 20261111.635
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:50.3301561Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:50.3302088Z Build Date: 2026-11-11T01:49:01Z
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:50.3302624Z Worker ID: {f077bd95-19e1-4936-862b-3878ea069d66}
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:50.3303108Z Region: us-west-2
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:50.3303572Z Cloud: AWS
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:50.3303943Z ##[endgroup]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:50.3304821Z ##[group]Operating System
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:50.3305268Z Ubuntu
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:50.3305627Z 24.04.5
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:50.3306215Z LTS
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:50.3306576Z ##[endgroup]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:50.3306945Z ##[group]Runner Image
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:50.3307430Z Image: ubuntu-24.04
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:50.3308091Z Version: 20261116.133.1
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:50.3309037Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261116.133/images/ubuntu/Ubuntu2404-Readme.md
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:50.3310090Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261116.133
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:50.3310832Z ##[endgroup]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:50.3311592Z ##[group]GITHUB_TOKEN Permissions
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:50.3313273Z Contents: read
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:50.3313679Z Metadata: read
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:50.3314155Z ##[endgroup]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:50.3315615Z Secret source: Actions
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:50.3316269Z Cache mode: write
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:50.3316746Z Prepare workflow directory
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:50.3543214Z Prepare all required actions
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:50.3579776Z Getting action download info
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:50.7078863Z Download action repository 'actions/checkout@v7' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:52.7926788Z Download action repository 'actions/setup-python@v7' (SHA:6d4fd22b20465ccc0f7354476588e8df7c9ca0e0)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:52.9675495Z Download action repository 'actions/setup-node@v7' (SHA:949feb2413d6458794dcd2491c4babbbce0c15c1)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:53.2859614Z Download action repository 'actions/upload-artifact@v7' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:53.6265216Z Complete job name: pytest, Newman e Selenium
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:53.6989525Z ##[group]Run actions/checkout@v7
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:53.6990624Z with:
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:53.6991366Z   persist-credentials: false
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:53.6992347Z   repository: YagoL3m3/p2-tqs-2026-cc-grupo01-flaskr
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:53.6999348Z   token: ***
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:53.7000063Z   ssh-strict: true
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:53.7000816Z   ssh-user: git
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:53.7001508Z   clean: true
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:53.7002279Z   sparse-checkout-cone-mode: true
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:53.7003158Z   fetch-depth: 1
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:53.7003918Z   fetch-tags: false
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:53.7004680Z   show-progress: true
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:53.7005414Z   lfs: false
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:53.7006100Z   submodules: false
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:53.7006852Z   set-safe-directory: true
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:53.7007833Z   allow-unsafe-pr-checkout: false
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:53.7008897Z ##[endgroup]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:58.8258368Z Syncing repository: YagoL3m3/p2-tqs-2026-cc-grupo01-flaskr
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:58.8259823Z ##[group]Getting Git version info
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:58.8260339Z Working directory is '/home/runner/work/p2-tqs-2026-cc-grupo01-flaskr/p2-tqs-2026-cc-grupo01-flaskr'
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:58.8260937Z [command]/usr/bin/git version
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.2384794Z git version 2.56.1
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.2400104Z ##[endgroup]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.2410091Z Temporarily overriding HOME='/home/runner/work/_temp/93c46d57-a721-48a7-9a77-a6557a9cc491' before making global git config changes
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.2410984Z Adding repository directory to the temporary git global config as a safe directory
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.2415314Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/p2-tqs-2026-cc-grupo01-flaskr/p2-tqs-2026-cc-grupo01-flaskr
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.2785802Z Deleting the contents of '/home/runner/work/p2-tqs-2026-cc-grupo01-flaskr/p2-tqs-2026-cc-grupo01-flaskr'
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.2788048Z ##[group]Determining repository object format
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.2789009Z ##[endgroup]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.2789418Z ##[group]Initializing the repository
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.2792632Z [command]/usr/bin/git init /home/runner/work/p2-tqs-2026-cc-grupo01-flaskr/p2-tqs-2026-cc-grupo01-flaskr
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.3682234Z hint: Using 'master' as the name for the initial branch. This default branch name
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.3682768Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.3683358Z hint: to use in all of your new repositories, which will suppress this warning,
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.3683718Z hint: call:
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.3683965Z hint:
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.3684275Z hint: 	git config --global init.defaultBranch <name>
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.3684549Z hint:
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.3684841Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.3685236Z hint: 'development'. The just-created branch can be renamed via this command:
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.3685683Z hint:
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.3685926Z hint: 	git branch -m <name>
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.3686160Z hint:
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.3686470Z hint: Disable this message with "git config set advice.defaultBranchName false"
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.3688520Z Initialized empty Git repository in /home/runner/work/p2-tqs-2026-cc-grupo01-flaskr/p2-tqs-2026-cc-grupo01-flaskr/.git/
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.3697819Z [command]/usr/bin/git remote add origin https://github.com/YagoL3m3/p2-tqs-2026-cc-grupo01-flaskr
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.3741981Z ##[endgroup]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.3742438Z ##[group]Disabling automatic garbage collection
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.3744563Z [command]/usr/bin/git config --local gc.auto 0
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.3768800Z ##[endgroup]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.3769378Z ##[group]Setting up auth
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.3769764Z Removing SSH command configuration
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.3773972Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.3800776Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.7858934Z Removing HTTP extra header
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.7889319Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.7898970Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.8041291Z Removing includeIf entries pointing to credentials config files
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.8046651Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.8074276Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.8222845Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-bbc381aa-fec6-4354-8738-96fa98f0f746.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.8250777Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/p2-tqs-2026-cc-grupo01-flaskr/p2-tqs-2026-cc-grupo01-flaskr/.git.path /home/runner/work/_temp/git-credentials-bbc381aa-fec6-4354-8738-96fa98f0f746.config
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.8273179Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/p2-tqs-2026-cc-grupo01-flaskr/p2-tqs-2026-cc-grupo01-flaskr/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-bbc381aa-fec6-4354-8738-96fa98f0f746.config
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.8295461Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-bbc381aa-fec6-4354-8738-96fa98f0f746.config
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.8329586Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-bbc381aa-fec6-4354-8738-96fa98f0f746.config
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.8337796Z ##[endgroup]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.8338612Z ##[group]Fetching the repository
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:40:59.8342876Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +d7c225cf16e504fdfb92c9235762bf6ba3f0dc19:refs/remotes/origin/etapa-9-tdd-ci
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.5529856Z From https://github.com/YagoL3m3/p2-tqs-2026-cc-grupo01-flaskr
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.5530692Z  * [new ref]         d7c225cf16e504fdfb92c9235762bf6ba3f0dc19 -> origin/etapa-9-tdd-ci
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.5538121Z [command]/usr/bin/git branch --list --remote origin/etapa-9-tdd-ci
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.5574762Z   origin/etapa-9-tdd-ci
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.5586281Z [command]/usr/bin/git rev-parse refs/remotes/origin/etapa-9-tdd-ci
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.5598968Z d7c225cf16e504fdfb92c9235762bf6ba3f0dc19
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.5601528Z ##[endgroup]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.5602068Z ##[group]Determining the checkout info
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.5602847Z ##[endgroup]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.5605888Z [command]/usr/bin/git sparse-checkout disable
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.5664021Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.5685356Z ##[group]Checking out the ref
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.5688621Z [command]/usr/bin/git checkout --progress --force -B etapa-9-tdd-ci refs/remotes/origin/etapa-9-tdd-ci
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.5885063Z Switched to a new branch 'etapa-9-tdd-ci'
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.5893240Z branch 'etapa-9-tdd-ci' set up to track 'origin/etapa-9-tdd-ci'.
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.5896599Z ##[endgroup]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.5934960Z [command]/usr/bin/git log -1 --format=%H
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.5952817Z d7c225cf16e504fdfb92c9235762bf6ba3f0dc19
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.5960509Z ##[group]Removing auth
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.5960924Z Removing SSH command configuration
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.5961619Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.5985071Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.6132673Z Removing HTTP extra header
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.6135395Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.6157273Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.6301161Z Removing includeIf entries pointing to credentials config files
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.6303603Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.6329171Z includeif.gitdir:/home/runner/work/p2-tqs-2026-cc-grupo01-flaskr/p2-tqs-2026-cc-grupo01-flaskr/.git.path
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.6330301Z includeif.gitdir:/home/runner/work/p2-tqs-2026-cc-grupo01-flaskr/p2-tqs-2026-cc-grupo01-flaskr/.git/worktrees/*.path
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.6331182Z includeif.gitdir:/github/workspace/.git.path
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.6342645Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.6343965Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/p2-tqs-2026-cc-grupo01-flaskr/p2-tqs-2026-cc-grupo01-flaskr/.git.path
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.6355331Z /home/runner/work/_temp/git-credentials-bbc381aa-fec6-4354-8738-96fa98f0f746.config
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.6362890Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/p2-tqs-2026-cc-grupo01-flaskr/p2-tqs-2026-cc-grupo01-flaskr/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-bbc381aa\-fec6\-4354\-8738\-96fa98f0f746\.config
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.6388767Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/p2-tqs-2026-cc-grupo01-flaskr/p2-tqs-2026-cc-grupo01-flaskr/.git/worktrees/*.path
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.6405611Z /home/runner/work/_temp/git-credentials-bbc381aa-fec6-4354-8738-96fa98f0f746.config
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.6411422Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/p2-tqs-2026-cc-grupo01-flaskr/p2-tqs-2026-cc-grupo01-flaskr/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-bbc381aa\-fec6\-4354\-8738\-96fa98f0f746\.config
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.6434224Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.6451956Z /github/runner_temp/git-credentials-bbc381aa-fec6-4354-8738-96fa98f0f746.config
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.6464179Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-bbc381aa\-fec6\-4354\-8738\-96fa98f0f746\.config
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.6486343Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.6503018Z /github/runner_temp/git-credentials-bbc381aa-fec6-4354-8738-96fa98f0f746.config
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.6507256Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-bbc381aa\-fec6\-4354\-8738\-96fa98f0f746\.config
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.6529499Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.6672405Z Removing credentials config '/home/runner/work/_temp/git-credentials-bbc381aa-fec6-4354-8738-96fa98f0f746.config'
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.6680894Z ##[endgroup]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.6869775Z ##[group]Run actions/setup-python@v7
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.6870099Z with:
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.6870315Z   python-version: 3.12
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.6870550Z   cache: pip
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.6870911Z   cache-dependency-path: requirements-test.txt
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.6871200Z   check-latest: false
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.6873175Z   token: ***
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.6873475Z   mirror: https://raw.githubusercontent.com/actions/python-versions/main
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.6873829Z   update-environment: true
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.6874087Z   allow-prereleases: false
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.6874343Z   freethreaded: false
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.6874561Z ##[endgroup]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:00.7753553Z ##[group]Installed versions
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:01.0309953Z Successfully set up CPython (3.12.16)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:01.0310720Z ##[endgroup]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:01.0555019Z [command]/opt/hostedtoolcache/Python/3.12.16/x64/bin/pip cache dir
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:04.6535250Z /home/runner/.cache/pip
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:05.0185942Z Cache hit for: setup-python-Linux-x64-24.04-Ubuntu-python-3.12.16-pip-010a2f76e656710554b39b335d093cb88e75a0763f75889d320ff78fb757b5b0
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:06.4028790Z Received 544817 of 17322033 (3.1%), 0.5 MBs/sec
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:06.9255163Z Received 17322033 of 17322033 (100.0%), 10.8 MBs/sec
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:06.9255866Z Cache Size: ~17 MB (17322033 B)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:06.9275418Z [command]/usr/bin/tar -xf /home/runner/work/_temp/92b0042e-282c-48b7-9467-4832d168cc31/cache.tzst -P -C /home/runner/work/p2-tqs-2026-cc-grupo01-flaskr/p2-tqs-2026-cc-grupo01-flaskr --use-compress-program unzstd
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:06.9483145Z Cache restored successfully
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:06.9490575Z Cache restored from key: setup-python-Linux-x64-24.04-Ubuntu-python-3.12.16-pip-010a2f76e656710554b39b335d093cb88e75a0763f75889d320ff78fb757b5b0
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:06.9645229Z ##[group]Run actions/setup-node@v7
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:06.9645489Z with:
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:06.9645756Z   node-version: 24
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:06.9645985Z   check-latest: false
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:06.9648358Z   token: ***
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:06.9648628Z   package-manager-cache: true
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:06.9648884Z env:
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:06.9649161Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:06.9649583Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:06.9649998Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:06.9650461Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:06.9650805Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:06.9651184Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:06.9651492Z ##[endgroup]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:07.1310529Z Found in cache @ /opt/hostedtoolcache/node/24.22.3/x64
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:08.5136078Z ##[group]Environment details
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:10.9438004Z node: v24.22.3
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:10.9438446Z npm: 11.19.1
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:10.9438860Z yarn: 1.22.22
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:10.9439489Z ##[endgroup]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:10.9537415Z ##[group]Run python -m pip install -r requirements-test.txt
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:10.9538420Z ^[[36;1mpython -m pip install -r requirements-test.txt^[[0m
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:11.4214787Z shell: /usr/bin/bash -e {0}
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:11.4215083Z env:
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:11.4215588Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:11.4216053Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:11.4216496Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:11.4216840Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:11.4217167Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:11.4217727Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:11.4218053Z ##[endgroup]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:13.5261831Z Obtaining file:///home/runner/work/p2-tqs-2026-cc-grupo01-flaskr/p2-tqs-2026-cc-grupo01-flaskr/flaskr-app (from -r requirements-test.txt (line 5))
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:13.5266320Z   Installing build dependencies: started
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:14.8273732Z   Installing build dependencies: finished with status 'done'
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:14.8278313Z   Checking if build backend supports build_editable: started
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.1095143Z   Checking if build backend supports build_editable: finished with status 'done'
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.1101192Z   Getting requirements to build editable: started
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.1681374Z   Getting requirements to build editable: finished with status 'done'
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.1687223Z   Preparing editable metadata (pyproject.toml): started
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.2262547Z   Preparing editable metadata (pyproject.toml): finished with status 'done'
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.2350379Z Collecting Flask==3.1.3 (from -r requirements-test.txt (line 1))
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.2359797Z   Using cached flask-3.1.3-py3-none-any.whl.metadata (3.2 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.2476496Z Collecting pytest==9.2.0 (from -r requirements-test.txt (line 2))
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.2483040Z   Using cached pytest-9.2.0-py3-none-any.whl.metadata (7.9 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.2537815Z Collecting pytest-cov==7.1.0 (from -r requirements-test.txt (line 3))
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.2543360Z   Using cached pytest_cov-7.1.0-py3-none-any.whl.metadata (32 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.2659404Z Collecting selenium==4.53.0 (from -r requirements-test.txt (line 4))
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.2666083Z   Using cached selenium-4.53.0-py3-none-any.whl.metadata (7.5 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.2703213Z Collecting blinker>=1.9.0 (from Flask==3.1.3->-r requirements-test.txt (line 1))
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.2711439Z   Using cached blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.2765575Z Collecting click>=8.1.3 (from Flask==3.1.3->-r requirements-test.txt (line 1))
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.2774004Z   Using cached click-8.5.1-py3-none-any.whl.metadata (2.6 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.2802503Z Collecting itsdangerous>=2.2.0 (from Flask==3.1.3->-r requirements-test.txt (line 1))
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.2814500Z   Using cached itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.2858372Z Collecting jinja2>=3.1.2 (from Flask==3.1.3->-r requirements-test.txt (line 1))
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.2865795Z   Using cached jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.3147058Z Collecting markupsafe>=2.1.1 (from Flask==3.1.3->-r requirements-test.txt (line 1))
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.3155471Z   Using cached markupsafe-3.0.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.3331246Z Collecting werkzeug>=3.1.0 (from Flask==3.1.3->-r requirements-test.txt (line 1))
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.3339320Z   Using cached werkzeug-3.1.9-py3-none-any.whl.metadata (4.1 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.3368557Z Collecting iniconfig>=2 (from pytest==9.2.0->-r requirements-test.txt (line 2))
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.3377045Z   Using cached iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.3424199Z Collecting packaging>=24 (from pytest==9.2.0->-r requirements-test.txt (line 2))
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.3430360Z   Using cached packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.3465551Z Collecting pluggy<2,>=1.6 (from pytest==9.2.0->-r requirements-test.txt (line 2))
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.3473314Z   Using cached pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.3533852Z Collecting pygments>=2.15 (from pytest==9.2.0->-r requirements-test.txt (line 2))
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.3542210Z   Using cached pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.5925881Z Collecting coverage>=7.10.6 (from coverage[toml]>=7.10.6->pytest-cov==7.1.0->-r requirements-test.txt (line 3))
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.5936871Z   Using cached coverage-7.17.3-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (8.3 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6009602Z Collecting certifi>=2026.10.23 (from selenium==4.53.0->-r requirements-test.txt (line 4))
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6018295Z   Using cached certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6063589Z Collecting trio<1.0,>=0.31.0 (from selenium==4.53.0->-r requirements-test.txt (line 4))
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6071349Z   Using cached trio-0.35.0-py3-none-any.whl.metadata (8.5 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6106108Z Collecting trio-websocket<1.0,>=0.12.2 (from selenium==4.53.0->-r requirements-test.txt (line 4))
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6113975Z   Using cached trio_websocket-0.12.2-py3-none-any.whl.metadata (5.1 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6169884Z Collecting typing_extensions<5.0,>=4.15.0 (from selenium==4.53.0->-r requirements-test.txt (line 4))
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6176273Z   Using cached typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6249795Z Collecting urllib3<3.0,>=2.6.3 (from urllib3[socks]<3.0,>=2.6.3->selenium==4.53.0->-r requirements-test.txt (line 4))
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6258129Z   Using cached urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6319548Z Collecting websocket-client<2.0,>=1.8.0 (from selenium==4.53.0->-r requirements-test.txt (line 4))
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6325268Z   Using cached websocket_client-1.9.2-py3-none-any.whl.metadata (8.3 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6378243Z Collecting attrs>=23.2.0 (from trio<1.0,>=0.31.0->selenium==4.53.0->-r requirements-test.txt (line 4))
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6385527Z   Using cached attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6427706Z Collecting sortedcontainers (from trio<1.0,>=0.31.0->selenium==4.53.0->-r requirements-test.txt (line 4))
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6434770Z   Using cached sortedcontainers-2.4.0-py2.py3-none-any.whl.metadata (10 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6484162Z Collecting idna (from trio<1.0,>=0.31.0->selenium==4.53.0->-r requirements-test.txt (line 4))
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6491659Z   Using cached idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6524055Z Collecting outcome (from trio<1.0,>=0.31.0->selenium==4.53.0->-r requirements-test.txt (line 4))
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6530121Z   Using cached outcome-1.3.0.post0-py2.py3-none-any.whl.metadata (2.6 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6556227Z Collecting sniffio>=1.3.0 (from trio<1.0,>=0.31.0->selenium==4.53.0->-r requirements-test.txt (line 4))
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6563802Z   Using cached sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6606389Z Collecting wsproto>=0.14 (from trio-websocket<1.0,>=0.12.2->selenium==4.53.0->-r requirements-test.txt (line 4))
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6613086Z   Using cached wsproto-1.3.2-py3-none-any.whl.metadata (5.2 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6653967Z Collecting pysocks!=1.5.7,<2.0,>=1.5.6 (from urllib3[socks]<3.0,>=2.6.3->selenium==4.53.0->-r requirements-test.txt (line 4))
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6663438Z   Using cached PySocks-1.7.1-py3-none-any.whl.metadata (13 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6751467Z Collecting h11<1,>=0.16.0 (from wsproto>=0.14->trio-websocket<1.0,>=0.12.2->selenium==4.53.0->-r requirements-test.txt (line 4))
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6758993Z   Using cached h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6787347Z Using cached flask-3.1.3-py3-none-any.whl (103 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6792984Z Using cached pytest-9.2.0-py3-none-any.whl (411 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6802085Z Using cached pytest_cov-7.1.0-py3-none-any.whl (22 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6809212Z Using cached selenium-4.53.0-py3-none-any.whl (12.2 MB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6853948Z Using cached pluggy-1.7.0-py3-none-any.whl (27 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6862216Z Using cached trio-0.35.0-py3-none-any.whl (513 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6870622Z Using cached trio_websocket-0.12.2-py3-none-any.whl (21 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6877138Z Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6884681Z Using cached urllib3-2.8.0-py3-none-any.whl (135 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6892239Z Using cached PySocks-1.7.1-py3-none-any.whl (16 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6899450Z Using cached websocket_client-1.9.2-py3-none-any.whl (95 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6906785Z Using cached attrs-26.1.0-py3-none-any.whl (67 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6914245Z Using cached blinker-1.9.0-py3-none-any.whl (8.5 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6921056Z Using cached certifi-2026.10.23-py3-none-any.whl (135 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6928411Z Using cached click-8.5.1-py3-none-any.whl (126 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6936162Z Using cached coverage-7.17.3-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (264 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6944454Z Using cached iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6951431Z Using cached itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6958019Z Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6965654Z Using cached markupsafe-3.0.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6972799Z Using cached outcome-1.3.0.post0-py2.py3-none-any.whl (10 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6979600Z Using cached packaging-26.3-py3-none-any.whl (129 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6987008Z Using cached pygments-2.21.0-py3-none-any.whl (1.3 MB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.6998868Z Using cached sniffio-1.3.1-py3-none-any.whl (10 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.7005646Z Using cached werkzeug-3.1.9-py3-none-any.whl (228 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.7013859Z Using cached wsproto-1.3.2-py3-none-any.whl (24 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.7020775Z Using cached h11-0.16.0-py3-none-any.whl (37 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.7027490Z Using cached idna-3.20-py3-none-any.whl (69 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.7034615Z Using cached sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.7544567Z Building wheels for collected packages: flaskr
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.7547963Z   Building editable for flaskr (pyproject.toml): started
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.8159369Z   Building editable for flaskr (pyproject.toml): finished with status 'done'
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.8162461Z   Created wheel for flaskr: filename=flaskr-1.0.0-py2.py3-none-any.whl size=2646 sha256=f8da607a86ee772c14fa1bcbfd0167fc6fb02ee990816832174bf249363613fd
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.8163366Z   Stored in directory: /tmp/pip-ephem-wheel-cache-1k46u9n6/wheels/9c/fa/0c/fe468c1935a73e794b94d8465070340e47607e47a0eacd40e5
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.8174861Z Successfully built flaskr
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:15.8557033Z Installing collected packages: sortedcontainers, websocket-client, urllib3, typing_extensions, sniffio, pysocks, pygments, pluggy, packaging, markupsafe, itsdangerous, iniconfig, idna, h11, coverage, click, certifi, blinker, attrs, wsproto, werkzeug, pytest, outcome, jinja2, trio, pytest-cov, Flask, trio-websocket, flaskr, selenium
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:18.1536974Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:18.1559319Z Successfully installed Flask-3.1.3 attrs-26.1.0 blinker-1.9.0 certifi-2026.10.23 click-8.5.1 coverage-7.17.3 flaskr-1.0.0 h11-0.16.0 idna-3.20 iniconfig-2.3.1 itsdangerous-2.2.0 jinja2-3.1.6 markupsafe-3.0.4 outcome-1.3.0.post0 packaging-26.3 pluggy-1.7.0 pygments-2.21.0 pysocks-1.7.1 pytest-9.2.0 pytest-cov-7.1.0 selenium-4.53.0 sniffio-1.3.1 sortedcontainers-2.4.0 trio-0.35.0 trio-websocket-0.12.2 typing_extensions-4.16.0 urllib3-2.8.0 websocket-client-1.9.2 werkzeug-3.1.9 wsproto-1.3.2
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:18.2306851Z ##[group]Run python --version
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:18.2307192Z ^[[36;1mpython --version^[[0m
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:18.2307441Z ^[[36;1mnode --version^[[0m
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:18.2308235Z ^[[36;1mgoogle-chrome --version^[[0m
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:18.2334880Z shell: /usr/bin/bash -e {0}
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:18.2335240Z env:
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:18.2335527Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:18.2335986Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:18.2336348Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:18.2336719Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:18.2337078Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:18.2337460Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:18.2337924Z ##[endgroup]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:18.2399760Z Python 3.12.16
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:18.2425521Z v24.22.3
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:24.8999147Z Google Chrome 157.0.8103.78 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:25.1808965Z ##[group]Run bash tools/executar_ci.sh
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:25.1809448Z ^[[36;1mbash tools/executar_ci.sh^[[0m
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:25.1846211Z shell: /usr/bin/bash -e {0}
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:25.1846569Z env:
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:25.1846900Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:25.1847316Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:25.1847970Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:25.1848343Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:25.1848699Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:25.1849045Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:25.1849347Z ##[endgroup]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:27.0179071Z ============================= test session starts ==============================
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:27.0180138Z platform linux -- Python 3.12.16, pytest-9.2.0, pluggy-1.7.0
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:27.0181128Z rootdir: /home/runner/work/p2-tqs-2026-cc-grupo01-flaskr/p2-tqs-2026-cc-grupo01-flaskr/flaskr-app
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:27.0181826Z configfile: pyproject.toml
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:27.0182211Z plugins: cov-7.1.0
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:27.0182506Z collected 34 items
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:27.0182737Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:27.3419256Z flaskr-app/tests/test_auth.py ........                                   [ 23%]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:27.5924254Z flaskr-app/tests/test_blog.py ............                               [ 58%]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:27.6093397Z flaskr-app/tests/test_db.py ..                                           [ 64%]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:27.6256139Z flaskr-app/tests/test_factory.py ..                                      [ 70%]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:28.2027398Z flaskr-app/test_autenticacao.py ....                                     [ 82%]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:28.2445768Z flaskr-app/test_publicacoes.py ....                                      [ 94%]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:28.6012802Z flaskr-app/test_tdd_titulo.py ..                                         [100%]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:28.6013232Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:28.6013774Z - generated xml file: /home/runner/work/p2-tqs-2026-cc-grupo01-flaskr/p2-tqs-2026-cc-grupo01-flaskr/artefatos-ci/junit.xml -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:28.6014633Z ================================ tests coverage ================================
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:28.6015177Z _______________ coverage: platform linux, python 3.12.16-final-0 _______________
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:28.6015637Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:28.6015891Z Name                            Stmts   Miss Branch BrPart  Cover   Missing
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:28.6016319Z ---------------------------------------------------------------------------
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:28.6016718Z flaskr-app/flaskr/__init__.py      20      0      2      0   100%
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:28.6017177Z flaskr-app/flaskr/auth.py          68      0     20      0   100%
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:28.6017772Z flaskr-app/flaskr/blog.py          64      0     14      0   100%
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:28.6018301Z flaskr-app/flaskr/db.py            26      0      4      0   100%
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:28.6018780Z ---------------------------------------------------------------------------
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:28.6019163Z TOTAL                             178      0     40      0   100%
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:28.6019539Z Coverage XML written to file artefatos-ci/coverage.xml
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:28.6019945Z ============================== 34 passed in 1.74s ==============================
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:28.7490646Z Flask 3.1.3 | Werkzeug 3.1.9 | SQLite 3.45.1 | http://127.0.0.1:44371
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:28.7493341Z npx --yes newman@6.2.1 run /home/runner/work/p2-tqs-2026-cc-grupo01-flaskr/p2-tqs-2026-cc-grupo01-flaskr/testes_grupo/integracao_postman/Flaskr.postman_collection.json --environment /home/runner/work/p2-tqs-2026-cc-grupo01-flaskr/p2-tqs-2026-cc-grupo01-flaskr/testes_grupo/integracao_postman/Flaskr_Local.postman_environment.json --env-var baseUrl=http://127.0.0.1:44371 --ignore-redirects --timeout-request 10000 --color off --reporter-json-export artefatos-ci/postman.json --reporter-junit-export artefatos-ci/postman.xml --reporters cli,json,junit
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:33.1565686Z npm warn deprecated har-validator@5.1.5: this library is no longer supported
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:33.4510120Z npm warn deprecated uuid@3.4.0: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:33.6155088Z npm warn deprecated uuid@8.3.2: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:34.2890993Z npm warn deprecated @faker-js/faker@5.5.3: Please update to a newer version.
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:34.5768951Z (node:2444) [DEP0176] DeprecationWarning: fs.F_OK is deprecated, use fs.constants.F_OK instead
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:34.5769924Z (Use `node --trace-deprecation ...` to show where the warning was created)
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:34.7280753Z newman
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:34.7280988Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:34.7281510Z Flaskr | Etapa 6 | Integração HTTP
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:34.7302954Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:34.7303390Z ❏ AUT-I-01 Cadastrar conta inédita
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:34.7303794Z ↳ Enviar cadastro válido
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:34.8283508Z 127.0.0.1 - - [19/Nov/2026 18:41:34] "^[[32mPOST /auth/register HTTP/1.1^[[0m" 302 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:34.8346311Z   POST http://127.0.0.1:44371/auth/register [302 FOUND, 424B, 97ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:34.8453212Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:34.8587750Z   ✓  HTTP 302
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:34.8588432Z   ✓  Location aponta para /auth/login
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:34.8596340Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:34.8598829Z ↳ Autenticar com a conta recém-cadastrada
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:34.9403858Z 127.0.0.1 - - [19/Nov/2026 18:41:34] "^[[32mPOST /auth/login HTTP/1.1^[[0m" 302 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:34.9429943Z   POST http://127.0.0.1:44371/auth/login [302 FOUND, 487B, 77ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:34.9487902Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:34.9513196Z   ✓  HTTP 302
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:34.9513634Z   ✓  Location aponta para /
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:34.9539935Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:34.9540471Z ↳ Ver a conta recém-cadastrada na página inicial
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:34.9664754Z 127.0.0.1 - - [19/Nov/2026 18:41:34] "GET / HTTP/1.1" 200 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:34.9672971Z   GET http://127.0.0.1:44371/ [200 OK, 583B, 10ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:34.9712437Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:34.9750458Z   ✓  HTTP 200
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:34.9755879Z   ✓  Posts mantém o nome e o link Log Out
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:34.9793613Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:34.9794250Z ❏ AUT-I-02 Rejeitar cadastro duplicado
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:34.9794647Z ↳ Preparar conta fictícia
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.0544557Z 127.0.0.1 - - [19/Nov/2026 18:41:35] "^[[32mPOST /auth/register HTTP/1.1^[[0m" 302 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.0557829Z   POST http://127.0.0.1:44371/auth/register [302 FOUND, 424B, 73ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.0593070Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.0620330Z   ✓  HTTP 302
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.0621066Z   ✓  Location aponta para /auth/login
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.0653726Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.0654207Z ↳ Enviar o mesmo nome com outra senha
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.1406555Z 127.0.0.1 - - [19/Nov/2026 18:41:35] "POST /auth/register HTTP/1.1" 200 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.1421297Z   POST http://127.0.0.1:44371/auth/register [200 OK, 985B, 72ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.1456577Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.1491467Z   ✓  HTTP 200
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.1493599Z   ✓  Register exibe a mensagem de duplicidade
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.1526499Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.1526912Z ↳ Autenticar com a senha do primeiro cadastro
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.2281104Z 127.0.0.1 - - [19/Nov/2026 18:41:35] "^[[32mPOST /auth/login HTTP/1.1^[[0m" 302 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.2294001Z   POST http://127.0.0.1:44371/auth/login [302 FOUND, 487B, 73ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.2328671Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.2356510Z   ✓  HTTP 302
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.2357801Z   ✓  Location aponta para /
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.2390845Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.2391576Z ↳ Conferir a sessão com a credencial original
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.2441956Z 127.0.0.1 - - [19/Nov/2026 18:41:35] "GET / HTTP/1.1" 200 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.2448148Z   GET http://127.0.0.1:44371/ [200 OK, 584B, 2ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.2474629Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.2499861Z   ✓  HTTP 200
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.2502101Z   ✓  Posts mantém o nome e o link Log Out
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.2534264Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.2534735Z ❏ AUT-I-03 Autenticar e manter a sessão
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.2535113Z ↳ Preparar conta fictícia
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.3276249Z 127.0.0.1 - - [19/Nov/2026 18:41:35] "^[[32mPOST /auth/register HTTP/1.1^[[0m" 302 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.3286312Z   POST http://127.0.0.1:44371/auth/register [302 FOUND, 424B, 71ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.3307091Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.3331163Z   ✓  HTTP 302
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.3331748Z   ✓  Location aponta para /auth/login
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.3364006Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.3364381Z ↳ Enviar credenciais válidas
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.4094881Z 127.0.0.1 - - [19/Nov/2026 18:41:35] "^[[32mPOST /auth/login HTTP/1.1^[[0m" 302 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.4111251Z   POST http://127.0.0.1:44371/auth/login [302 FOUND, 487B, 70ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.4145725Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.4174054Z   ✓  HTTP 302
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.4174555Z   ✓  Location aponta para /
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.4206880Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.4207705Z ↳ Consultar Posts após autenticação
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.4268340Z 127.0.0.1 - - [19/Nov/2026 18:41:35] "GET / HTTP/1.1" 200 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.4298566Z   GET http://127.0.0.1:44371/ [200 OK, 580B, 3ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.4301784Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.4327131Z   ✓  HTTP 200
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.4329946Z   ✓  Posts mantém o nome e o link Log Out
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.4349946Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.4350161Z ↳ Consultar Posts novamente com o cookie
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.4404392Z 127.0.0.1 - - [19/Nov/2026 18:41:35] "GET / HTTP/1.1" 200 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.4411628Z   GET http://127.0.0.1:44371/ [200 OK, 580B, 2ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.4439340Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.4465251Z   ✓  HTTP 200
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.4467452Z   ✓  Posts mantém o nome e o link Log Out
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.4498655Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.4499029Z ❏ AUT-I-04 Rejeitar senha incorreta
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.4500041Z ↳ Preparar conta fictícia
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.5264006Z 127.0.0.1 - - [19/Nov/2026 18:41:35] "^[[32mPOST /auth/register HTTP/1.1^[[0m" 302 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.5272680Z   POST http://127.0.0.1:44371/auth/register [302 FOUND, 424B, 74ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.5304334Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.5329006Z   ✓  HTTP 302
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.5330135Z   ✓  Location aponta para /auth/login
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.5363613Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.5363808Z ↳ Preparar sessão anônima
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.5416647Z 127.0.0.1 - - [19/Nov/2026 18:41:35] "^[[32mGET /auth/logout HTTP/1.1^[[0m" 302 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.5425911Z   GET http://127.0.0.1:44371/auth/logout [302 FOUND, 484B, 2ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.5452243Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.5474803Z   ✓  HTTP 302
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.5475931Z   ✓  Location aponta para /
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.5509967Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.5510266Z ↳ Enviar senha incorreta da conta cadastrada
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.6268225Z 127.0.0.1 - - [19/Nov/2026 18:41:35] "POST /auth/login HTTP/1.1" 200 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.6275960Z   POST http://127.0.0.1:44371/auth/login [200 OK, 958B, 73ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.6304493Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.6327375Z   ✓  HTTP 200
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.6329504Z   ✓  Log In exibe a mensagem de senha incorreta
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.6359066Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.6359276Z ↳ Confirmar que New Post exige sessão
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.6407117Z 127.0.0.1 - - [19/Nov/2026 18:41:35] "^[[32mGET /create HTTP/1.1^[[0m" 302 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.6411538Z   GET http://127.0.0.1:44371/create [302 FOUND, 424B, 1ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.6435100Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.6453653Z   ✓  HTTP 302
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.6454217Z   ✓  Location aponta para /auth/login
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.6484521Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.6485148Z ❏ AUT-I-05 Publicar com título, corpo e autor
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.6485579Z ↳ Preparar conta fictícia
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.7240083Z 127.0.0.1 - - [19/Nov/2026 18:41:35] "^[[32mPOST /auth/register HTTP/1.1^[[0m" 302 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.7248130Z   POST http://127.0.0.1:44371/auth/register [302 FOUND, 424B, 73ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.7265603Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.7286168Z   ✓  HTTP 302
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.7286689Z   ✓  Location aponta para /auth/login
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.7316347Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.7316620Z ↳ Preparar sessão autenticada
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.8069198Z 127.0.0.1 - - [19/Nov/2026 18:41:35] "^[[32mPOST /auth/login HTTP/1.1^[[0m" 302 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.8076536Z   POST http://127.0.0.1:44371/auth/login [302 FOUND, 487B, 72ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.8094411Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.8117302Z   ✓  HTTP 302
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.8118555Z   ✓  Location aponta para /
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.8147766Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.8148434Z ↳ Enviar publicação válida
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.8202691Z 127.0.0.1 - - [19/Nov/2026 18:41:35] "^[[32mPOST /create HTTP/1.1^[[0m" 302 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.8209389Z   POST http://127.0.0.1:44371/create [302 FOUND, 394B, 3ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.8235744Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.8270021Z   ✓  HTTP 302
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.8270569Z   ✓  Location aponta para /
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.8289889Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.8290409Z ↳ Ler a publicação e a autoria em Posts
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.8340987Z 127.0.0.1 - - [19/Nov/2026 18:41:35] "GET / HTTP/1.1" 200 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.8347280Z   GET http://127.0.0.1:44371/ [200 OK, 915B, 2ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.8361074Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.8384065Z   ✓  HTTP 200
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.8390430Z   ✓  Artigo I05 Rotina QA contém corpo e autoria esperados
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.8423195Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.8423561Z ❏ AUT-I-06 Rejeitar criação com título vazio
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.8423922Z ↳ Preparar conta fictícia
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.9179929Z 127.0.0.1 - - [19/Nov/2026 18:41:35] "^[[32mPOST /auth/register HTTP/1.1^[[0m" 302 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.9187287Z   POST http://127.0.0.1:44371/auth/register [302 FOUND, 424B, 73ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.9205602Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.9228528Z   ✓  HTTP 302
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.9229017Z   ✓  Location aponta para /auth/login
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.9260419Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:35.9260977Z ↳ Preparar sessão autenticada
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.0030090Z 127.0.0.1 - - [19/Nov/2026 18:41:36] "^[[32mPOST /auth/login HTTP/1.1^[[0m" 302 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.0040889Z   POST http://127.0.0.1:44371/auth/login [302 FOUND, 487B, 74ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.0073847Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.0096894Z   ✓  HTTP 302
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.0097890Z   ✓  Location aponta para /
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.0128945Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.0129559Z ↳ Enviar título vazio e corpo preenchido
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.0200798Z 127.0.0.1 - - [19/Nov/2026 18:41:36] "POST /create HTTP/1.1" 200 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.0206578Z   POST http://127.0.0.1:44371/create [200 OK, 935B, 4ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.0232846Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.0256331Z   ✓  HTTP 200
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.0258820Z   ✓  New Post informa a obrigatoriedade do título
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.0288761Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.0288959Z ↳ Conferir que o rascunho não foi publicado
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.0334685Z 127.0.0.1 - - [19/Nov/2026 18:41:36] "GET / HTTP/1.1" 200 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.0339310Z   GET http://127.0.0.1:44371/ [200 OK, 848B, 2ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.0366393Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.0388865Z   ✓  HTTP 200
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.0391239Z   ✓  Posts não exibe o corpo do rascunho
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.0421105Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.0421790Z ❏ AUT-I-07 Editar publicação como autor
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.0422109Z ↳ Preparar conta fictícia
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.1171979Z 127.0.0.1 - - [19/Nov/2026 18:41:36] "^[[32mPOST /auth/register HTTP/1.1^[[0m" 302 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.1182089Z   POST http://127.0.0.1:44371/auth/register [302 FOUND, 424B, 72ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.1214441Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.1240429Z   ✓  HTTP 302
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.1241084Z   ✓  Location aponta para /auth/login
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.1272524Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.1272994Z ↳ Preparar sessão autenticada
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.2021942Z 127.0.0.1 - - [19/Nov/2026 18:41:36] "^[[32mPOST /auth/login HTTP/1.1^[[0m" 302 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.2032565Z   POST http://127.0.0.1:44371/auth/login [302 FOUND, 487B, 72ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.2065294Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.2089601Z   ✓  HTTP 302
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.2090146Z   ✓  Location aponta para /
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.2139262Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.2140057Z ↳ Preparar publicação do autor
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.2201611Z 127.0.0.1 - - [19/Nov/2026 18:41:36] "^[[32mPOST /create HTTP/1.1^[[0m" 302 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.2207213Z   POST http://127.0.0.1:44371/create [302 FOUND, 394B, 3ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.2227236Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.2248907Z   ✓  HTTP 302
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.2249421Z   ✓  Location aponta para /
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.2278967Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.2279416Z ↳ Obter o ID pelo link Edit do artigo preparado
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.2335474Z 127.0.0.1 - - [19/Nov/2026 18:41:36] "GET / HTTP/1.1" 200 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.2344174Z   GET http://127.0.0.1:44371/ [200 OK, 1.19kB, 3ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.2367467Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.2386971Z   ✓  HTTP 200
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.2392528Z   ✓  Artigo I07 Original QA contém corpo e autoria esperados
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.2420006Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.2420228Z ↳ Salvar novo título e novo corpo
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.2472817Z 127.0.0.1 - - [19/Nov/2026 18:41:36] "^[[32mPOST /2/update HTTP/1.1^[[0m" 302 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.2478539Z   POST http://127.0.0.1:44371/2/update [302 FOUND, 394B, 3ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.2505921Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.2524685Z   ✓  HTTP 302
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.2526035Z   ✓  Location aponta para /
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.2560137Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.2560570Z ↳ Conferir a versão revisada em Posts
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.2607726Z 127.0.0.1 - - [19/Nov/2026 18:41:36] "GET / HTTP/1.1" 200 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.2612294Z   GET http://127.0.0.1:44371/ [200 OK, 1.19kB, 2ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.2631054Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.2650731Z   ✓  HTTP 200
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.2653914Z   ✓  Artigo I07 Revisado QA contém corpo e autoria esperados
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.2684865Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.2685134Z ❏ AUT-I-08 Rejeitar edição com título vazio
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.2685634Z ↳ Preparar conta fictícia
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.3453083Z 127.0.0.1 - - [19/Nov/2026 18:41:36] "^[[32mPOST /auth/register HTTP/1.1^[[0m" 302 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.3461677Z   POST http://127.0.0.1:44371/auth/register [302 FOUND, 424B, 73ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.3491619Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.3514714Z   ✓  HTTP 302
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.3515254Z   ✓  Location aponta para /auth/login
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.3539772Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.4278961Z 127.0.0.1 - - [19/Nov/2026 18:41:36] "^[[32mPOST /auth/login HTTP/1.1^[[0m" 302 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.4279848Z ↳ Preparar sessão autenticada
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.4287943Z   POST http://127.0.0.1:44371/auth/login [302 FOUND, 487B, 71ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.4309012Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.4332190Z   ✓  HTTP 302
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.4332832Z   ✓  Location aponta para /
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.4365211Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.4365933Z ↳ Preparar publicação do autor
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.4425846Z 127.0.0.1 - - [19/Nov/2026 18:41:36] "^[[32mPOST /create HTTP/1.1^[[0m" 302 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.4432495Z   POST http://127.0.0.1:44371/create [302 FOUND, 394B, 3ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.4458891Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.4478808Z   ✓  HTTP 302
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.4479245Z   ✓  Location aponta para /
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.4508580Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.4509082Z ↳ Obter o ID pelo link Edit do artigo preparado
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.4560479Z 127.0.0.1 - - [19/Nov/2026 18:41:36] "GET / HTTP/1.1" 200 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.4565660Z   GET http://127.0.0.1:44371/ [200 OK, 1.47kB, 2ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.4590770Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.4611784Z   ✓  HTTP 200
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.4616104Z   ✓  Artigo I08 Original QA contém corpo e autoria esperados
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.4646288Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.4646770Z ↳ Enviar edição com título vazio
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.4717666Z 127.0.0.1 - - [19/Nov/2026 18:41:36] "POST /3/update HTTP/1.1" 200 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.4723467Z   POST http://127.0.0.1:44371/3/update [200 OK, 1.14kB, 5ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.4748578Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.4768758Z   ✓  HTTP 200
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.4770611Z   ✓  O editor informa a obrigatoriedade do título
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.4800549Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.4800914Z ↳ Conferir o artigo original em Posts
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.4850041Z 127.0.0.1 - - [19/Nov/2026 18:41:36] "GET / HTTP/1.1" 200 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.4855860Z   GET http://127.0.0.1:44371/ [200 OK, 1.47kB, 2ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.4872509Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.4893574Z   ✓  HTTP 200
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.4896140Z   ✓  Artigo I08 Original QA contém corpo e autoria esperados
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.4919456Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.4920062Z ❏ AUT-I-09 Excluir somente o post selecionado
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.4920510Z ↳ Preparar conta fictícia
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.5680772Z 127.0.0.1 - - [19/Nov/2026 18:41:36] "^[[32mPOST /auth/register HTTP/1.1^[[0m" 302 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.5690554Z   POST http://127.0.0.1:44371/auth/register [302 FOUND, 424B, 73ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.5719347Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.5743615Z   ✓  HTTP 302
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.5744226Z   ✓  Location aponta para /auth/login
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.5774491Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.5774784Z ↳ Preparar sessão autenticada
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.6517812Z 127.0.0.1 - - [19/Nov/2026 18:41:36] "^[[32mPOST /auth/login HTTP/1.1^[[0m" 302 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.6526160Z   POST http://127.0.0.1:44371/auth/login [302 FOUND, 487B, 71ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.6558114Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.6581221Z   ✓  HTTP 302
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.6581632Z   ✓  Location aponta para /
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.6611718Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.6612338Z ↳ Preparar publicação alvo
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.6669433Z 127.0.0.1 - - [19/Nov/2026 18:41:36] "^[[32mPOST /create HTTP/1.1^[[0m" 302 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.6675688Z   POST http://127.0.0.1:44371/create [302 FOUND, 394B, 3ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.6701516Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.6721947Z   ✓  HTTP 302
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.6722613Z   ✓  Location aponta para /
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.6753821Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.6754481Z ↳ Preparar publicação de controle
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.6813317Z 127.0.0.1 - - [19/Nov/2026 18:41:36] "^[[32mPOST /create HTTP/1.1^[[0m" 302 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.6819403Z   POST http://127.0.0.1:44371/create [302 FOUND, 394B, 3ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.6844387Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.6866271Z   ✓  HTTP 302
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.6866751Z   ✓  Location aponta para /
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.6896221Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.6896860Z ↳ Obter o ID pelo link Edit do artigo preparado
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.6951330Z 127.0.0.1 - - [19/Nov/2026 18:41:36] "GET / HTTP/1.1" 200 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.6956485Z   GET http://127.0.0.1:44371/ [200 OK, 2.1kB, 2ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.6973721Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.6993772Z   ✓  HTTP 200
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.6997388Z   ✓  Artigo I09 Alvo QA contém corpo e autoria esperados
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.7027100Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.7027329Z ↳ Excluir a publicação selecionada
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.7083790Z 127.0.0.1 - - [19/Nov/2026 18:41:36] "^[[32mPOST /4/delete HTTP/1.1^[[0m" 302 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.7089307Z   POST http://127.0.0.1:44371/4/delete [302 FOUND, 394B, 2ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.7114709Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.7137440Z   ✓  HTTP 302
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.7144706Z   ✓  Location aponta para /
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.7161112Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.7161575Z ↳ Conferir o controle preservado e o alvo ausente
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.7211206Z 127.0.0.1 - - [19/Nov/2026 18:41:36] "GET / HTTP/1.1" 200 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.7215601Z   GET http://127.0.0.1:44371/ [200 OK, 1.76kB, 2ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.7239683Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.7260813Z   ✓  HTTP 200
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.7264773Z   ✓  Artigo I09 Controle QA contém corpo e autoria esperados
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.7295707Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.7296308Z ❏ AUT-I-10 Tratar nova exclusão do mesmo post
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.7296722Z ↳ Preparar conta fictícia
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.8062087Z 127.0.0.1 - - [19/Nov/2026 18:41:36] "^[[32mPOST /auth/register HTTP/1.1^[[0m" 302 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.8070901Z   POST http://127.0.0.1:44371/auth/register [302 FOUND, 424B, 73ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.8102021Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.8129264Z   ✓  HTTP 302
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.8129959Z   ✓  Location aponta para /auth/login
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.8150335Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.8150941Z ↳ Preparar sessão autenticada
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.8880515Z 127.0.0.1 - - [19/Nov/2026 18:41:36] "^[[32mPOST /auth/login HTTP/1.1^[[0m" 302 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.8887806Z   POST http://127.0.0.1:44371/auth/login [302 FOUND, 488B, 70ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.8917897Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.8944178Z   ✓  HTTP 302
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.8944828Z   ✓  Location aponta para /
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.8976900Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.8977099Z ↳ Preparar publicação alvo
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9034083Z 127.0.0.1 - - [19/Nov/2026 18:41:36] "^[[32mPOST /create HTTP/1.1^[[0m" 302 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9040394Z   POST http://127.0.0.1:44371/create [302 FOUND, 394B, 3ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9062652Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9082271Z   ✓  HTTP 302
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9082857Z   ✓  Location aponta para /
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9112593Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9112827Z ↳ Preparar publicação de controle
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9163568Z 127.0.0.1 - - [19/Nov/2026 18:41:36] "^[[32mPOST /create HTTP/1.1^[[0m" 302 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9169648Z   POST http://127.0.0.1:44371/create [302 FOUND, 394B, 2ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9194248Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9214851Z   ✓  HTTP 302
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9215389Z   ✓  Location aponta para /
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9246248Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9246761Z ↳ Obter o ID pelo link Edit do artigo preparado
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9294141Z 127.0.0.1 - - [19/Nov/2026 18:41:36] "GET / HTTP/1.1" 200 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9299076Z   GET http://127.0.0.1:44371/ [200 OK, 2.39kB, 2ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9321952Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9342783Z   ✓  HTTP 200
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9347409Z   ✓  Artigo I10 Alvo QA contém corpo e autoria esperados
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9382424Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9382815Z ↳ Excluir o alvo na primeira solicitação
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9436359Z 127.0.0.1 - - [19/Nov/2026 18:41:36] "^[[32mPOST /6/delete HTTP/1.1^[[0m" 302 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9442224Z   POST http://127.0.0.1:44371/6/delete [302 FOUND, 394B, 2ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9465641Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9483968Z   ✓  HTTP 302
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9484399Z   ✓  Location aponta para /
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9514546Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9515189Z ↳ Repetir a solicitação para o alvo já excluído
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9563276Z 127.0.0.1 - - [19/Nov/2026 18:41:36] "^[[33mPOST /6/delete HTTP/1.1^[[0m" 404 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9569565Z   POST http://127.0.0.1:44371/6/delete [404 NOT FOUND, 311B, 2ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9592839Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9612276Z   ✓  HTTP 404
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9614328Z   ✓  A mensagem Not Found identifica o post ausente
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9643553Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9643886Z ↳ Conferir que apenas a publicação de controle permanece
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9704461Z 127.0.0.1 - - [19/Nov/2026 18:41:36] "GET / HTTP/1.1" 200 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9708971Z   GET http://127.0.0.1:44371/ [200 OK, 2.05kB, 3ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9733350Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9754330Z   ✓  HTTP 200
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9757235Z   ✓  Artigo I10 Controle QA contém corpo e autoria esperados
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9788241Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9788898Z ❏ AUT-I-11 Encerrar sessão e proteger a criação
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:36.9789413Z ↳ Preparar conta fictícia
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.0547274Z 127.0.0.1 - - [19/Nov/2026 18:41:37] "^[[32mPOST /auth/register HTTP/1.1^[[0m" 302 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.0557360Z   POST http://127.0.0.1:44371/auth/register [302 FOUND, 424B, 73ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.0581377Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.0606475Z   ✓  HTTP 302
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.0607092Z   ✓  Location aponta para /auth/login
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.0638550Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.0639215Z ↳ Preparar sessão autenticada
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.1379173Z 127.0.0.1 - - [19/Nov/2026 18:41:37] "^[[32mPOST /auth/login HTTP/1.1^[[0m" 302 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.1387918Z   POST http://127.0.0.1:44371/auth/login [302 FOUND, 488B, 71ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.1410873Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.1444309Z   ✓  HTTP 302
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.1444677Z   ✓  Location aponta para /
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.1476806Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.1477057Z ↳ Abrir New Post no início da sessão
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.1531235Z 127.0.0.1 - - [19/Nov/2026 18:41:37] "GET /create HTTP/1.1" 200 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.1537283Z   GET http://127.0.0.1:44371/create [200 OK, 779B, 2ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.1551507Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.1572573Z   ✓  HTTP 200
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.1574030Z   ✓  New Post contém o campo Title
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.1603242Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.1603471Z ↳ Encerrar a sessão
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.1654271Z 127.0.0.1 - - [19/Nov/2026 18:41:37] "^[[32mGET /auth/logout HTTP/1.1^[[0m" 302 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.1659985Z   GET http://127.0.0.1:44371/auth/logout [302 FOUND, 484B, 2ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.1683551Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.1705141Z   ✓  HTTP 302
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.1705744Z   ✓  Location aponta para /
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.1735311Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.1735965Z ↳ Conferir menu anônimo em Posts
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.1775282Z 127.0.0.1 - - [19/Nov/2026 18:41:37] "GET / HTTP/1.1" 200 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.1779021Z   GET http://127.0.0.1:44371/ [200 OK, 1.94kB, 1ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.1803699Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.1831845Z   ✓  HTTP 200
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.1832271Z   ✓  Menu exibe Log In e Register
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.1859544Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.1860280Z ↳ Reabrir New Post após Log Out
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.1905135Z 127.0.0.1 - - [19/Nov/2026 18:41:37] "^[[32mGET /create HTTP/1.1^[[0m" 302 -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.1908801Z   GET http://127.0.0.1:44371/create [302 FOUND, 424B, 1ms]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.1932156Z   ✓  Resposta com representação HTML
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.1949705Z   ✓  HTTP 302
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.1953302Z   ✓  Location aponta para /auth/login
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.2149126Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.2150105Z ┌─────────────────────────┬──────────────────┬──────────────────┐
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.2150740Z │                         │         executed │           failed │
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.2151433Z ├─────────────────────────┼──────────────────┼──────────────────┤
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.2151883Z │              iterations │                1 │                0 │
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.2152350Z ├─────────────────────────┼──────────────────┼──────────────────┤
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.2152743Z │                requests │               56 │                0 │
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.2153186Z ├─────────────────────────┼──────────────────┼──────────────────┤
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.2153596Z │            test-scripts │              112 │                0 │
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.2154252Z ├─────────────────────────┼──────────────────┼──────────────────┤
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.2154708Z │      prerequest-scripts │                0 │                0 │
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.2155138Z ├─────────────────────────┼──────────────────┼──────────────────┤
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.2155531Z │              assertions │              168 │                0 │
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.2155973Z ├─────────────────────────┴──────────────────┴──────────────────┤
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.2156405Z │ total run duration: 2.4s                                      │
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.2156851Z ├───────────────────────────────────────────────────────────────┤
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.2157296Z │ total data received: 27.3kB (approx)                          │
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.2157948Z ├───────────────────────────────────────────────────────────────┤
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.2158394Z │ average response time: 31ms [min: 1ms, max: 97ms, s.d.: 35ms] │
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:37.2158875Z └───────────────────────────────────────────────────────────────┘
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:38.0243781Z ============================= test session starts ==============================
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:38.0244340Z platform linux -- Python 3.12.16, pytest-9.2.0, pluggy-1.7.0
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:38.0244975Z rootdir: /home/runner/work/p2-tqs-2026-cc-grupo01-flaskr/p2-tqs-2026-cc-grupo01-flaskr
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:38.0245372Z plugins: cov-7.1.0
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:38.0245857Z collected 7 items
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:41:38.0246040Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:12.3767003Z testes_grupo/sistema_selenium/test_fluxos.py .......                     [100%]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:12.3767965Z 
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:12.3768967Z - generated xml file: /home/runner/work/p2-tqs-2026-cc-grupo01-flaskr/p2-tqs-2026-cc-grupo01-flaskr/artefatos-ci/selenium.xml -
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:12.3770456Z ========================= 7 passed in 94.35s (0:01:34) =========================
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:12.4266846Z Códigos de saída: pytest=0, Newman=0, Selenium=0
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:12.4317905Z ##[group]Run actions/upload-artifact@v7
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:12.4318264Z with:
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:12.4318501Z   name: testes-flaskr
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:12.4318744Z   path: artefatos-ci/
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:12.4319000Z   if-no-files-found: warn
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:12.4319294Z   retention-days: 30
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:12.4319533Z   compression-level: 6
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:12.4319775Z   overwrite: false
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:12.4320007Z   include-hidden-files: false
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:12.4320337Z   archive: true
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:12.4320551Z env:
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:12.4320818Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:12.4321210Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:12.4321600Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:12.4321991Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:12.4322335Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:12.4322784Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:12.4323092Z ##[endgroup]
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:12.5414769Z With the provided path, there will be 5 files uploaded
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:12.5417811Z Artifact name is valid!
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:12.5418347Z Root directory input is valid!
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:13.1186753Z Uploading artifact: testes-flaskr.zip
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:13.1213337Z Beginning upload of artifact content to blob storage
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:14.0285675Z Uploaded bytes 59648
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:14.1205053Z Finished uploading artifact content to blob storage!
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:14.1206338Z SHA256 digest of uploaded artifact is f71a538308e8dbaa0e1936fe39d5d64db5b7b251adfab284ddd0897c3ff2274d
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:14.1207151Z Finalizing artifact upload
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:14.7350482Z Artifact testes-flaskr successfully finalized. Artifact ID 14564016718
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:14.7351212Z Artifact testes-flaskr has been successfully uploaded! Final size is 59648 bytes. Artifact ID is 14564016718
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:14.7353202Z Artifact download URL: https://github.com/YagoL3m3/p2-tqs-2026-cc-grupo01-flaskr/actions/runs/44590346309/artifacts/14564016718
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:14.7499027Z Post job cleanup.
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:14.8456453Z Post job cleanup.
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:14.9353450Z Cache hit occurred on the primary key setup-python-Linux-x64-24.04-Ubuntu-python-3.12.16-pip-010a2f76e656710554b39b335d093cb88e75a0763f75889d320ff78fb757b5b0, not saving cache.
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:14.9454399Z Post job cleanup.
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:15.0165586Z [command]/usr/bin/git version
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:15.0199712Z git version 2.56.1
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:15.0231724Z Temporarily overriding HOME='/home/runner/work/_temp/72491687-f212-447f-8834-bfde4ca938d2' before making global git config changes
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:15.0233103Z Adding repository directory to the temporary git global config as a safe directory
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:15.0235602Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/p2-tqs-2026-cc-grupo01-flaskr/p2-tqs-2026-cc-grupo01-flaskr
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:15.0259923Z Removing SSH command configuration
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:15.0264253Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:15.0288415Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:15.0455983Z Removing HTTP extra header
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:15.0456841Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:15.0474604Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:15.0622727Z Removing includeIf entries pointing to credentials config files
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:15.0626528Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:15.0646696Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+pytest, Newman e Selenium	UNKNOWN STEP	2026-11-19T18:43:15.0910651Z Cleaning up orphan processes

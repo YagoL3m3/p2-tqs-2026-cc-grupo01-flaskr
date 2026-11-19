@@ -1,0 +1,129 @@
+{
+  "fase": "final",
+  "commit": "d7c225cf16e504fdfb92c9235762bf6ba3f0dc19",
+  "server": {
+    "id": "147B411E-AaH1FNuWXJ2ONU1JlJ7y",
+    "version": "26.11.0.134175",
+    "status": "UP"
+  },
+  "ce": {
+    "task": {
+      "id": "bc941d72-843b-4d47-90e1-6ff9aa941c41",
+      "type": "REPORT",
+      "componentId": "c6beaa57-fc67-4bde-9c95-270c90a4864d",
+      "componentKey": "p2-flaskr-grupo01-local",
+      "componentName": "p2-flaskr-grupo01-local",
+      "componentQualifier": "TRK",
+      "analysisId": "7ad96dad-71f5-4fe9-a443-46568c7c2765",
+      "status": "SUCCESS",
+      "submittedAt": "2026-11-19T22:08:21+0000",
+      "submitterLogin": "admin",
+      "startedAt": "2026-11-19T22:08:22+0000",
+      "executedAt": "2026-11-19T22:08:25+0000",
+      "executionTimeMs": 3150,
+      "hasScannerContext": true,
+      "warningCount": 1,
+      "warnings": [
+        "SCM provider autodetection failed. Please use \"sonar.scm.provider\" to define SCM of your project, or disable the SCM Sensor in the project settings."
+      ],
+      "infoMessages": []
+    }
+  },
+  "medidas": {
+    "component": {
+      "key": "p2-flaskr-grupo01-local",
+      "name": "p2-flaskr-grupo01-local",
+      "qualifier": "TRK",
+      "measures": [
+        {
+          "metric": "coverage",
+          "value": "100.0",
+          "bestValue": true
+        },
+        {
+          "metric": "alert_status",
+          "value": "OK"
+        },
+        {
+          "metric": "bugs",
+          "value": "0",
+          "bestValue": true
+        },
+        {
+          "metric": "reliability_rating",
+          "value": "1.0",
+          "bestValue": true
+        },
+        {
+          "metric": "code_smells",
+          "value": "0",
+          "bestValue": true
+        },
+        {
+          "metric": "duplicated_lines_density",
+          "value": "0.0",
+          "bestValue": true
+        },
+        {
+          "metric": "security_rating",
+          "value": "4.0",
+          "bestValue": false
+        },
+        {
+          "metric": "ncloc",
+          "value": "428"
+        },
+        {
+          "metric": "vulnerabilities",
+          "value": "1",
+          "bestValue": false
+        },
+        {
+          "metric": "security_hotspots",
+          "value": "0",
+          "bestValue": true
+        },
+        {
+          "metric": "sqale_rating",
+          "value": "1.0",
+          "bestValue": true
+        }
+      ]
+    }
+  },
+  "quality_gate": {
+    "projectStatus": {
+      "status": "OK",
+      "conditions": [
+        {
+          "status": "OK",
+          "metricKey": "new_coverage",
+          "comparator": "LT",
+          "errorThreshold": "80",
+          "actualValue": "100.0"
+        },
+        {
+          "status": "OK",
+          "metricKey": "new_duplicated_lines_density",
+          "comparator": "GT",
+          "errorThreshold": "3",
+          "actualValue": "0.0"
+        },
+        {
+          "status": "OK",
+          "metricKey": "new_violations",
+          "comparator": "GT",
+          "errorThreshold": "0",
+          "actualValue": "0"
+        }
+      ],
+      "ignoredConditions": false,
+      "period": {
+        "mode": "PREVIOUS_VERSION",
+        "date": "2026-11-19T18:36:12+0000",
+        "parameter": "9db2f3cecd1055f837f45faf0bdbc71b262b06d8"
+      },
+      "caycStatus": "compliant"
+    }
+  }
+}

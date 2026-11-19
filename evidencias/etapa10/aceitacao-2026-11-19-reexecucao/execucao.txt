@@ -1,0 +1,29 @@
+2026-11-19T19:43:01-0300 | python -m pytest testes_grupo/sistema_selenium/roteiro_aceitacao.py -s -v
+Executor Codex | Ensaio com dados fictícios e um SQLite descartável por cenário
+3ddcc91d095e825b9e1550ac7805862cbe8d43c9
+ProductName:		macOS
+ProductVersion:		26.4
+BuildVersion:		25E246
+Python 3.12.13
+============================= test session starts ==============================
+platform darwin -- Python 3.12.13, pytest-9.2.0, pluggy-1.7.0 -- /private/tmp/flaskr-etapa5-venv/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/henrique/Desktop/Trabalho Elvio/p2-tqs-2026-cc-grupo01-flaskr
+plugins: cov-7.1.0
+collecting ... collected 4 items
+
+testes_grupo/sistema_selenium/roteiro_aceitacao.py::test_ac_01_publicar_como_novo_autor Chrome 157.0.8103.79 | ChromeDriver 157.0.8103.78 (4b3d0dabb8250b6f152d2d85d79e7706e309d087-refs/branch-heads/8103@{#1573})
+AC-01 | Cadastro encaminhou ao login. O aviso com título, corpo e autoria apareceu após publicar e após sair.
+PASSED
+testes_grupo/sistema_selenium/roteiro_aceitacao.py::test_ac_02_ler_o_aviso_mais_recente Chrome 157.0.8103.79 | ChromeDriver 157.0.8103.78 (4b3d0dabb8250b6f152d2d85d79e7706e309d087-refs/branch-heads/8103@{#1573})
+AC-02 | Sem sessão, Post B apareceu antes de Post A. Os dois títulos, corpos e autorias estavam visíveis.
+PASSED
+testes_grupo/sistema_selenium/roteiro_aceitacao.py::test_ac_03_corrigir_como_autor Chrome 157.0.8103.79 | ChromeDriver 157.0.8103.78 (4b3d0dabb8250b6f152d2d85d79e7706e309d087-refs/branch-heads/8103@{#1573})
+AC-03 | Edição substituiu título e corpo do Post A, conservou a autoria e o Post B. Conta B leu a revisão com a ação Edit ausente.
+PASSED
+testes_grupo/sistema_selenium/roteiro_aceitacao.py::test_ac_04_cancelar_e_confirmar_exclusao Chrome 157.0.8103.79 | ChromeDriver 157.0.8103.78 (4b3d0dabb8250b6f152d2d85d79e7706e309d087-refs/branch-heads/8103@{#1573})
+AC-04 | Cancelar preservou os dois avisos. Confirmar retirou o Post A e conservou o Post B, seu corpo e autoria.
+PASSED
+
+- generated xml file: /Users/henrique/Desktop/Trabalho Elvio/p2-tqs-2026-cc-grupo01-flaskr/evidencias/etapa10/aceitacao-2026-11-19-reexecucao/junit.xml -
+============================== 4 passed in 9.73s ===============================

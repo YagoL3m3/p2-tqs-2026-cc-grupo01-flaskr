@@ -1,0 +1,5 @@
+Conferência CT-026: GET da resposta HTML e leitura SQLite em modo somente leitura | 2026-11-19T13:43:28-0300 | Python 3.12.14
+Ocorrências da senha fictícia no HTML HTTP 200: 0
+Um único registro: True
+Hash diferente da senha: True
+Hash verificável: True

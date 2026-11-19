@@ -1,0 +1,437 @@
+Comando: /private/tmp/flaskr-etapa5-venv/bin/python tools/executar_postman.py --relatorio-json evidencias/etapa6/2026-11-19_newman.json --junitxml evidencias/etapa6/2026-11-19_newman.xml | 2026-11-19T15:34:45-03:00 | Python 3.12.13
+ProductName:		macOS
+ProductVersion:		26.4
+BuildVersion:		25E246
+v24.18.0
+11.16.0
+6.2.1
+Flask 3.1.3 | Werkzeug 3.1.9 | SQLite 3.53.4 | http://127.0.0.1:60948
+npx --yes newman@6.2.1 run '/Users/henrique/Desktop/Trabalho Elvio/p2-tqs-2026-cc-grupo01-flaskr/testes_grupo/integracao_postman/Flaskr.postman_collection.json' --environment '/Users/henrique/Desktop/Trabalho Elvio/p2-tqs-2026-cc-grupo01-flaskr/testes_grupo/integracao_postman/Flaskr_Local.postman_environment.json' --env-var baseUrl=http://127.0.0.1:60948 --ignore-redirects --timeout-request 10000 --color off --reporter-json-export evidencias/etapa6/2026-11-19_newman.json --reporter-junit-export evidencias/etapa6/2026-11-19_newman.xml --reporters cli,json,junit
+(node:33000) [DEP0176] DeprecationWarning: fs.F_OK is deprecated, use fs.constants.F_OK instead
+(Use `node --trace-deprecation ...` to show where the warning was created)
+newman
+
+Flaskr | Etapa 6 | Integração HTTP
+
+❏ AUT-I-01 Cadastrar conta inédita
+↳ Enviar cadastro válido
+  POST http://127.0.0.1:60948/auth/register 127.0.0.1 - - [19/Nov/2026 15:34:50] "[32mPOST /auth/register HTTP/1.1[0m" 302 -
+[302 FOUND, 424B, 97ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /auth/login
+
+↳ Autenticar com a conta recém-cadastrada
+  POST http://127.0.0.1:60948/auth/login 127.0.0.1 - - [19/Nov/2026 15:34:51] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+[302 FOUND, 487B, 75ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /
+
+↳ Ver a conta recém-cadastrada na página inicial
+  GET http://127.0.0.1:60948/ 127.0.0.1 - - [19/Nov/2026 15:34:51] "GET / HTTP/1.1" 200 -
+[200 OK, 583B, 9ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 200
+  ✓  Posts mantém o nome e o link Log Out
+
+❏ AUT-I-02 Rejeitar cadastro duplicado
+↳ Preparar conta fictícia
+  POST http://127.0.0.1:60948/auth/register 127.0.0.1 - - [19/Nov/2026 15:34:51] "[32mPOST /auth/register HTTP/1.1[0m" 302 -
+[302 FOUND, 424B, 74ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /auth/login
+
+↳ Enviar o mesmo nome com outra senha
+  POST http://127.0.0.1:60948/auth/register 127.0.0.1 - - [19/Nov/2026 15:34:51] "POST /auth/register HTTP/1.1" 200 -
+[200 OK, 985B, 72ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 200
+  ✓  Register exibe a mensagem de duplicidade
+
+↳ Autenticar com a senha do primeiro cadastro
+  POST http://127.0.0.1:60948/auth/login 127.0.0.1 - - [19/Nov/2026 15:34:51] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+[302 FOUND, 487B, 71ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /
+
+↳ Conferir a sessão com a credencial original
+  GET http://127.0.0.1:60948/ 127.0.0.1 - - [19/Nov/2026 15:34:51] "GET / HTTP/1.1" 200 -
+[200 OK, 584B, 2ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 200
+  ✓  Posts mantém o nome e o link Log Out
+
+❏ AUT-I-03 Autenticar e manter a sessão
+↳ Preparar conta fictícia
+  POST http://127.0.0.1:60948/auth/register 127.0.0.1 - - [19/Nov/2026 15:34:51] "[32mPOST /auth/register HTTP/1.1[0m" 302 -
+[302 FOUND, 424B, 72ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /auth/login
+
+↳ Enviar credenciais válidas
+  POST http://127.0.0.1:60948/auth/login 127.0.0.1 - - [19/Nov/2026 15:34:51] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+[302 FOUND, 487B, 74ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /
+
+↳ Consultar Posts após autenticação
+  GET http://127.0.0.1:60948/ 127.0.0.1 - - [19/Nov/2026 15:34:51] "GET / HTTP/1.1" 200 -
+[200 OK, 580B, 2ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 200
+  ✓  Posts mantém o nome e o link Log Out
+
+↳ Consultar Posts novamente com o cookie
+  GET http://127.0.0.1:60948/ 127.0.0.1 - - [19/Nov/2026 15:34:51] "GET / HTTP/1.1" 200 -
+[200 OK, 580B, 2ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 200
+  ✓  Posts mantém o nome e o link Log Out
+
+❏ AUT-I-04 Rejeitar senha incorreta
+↳ Preparar conta fictícia
+  POST http://127.0.0.1:60948/auth/register 127.0.0.1 - - [19/Nov/2026 15:34:51] "[32mPOST /auth/register HTTP/1.1[0m" 302 -
+[302 FOUND, 424B, 75ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /auth/login
+
+↳ Preparar sessão anônima
+  GET http://127.0.0.1:60948/auth/logout 127.0.0.1 - - [19/Nov/2026 15:34:51] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+[302 FOUND, 484B, 3ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /
+
+↳ Enviar senha incorreta da conta cadastrada
+  POST http://127.0.0.1:60948/auth/login 127.0.0.1 - - [19/Nov/2026 15:34:51] "POST /auth/login HTTP/1.1" 200 -
+[200 OK, 958B, 74ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 200
+  ✓  Log In exibe a mensagem de senha incorreta
+
+↳ Confirmar que New Post exige sessão
+  GET http://127.0.0.1:60948/create 127.0.0.1 - - [19/Nov/2026 15:34:51] "[32mGET /create HTTP/1.1[0m" 302 -
+[302 FOUND, 424B, 1ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /auth/login
+
+❏ AUT-I-05 Publicar com título, corpo e autor
+↳ Preparar conta fictícia
+  POST http://127.0.0.1:60948/auth/register 127.0.0.1 - - [19/Nov/2026 15:34:51] "[32mPOST /auth/register HTTP/1.1[0m" 302 -
+[302 FOUND, 424B, 75ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /auth/login
+
+↳ Preparar sessão autenticada
+  POST http://127.0.0.1:60948/auth/login 127.0.0.1 - - [19/Nov/2026 15:34:51] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+[302 FOUND, 487B, 71ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /
+
+↳ Enviar publicação válida
+  POST http://127.0.0.1:60948/create 127.0.0.1 - - [19/Nov/2026 15:34:51] "[32mPOST /create HTTP/1.1[0m" 302 -
+[302 FOUND, 394B, 2ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /
+
+↳ Ler a publicação e a autoria em Posts
+  GET http://127.0.0.1:60948/ 127.0.0.1 - - [19/Nov/2026 15:34:51] "GET / HTTP/1.1" 200 -
+[200 OK, 915B, 2ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 200
+  ✓  Artigo I05 Rotina QA contém corpo e autoria esperados
+
+❏ AUT-I-06 Rejeitar criação com título vazio
+↳ Preparar conta fictícia
+  POST http://127.0.0.1:60948/auth/register 127.0.0.1 - - [19/Nov/2026 15:34:51] "[32mPOST /auth/register HTTP/1.1[0m" 302 -
+[302 FOUND, 424B, 73ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /auth/login
+
+↳ Preparar sessão autenticada
+  POST http://127.0.0.1:60948/auth/login 127.0.0.1 - - [19/Nov/2026 15:34:52] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+[302 FOUND, 487B, 73ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /
+
+↳ Enviar título vazio e corpo preenchido
+  POST http://127.0.0.1:60948/create 127.0.0.1 - - [19/Nov/2026 15:34:52] "POST /create HTTP/1.1" 200 -
+[200 OK, 935B, 5ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 200
+  ✓  New Post informa a obrigatoriedade do título
+
+↳ Conferir que o rascunho não foi publicado
+  GET http://127.0.0.1:60948/ 127.0.0.1 - - [19/Nov/2026 15:34:52] "GET / HTTP/1.1" 200 -
+[200 OK, 848B, 2ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 200
+  ✓  Posts não exibe o corpo do rascunho
+
+❏ AUT-I-07 Editar publicação como autor
+↳ Preparar conta fictícia
+  POST http://127.0.0.1:60948/auth/register 127.0.0.1 - - [19/Nov/2026 15:34:52] "[32mPOST /auth/register HTTP/1.1[0m" 302 -
+[302 FOUND, 424B, 72ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /auth/login
+
+↳ Preparar sessão autenticada
+  POST http://127.0.0.1:60948/auth/login 127.0.0.1 - - [19/Nov/2026 15:34:52] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+[302 FOUND, 487B, 72ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /
+
+↳ Preparar publicação do autor
+  POST http://127.0.0.1:60948/create 127.0.0.1 - - [19/Nov/2026 15:34:52] "[32mPOST /create HTTP/1.1[0m" 302 -
+[302 FOUND, 394B, 3ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /
+
+↳ Obter o ID pelo link Edit do artigo preparado
+  GET http://127.0.0.1:60948/ 127.0.0.1 - - [19/Nov/2026 15:34:52] "GET / HTTP/1.1" 200 -
+[200 OK, 1.19kB, 2ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 200
+  ✓  Artigo I07 Original QA contém corpo e autoria esperados
+
+↳ Salvar novo título e novo corpo
+  POST http://127.0.0.1:60948/2/update 127.0.0.1 - - [19/Nov/2026 15:34:52] "[32mPOST /2/update HTTP/1.1[0m" 302 -
+[302 FOUND, 394B, 3ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /
+
+↳ Conferir a versão revisada em Posts
+  GET http://127.0.0.1:60948/ 127.0.0.1 - - [19/Nov/2026 15:34:52] "GET / HTTP/1.1" 200 -
+[200 OK, 1.19kB, 2ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 200
+  ✓  Artigo I07 Revisado QA contém corpo e autoria esperados
+
+❏ AUT-I-08 Rejeitar edição com título vazio
+↳ Preparar conta fictícia
+  POST http://127.0.0.1:60948/auth/register 127.0.0.1 - - [19/Nov/2026 15:34:52] "[32mPOST /auth/register HTTP/1.1[0m" 302 -
+[302 FOUND, 424B, 69ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /auth/login
+
+↳ Preparar sessão autenticada
+  POST http://127.0.0.1:60948/auth/login 127.0.0.1 - - [19/Nov/2026 15:34:52] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+[302 FOUND, 487B, 72ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /
+
+↳ Preparar publicação do autor
+  POST http://127.0.0.1:60948/create 127.0.0.1 - - [19/Nov/2026 15:34:52] "[32mPOST /create HTTP/1.1[0m" 302 -
+[302 FOUND, 394B, 3ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /
+
+↳ Obter o ID pelo link Edit do artigo preparado
+  GET http://127.0.0.1:60948/ 127.0.0.1 - - [19/Nov/2026 15:34:52] "GET / HTTP/1.1" 200 -
+[200 OK, 1.47kB, 2ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 200
+  ✓  Artigo I08 Original QA contém corpo e autoria esperados
+
+↳ Enviar edição com título vazio
+  POST http://127.0.0.1:60948/3/update 127.0.0.1 - - [19/Nov/2026 15:34:52] "POST /3/update HTTP/1.1" 200 -
+[200 OK, 1.14kB, 4ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 200
+  ✓  O editor informa a obrigatoriedade do título
+
+↳ Conferir o artigo original em Posts
+  GET http://127.0.0.1:60948/ 127.0.0.1 - - [19/Nov/2026 15:34:52] "GET / HTTP/1.1" 200 -
+[200 OK, 1.47kB, 2ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 200
+  ✓  Artigo I08 Original QA contém corpo e autoria esperados
+
+❏ AUT-I-09 Excluir somente o post selecionado
+↳ Preparar conta fictícia
+  POST http://127.0.0.1:60948/auth/register 127.0.0.1 - - [19/Nov/2026 15:34:52] "[32mPOST /auth/register HTTP/1.1[0m" 302 -
+[302 FOUND, 424B, 72ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /auth/login
+
+↳ Preparar sessão autenticada
+  POST http://127.0.0.1:60948/auth/login 127.0.0.1 - - [19/Nov/2026 15:34:52] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+[302 FOUND, 487B, 73ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /
+
+↳ Preparar publicação alvo
+  POST http://127.0.0.1:60948/create 127.0.0.1 - - [19/Nov/2026 15:34:52] "[32mPOST /create HTTP/1.1[0m" 302 -
+[302 FOUND, 394B, 3ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /
+
+↳ Preparar publicação de controle
+  POST http://127.0.0.1:60948/create 127.0.0.1 - - [19/Nov/2026 15:34:52] "[32mPOST /create HTTP/1.1[0m" 302 -
+[302 FOUND, 394B, 3ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /
+
+↳ Obter o ID pelo link Edit do artigo preparado
+  GET http://127.0.0.1:60948/ 127.0.0.1 - - [19/Nov/2026 15:34:52] "GET / HTTP/1.1" 200 -
+[200 OK, 2.1kB, 3ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 200
+  ✓  Artigo I09 Alvo QA contém corpo e autoria esperados
+
+↳ Excluir a publicação selecionada
+  POST http://127.0.0.1:60948/4/delete 127.0.0.1 - - [19/Nov/2026 15:34:52] "[32mPOST /4/delete HTTP/1.1[0m" 302 -
+[302 FOUND, 394B, 2ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /
+
+↳ Conferir o controle preservado e o alvo ausente
+  GET http://127.0.0.1:60948/ 127.0.0.1 - - [19/Nov/2026 15:34:52] "GET / HTTP/1.1" 200 -
+[200 OK, 1.76kB, 2ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 200
+  ✓  Artigo I09 Controle QA contém corpo e autoria esperados
+
+❏ AUT-I-10 Tratar nova exclusão do mesmo post
+↳ Preparar conta fictícia
+  POST http://127.0.0.1:60948/auth/register 127.0.0.1 - - [19/Nov/2026 15:34:52] "[32mPOST /auth/register HTTP/1.1[0m" 302 -
+[302 FOUND, 424B, 72ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /auth/login
+
+↳ Preparar sessão autenticada
+  POST http://127.0.0.1:60948/auth/login 127.0.0.1 - - [19/Nov/2026 15:34:52] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+[302 FOUND, 488B, 73ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /
+
+↳ Preparar publicação alvo
+  POST http://127.0.0.1:60948/create 127.0.0.1 - - [19/Nov/2026 15:34:52] "[32mPOST /create HTTP/1.1[0m" 302 -
+[302 FOUND, 394B, 3ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /
+
+↳ Preparar publicação de controle
+  POST http://127.0.0.1:60948/create 127.0.0.1 - - [19/Nov/2026 15:34:52] "[32mPOST /create HTTP/1.1[0m" 302 -
+[302 FOUND, 394B, 2ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /
+
+↳ Obter o ID pelo link Edit do artigo preparado
+  GET http://127.0.0.1:60948/ 127.0.0.1 - - [19/Nov/2026 15:34:52] "GET / HTTP/1.1" 200 -
+[200 OK, 2.39kB, 2ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 200
+  ✓  Artigo I10 Alvo QA contém corpo e autoria esperados
+
+↳ Excluir o alvo na primeira solicitação
+  POST http://127.0.0.1:60948/6/delete 127.0.0.1 - - [19/Nov/2026 15:34:52] "[32mPOST /6/delete HTTP/1.1[0m" 302 -
+[302 FOUND, 394B, 2ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /
+
+↳ Repetir a solicitação para o alvo já excluído
+  POST http://127.0.0.1:60948/6/delete 127.0.0.1 - - [19/Nov/2026 15:34:52] "[33mPOST /6/delete HTTP/1.1[0m" 404 -
+[404 NOT FOUND, 311B, 1ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 404
+  ✓  A mensagem Not Found identifica o post ausente
+
+↳ Conferir que apenas a publicação de controle permanece
+  GET http://127.0.0.1:60948/ 127.0.0.1 - - [19/Nov/2026 15:34:53] "GET / HTTP/1.1" 200 -
+[200 OK, 2.05kB, 2ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 200
+  ✓  Artigo I10 Controle QA contém corpo e autoria esperados
+
+❏ AUT-I-11 Encerrar sessão e proteger a criação
+↳ Preparar conta fictícia
+  POST http://127.0.0.1:60948/auth/register 127.0.0.1 - - [19/Nov/2026 15:34:53] "[32mPOST /auth/register HTTP/1.1[0m" 302 -
+[302 FOUND, 424B, 76ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /auth/login
+
+↳ Preparar sessão autenticada
+  POST http://127.0.0.1:60948/auth/login 127.0.0.1 - - [19/Nov/2026 15:34:53] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+[302 FOUND, 488B, 74ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /
+
+↳ Abrir New Post no início da sessão
+  GET http://127.0.0.1:60948/create 127.0.0.1 - - [19/Nov/2026 15:34:53] "GET /create HTTP/1.1" 200 -
+[200 OK, 779B, 2ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 200
+  ✓  New Post contém o campo Title
+
+↳ Encerrar a sessão
+  GET http://127.0.0.1:60948/auth/logout 127.0.0.1 - - [19/Nov/2026 15:34:53] "[32mGET /auth/logout HTTP/1.1[0m" 302 -
+[302 FOUND, 484B, 1ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /
+
+↳ Conferir menu anônimo em Posts
+  GET http://127.0.0.1:60948/ 127.0.0.1 - - [19/Nov/2026 15:34:53] "GET / HTTP/1.1" 200 -
+[200 OK, 1.94kB, 1ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 200
+  ✓  Menu exibe Log In e Register
+
+↳ Reabrir New Post após Log Out
+  GET http://127.0.0.1:60948/create 127.0.0.1 - - [19/Nov/2026 15:34:53] "[32mGET /create HTTP/1.1[0m" 302 -
+[302 FOUND, 424B, 1ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /auth/login
+
+┌─────────────────────────┬──────────────────┬──────────────────┐
+│                         │         executed │           failed │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│              iterations │                1 │                0 │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│                requests │               56 │                0 │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│            test-scripts │              112 │                0 │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│      prerequest-scripts │                0 │                0 │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│              assertions │              168 │                0 │
+├─────────────────────────┴──────────────────┴──────────────────┤
+│ total run duration: 2.4s                                      │
+├───────────────────────────────────────────────────────────────┤
+│ total data received: 27.3kB (approx)                          │
+├───────────────────────────────────────────────────────────────┤
+│ average response time: 31ms [min: 1ms, max: 97ms, s.d.: 35ms] │
+└───────────────────────────────────────────────────────────────┘

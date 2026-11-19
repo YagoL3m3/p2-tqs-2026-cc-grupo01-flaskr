@@ -1,0 +1,10 @@
+Comandos: Python com openpyxl, git rev-parse, git diff --exit-code, git diff --check | 2026-11-19T11:08:33-0300 | Python 3.12.14
+XLSX verificado: 7 RF, 3 RNF, 28 casos únicos (25 funcionais) e 17 vínculos válidos com os riscos da Etapa 2.
+Todos os casos constam na matriz; execuções, defeitos e evidências manuais aguardam registro do grupo.
+Relatório JUnit dos testes originais: 24 aprovados, zero falhas, erros e testes ignorados.
+Árvore do Flaskr idêntica ao tutorial da tag oficial: bb0b0b9ef6be5243ab661630e805d6705ed57417
+## etapa-3-requisitos-casos
+?? entrega/04_CASOS_E_RASTREABILIDADE/Requisitos_Casos_e_Rastreabilidade_Flaskr.xlsx
+?? evidencias/etapa3/
+?? tools/dados_marco3.mjs
+?? tools/gerar_marco3.mjs

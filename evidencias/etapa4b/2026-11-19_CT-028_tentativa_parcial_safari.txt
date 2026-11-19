@@ -1,0 +1,11 @@
+CT-028 · Tentativa parcial no Safari 26.4 · revisão 2c6af97 do grupo
+A preferência Press Tab to highlight each item on a webpage foi observada na interface. 0 = desmarcada, 1 = marcada.
+2026-11-19T17:39:37.892Z | original | 0
+2026-11-19T17:39:38.637Z | ativada | 1
+2026-11-19T17:53:10.396Z | restaurada | 0
+
+Tab focou Register e Return abriu o formulário. O controle do Safari foi interrompido antes da publicação. O resultado do CT-028 continua Bloqueado.
+
+127.0.0.1 - - [19/Nov/2026 14:40:05] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [19/Nov/2026 14:40:05] "GET /static/style.css HTTP/1.1" 200 -
+127.0.0.1 - - [19/Nov/2026 14:47:05] "GET /auth/register HTTP/1.1" 200 -

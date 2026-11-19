@@ -1,0 +1,107 @@
+Comando: PYTHONPATH=flaskr-app python -u -B tools/verificar_nao_funcionais.py | 2026-11-19T15:33:22-0300 | Python 3.12.14
+ProductName:		macOS
+ProductVersion:		26.4
+BuildVersion:		25E246
+arm64
+9d8d906af86ec82bc9e0e139994cda05b4264766
+22d924701a6ae2e4cd01e9a15bbaf3946094af65	refs/tags/3.1.3^{}
+blinker==1.9.0
+click==8.5.1
+Flask==3.1.3
+iniconfig==2.3.1
+itsdangerous==2.2.0
+Jinja2==3.1.6
+MarkupSafe==3.0.4
+packaging==26.3
+pluggy==1.7.0
+Pygments==2.21.0
+pytest==9.2.0
+Werkzeug==3.1.9
+Código importado: flaskr-app/flaskr/__init__.py; SQLite 3.53.1
+
+NF-01 | Início
+Traceback (most recent call last):
+  File "/Users/henrique/Desktop/Trabalho Elvio/p2-tqs-2026-cc-grupo01-flaskr/tools/verificar_nao_funcionais.py", line 266, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/Users/henrique/Desktop/Trabalho Elvio/p2-tqs-2026-cc-grupo01-flaskr/tools/verificar_nao_funcionais.py", line 232, in main
+    servir(args.servir)
+  File "/Users/henrique/Desktop/Trabalho Elvio/p2-tqs-2026-cc-grupo01-flaskr/tools/verificar_nao_funcionais.py", line 46, in servir
+    with make_server("127.0.0.1", 0, criar_app(banco), handler=RequisicaoLocal) as http:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: make_server() got an unexpected keyword argument 'handler'
+Servidor encerrado: PID=31827, código=1
+NF-01 | Bloqueado | invalid literal for int() with base 10: ''
+
+NF-02 | Início
+Traceback (most recent call last):
+  File "/Users/henrique/Desktop/Trabalho Elvio/p2-tqs-2026-cc-grupo01-flaskr/tools/verificar_nao_funcionais.py", line 266, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/Users/henrique/Desktop/Trabalho Elvio/p2-tqs-2026-cc-grupo01-flaskr/tools/verificar_nao_funcionais.py", line 232, in main
+    servir(args.servir)
+  File "/Users/henrique/Desktop/Trabalho Elvio/p2-tqs-2026-cc-grupo01-flaskr/tools/verificar_nao_funcionais.py", line 46, in servir
+    with make_server("127.0.0.1", 0, criar_app(banco), handler=RequisicaoLocal) as http:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: make_server() got an unexpected keyword argument 'handler'
+Servidor encerrado: PID=31830, código=1
+NF-02 | Bloqueado | invalid literal for int() with base 10: ''
+
+NF-04 | Início
+Traceback (most recent call last):
+  File "/Users/henrique/Desktop/Trabalho Elvio/p2-tqs-2026-cc-grupo01-flaskr/tools/verificar_nao_funcionais.py", line 266, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/Users/henrique/Desktop/Trabalho Elvio/p2-tqs-2026-cc-grupo01-flaskr/tools/verificar_nao_funcionais.py", line 232, in main
+    servir(args.servir)
+  File "/Users/henrique/Desktop/Trabalho Elvio/p2-tqs-2026-cc-grupo01-flaskr/tools/verificar_nao_funcionais.py", line 46, in servir
+    with make_server("127.0.0.1", 0, criar_app(banco), handler=RequisicaoLocal) as http:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: make_server() got an unexpected keyword argument 'handler'
+Servidor encerrado: PID=31852, código=1
+NF-04 | Bloqueado | invalid literal for int() with base 10: ''
+
+NF-05 | Início
+Traceback (most recent call last):
+  File "/Users/henrique/Desktop/Trabalho Elvio/p2-tqs-2026-cc-grupo01-flaskr/tools/verificar_nao_funcionais.py", line 266, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/Users/henrique/Desktop/Trabalho Elvio/p2-tqs-2026-cc-grupo01-flaskr/tools/verificar_nao_funcionais.py", line 232, in main
+    servir(args.servir)
+  File "/Users/henrique/Desktop/Trabalho Elvio/p2-tqs-2026-cc-grupo01-flaskr/tools/verificar_nao_funcionais.py", line 46, in servir
+    with make_server("127.0.0.1", 0, criar_app(banco), handler=RequisicaoLocal) as http:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: make_server() got an unexpected keyword argument 'handler'
+Servidor encerrado: PID=31853, código=1
+NF-05 | Bloqueado | invalid literal for int() with base 10: ''
+
+NF-06 | Início
+Traceback (most recent call last):
+  File "/Users/henrique/Desktop/Trabalho Elvio/p2-tqs-2026-cc-grupo01-flaskr/tools/verificar_nao_funcionais.py", line 266, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/Users/henrique/Desktop/Trabalho Elvio/p2-tqs-2026-cc-grupo01-flaskr/tools/verificar_nao_funcionais.py", line 232, in main
+    servir(args.servir)
+  File "/Users/henrique/Desktop/Trabalho Elvio/p2-tqs-2026-cc-grupo01-flaskr/tools/verificar_nao_funcionais.py", line 46, in servir
+    with make_server("127.0.0.1", 0, criar_app(banco), handler=RequisicaoLocal) as http:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: make_server() got an unexpected keyword argument 'handler'
+Servidor encerrado: PID=31868, código=1
+NF-06 | Bloqueado | invalid literal for int() with base 10: ''
+
+NF-07 | Início
+Google Chrome 157.0.8103.79
+Traceback (most recent call last):
+  File "/Users/henrique/Desktop/Trabalho Elvio/p2-tqs-2026-cc-grupo01-flaskr/tools/verificar_nao_funcionais.py", line 266, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/Users/henrique/Desktop/Trabalho Elvio/p2-tqs-2026-cc-grupo01-flaskr/tools/verificar_nao_funcionais.py", line 232, in main
+    servir(args.servir)
+  File "/Users/henrique/Desktop/Trabalho Elvio/p2-tqs-2026-cc-grupo01-flaskr/tools/verificar_nao_funcionais.py", line 46, in servir
+    with make_server("127.0.0.1", 0, criar_app(banco), handler=RequisicaoLocal) as http:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: make_server() got an unexpected keyword argument 'handler'
+Servidor encerrado: PID=31894, código=1
+NF-07 | Bloqueado | invalid literal for int() with base 10: ''
+
+Verificações locais que atendem ao critério: 0/6

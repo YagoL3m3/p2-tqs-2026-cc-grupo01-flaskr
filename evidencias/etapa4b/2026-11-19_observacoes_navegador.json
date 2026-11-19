@@ -1,0 +1,410 @@
+{
+  "1": {
+    "resultado": "Aprovado",
+    "nota": "Cadastro redirecionou para Log In. Com a mesma conta, Posts exibiu qa_autor_a e Log Out.",
+    "url": "http://127.0.0.1:56001/",
+    "capturas": [
+      "CT-001_2026-11-19_01.jpg",
+      "CT-001_2026-11-19.jpg"
+    ],
+    "snapshot": "- navigation:\n  - heading \"Flaskr\" [level=1]:\n    - link \"Flaskr\":\n      - /url: /\n  - list:\n    - generic: qa_autor_a\n    - link \"Log Out\":\n      - /url: /auth/logout\n- heading \"Posts\" [level=1]\n- link \"New\":\n  - /url: /create",
+    "hora": "2026-11-19T16:39:42.405Z",
+    "navegador": "Chrome 157.0.8103.79",
+    "dataLocal": "2026-11-19"
+  },
+  "2": {
+    "resultado": "Aprovado",
+    "nota": "Register permaneceu aberto e o foco foi para Username, identificado como obrigatório e vazio. Nenhum envio ocorreu.",
+    "url": "http://127.0.0.1:56002/auth/register",
+    "capturas": [
+      "CT-002_2026-11-19.jpg"
+    ],
+    "snapshot": "- navigation:\n  - heading \"Flaskr\" [level=1]:\n    - link \"Flaskr\":\n      - /url: /\n  - list:\n    - link \"Register\":\n      - /url: /auth/register\n    - link \"Log In\":\n      - /url: /auth/login\n- heading \"Register\" [level=1]\n- generic: Username\n- textbox \"Username\" [active]\n- generic: Password\n- textbox \"Password\": <redacted>\n- button \"Register\"",
+    "hora": "2026-11-19T16:41:02.279Z",
+    "validacaoNativa": {
+      "foco": "username",
+      "mensagem": "",
+      "obrigatorio": true,
+      "vazio": true
+    },
+    "navegador": "Chrome 157.0.8103.79",
+    "dataLocal": "2026-11-19"
+  },
+  "3": {
+    "resultado": "Aprovado",
+    "nota": "Register permaneceu aberto e o foco foi para Password, identificado como obrigatório e vazio. Nenhum envio ocorreu.",
+    "url": "http://127.0.0.1:56003/auth/register",
+    "capturas": [
+      "CT-003_2026-11-19.jpg"
+    ],
+    "snapshot": "- navigation:\n  - heading \"Flaskr\" [level=1]:\n    - link \"Flaskr\":\n      - /url: /\n  - list:\n    - link \"Register\":\n      - /url: /auth/register\n    - link \"Log In\":\n      - /url: /auth/login\n- heading \"Register\" [level=1]\n- generic: Username\n- textbox \"Username\": <redacted>\n- generic: Password\n- textbox \"Password\" [active]\n- button \"Register\"",
+    "hora": "2026-11-19T16:41:03.148Z",
+    "validacaoNativa": {
+      "foco": "password",
+      "mensagem": "",
+      "obrigatorio": true,
+      "vazio": true
+    },
+    "navegador": "Chrome 157.0.8103.79",
+    "dataLocal": "2026-11-19"
+  },
+  "4": {
+    "resultado": "Aprovado",
+    "nota": "Register mostrou “User qa_autor_a is already registered.”. A senha original manteve o acesso à conta.",
+    "url": "http://127.0.0.1:56004/",
+    "capturas": [
+      "CT-004_2026-11-19_01.jpg",
+      "CT-004_2026-11-19.jpg"
+    ],
+    "snapshot": "- navigation:\n  - heading \"Flaskr\" [level=1]:\n    - link \"Flaskr\":\n      - /url: /\n  - list:\n    - generic: qa_autor_a\n    - link \"Log Out\":\n      - /url: /auth/logout\n- heading \"Posts\" [level=1]\n- link \"New\":\n  - /url: /create",
+    "hora": "2026-11-19T16:40:10.825Z",
+    "navegador": "Chrome 157.0.8103.79",
+    "dataLocal": "2026-11-19"
+  },
+  "5": {
+    "resultado": "Aprovado",
+    "nota": "O cadastro com Username q conduziu a Log In e a conta de um caractere foi autenticada.",
+    "url": "http://127.0.0.1:56005/",
+    "capturas": [
+      "CT-005_2026-11-19_01.jpg",
+      "CT-005_2026-11-19.jpg"
+    ],
+    "snapshot": "- navigation:\n  - heading \"Flaskr\" [level=1]:\n    - link \"Flaskr\":\n      - /url: /\n  - list:\n    - generic: q\n    - link \"Log Out\":\n      - /url: /auth/logout\n- heading \"Posts\" [level=1]\n- link \"New\":\n  - /url: /create",
+    "hora": "2026-11-19T16:40:11.921Z",
+    "navegador": "Chrome 157.0.8103.79",
+    "dataLocal": "2026-11-19"
+  },
+  "6": {
+    "resultado": "Aprovado",
+    "nota": "Posts exibiu qa_autor_a e Log Out antes e depois do recarregamento.",
+    "url": "http://127.0.0.1:56006/",
+    "capturas": [
+      "CT-006_2026-11-19_01.jpg",
+      "CT-006_2026-11-19.jpg"
+    ],
+    "snapshot": "- navigation:\n  - heading \"Flaskr\" [level=1]:\n    - link \"Flaskr\":\n      - /url: /\n  - list:\n    - generic: qa_autor_a\n    - link \"Log Out\":\n      - /url: /auth/logout\n- heading \"Posts\" [level=1]\n- link \"New\":\n  - /url: /create",
+    "hora": "2026-11-19T16:40:13.008Z",
+    "navegador": "Chrome 157.0.8103.79",
+    "dataLocal": "2026-11-19"
+  },
+  "7": {
+    "resultado": "Aprovado",
+    "nota": "A tela permaneceu em Log In, exibiu “Incorrect username.” e não apresentou Log Out.",
+    "url": "http://127.0.0.1:56007/auth/login",
+    "capturas": [
+      "CT-007_2026-11-19.jpg"
+    ],
+    "snapshot": "- navigation:\n  - heading \"Flaskr\" [level=1]:\n    - link \"Flaskr\":\n      - /url: /\n  - list:\n    - link \"Register\":\n      - /url: /auth/register\n    - link \"Log In\":\n      - /url: /auth/login\n- heading \"Log In\" [level=1]\n- generic: Incorrect username.\n- generic: Username\n- textbox \"Username\"\n- generic: Password\n- textbox \"Password\"\n- button \"Log In\"",
+    "hora": "2026-11-19T16:40:13.652Z",
+    "navegador": "Chrome 157.0.8103.79",
+    "dataLocal": "2026-11-19"
+  },
+  "8": {
+    "resultado": "Aprovado",
+    "nota": "A tela permaneceu em Log In, exibiu “Incorrect password.” e não apresentou Log Out.",
+    "url": "http://127.0.0.1:56008/auth/login",
+    "capturas": [
+      "CT-008_2026-11-19.jpg"
+    ],
+    "snapshot": "- navigation:\n  - heading \"Flaskr\" [level=1]:\n    - link \"Flaskr\":\n      - /url: /\n  - list:\n    - link \"Register\":\n      - /url: /auth/register\n    - link \"Log In\":\n      - /url: /auth/login\n- heading \"Log In\" [level=1]\n- generic: Incorrect password.\n- generic: Username\n- textbox \"Username\"\n- generic: Password\n- textbox \"Password\"\n- button \"Log In\"",
+    "hora": "2026-11-19T16:40:14.391Z",
+    "navegador": "Chrome 157.0.8103.79",
+    "dataLocal": "2026-11-19"
+  },
+  "9": {
+    "resultado": "Aprovado",
+    "nota": "New Post abriu com sessão. Após Log Out, o menu mostrou Register e Log In, e /create redirecionou de volta a Log In.",
+    "url": "http://127.0.0.1:56009/auth/login",
+    "capturas": [
+      "CT-009_2026-11-19_01.jpg",
+      "CT-009_2026-11-19.jpg"
+    ],
+    "snapshot": "- navigation:\n  - heading \"Flaskr\" [level=1]:\n    - link \"Flaskr\":\n      - /url: /\n  - list:\n    - link \"Register\":\n      - /url: /auth/register\n    - link \"Log In\":\n      - /url: /auth/login\n- heading \"Log In\" [level=1]\n- generic: Username\n- textbox \"Username\"\n- generic: Password\n- textbox \"Password\"\n- button \"Log In\"",
+    "hora": "2026-11-19T16:41:04.567Z",
+    "navegador": "Chrome 157.0.8103.79",
+    "dataLocal": "2026-11-19"
+  },
+  "10": {
+    "resultado": "Aprovado",
+    "nota": "Com sessão anônima, Posts exibiu Post A, Corpo A e autoria qa_autor_a datada de 2026-01-10. O menu apresentou Log In.",
+    "url": "http://127.0.0.1:56010/",
+    "capturas": [
+      "CT-010_2026-11-19.jpg"
+    ],
+    "snapshot": "- navigation:\n  - heading \"Flaskr\" [level=1]:\n    - link \"Flaskr\":\n      - /url: /\n  - list:\n    - link \"Register\":\n      - /url: /auth/register\n    - link \"Log In\":\n      - /url: /auth/login\n- heading \"Posts\" [level=1]\n- article:\n  - heading \"Post A\" [level=1]\n  - generic: by qa_autor_a on 2026-01-10\n  - paragraph: Corpo A",
+    "hora": "2026-11-19T16:41:04.828Z",
+    "navegador": "Chrome 157.0.8103.79",
+    "dataLocal": "2026-11-19"
+  },
+  "11": {
+    "resultado": "Aprovado",
+    "nota": "A primeira publicação foi criada e houve intervalo superior a dois segundos antes da segunda. Segundo QA apareceu acima de Primeiro QA.",
+    "url": "http://127.0.0.1:56011/",
+    "capturas": [
+      "CT-011_2026-11-19_01.jpg",
+      "CT-011_2026-11-19.jpg"
+    ],
+    "snapshot": "- navigation:\n  - heading \"Flaskr\" [level=1]:\n    - link \"Flaskr\":\n      - /url: /\n  - list:\n    - generic: qa_autor_a\n    - link \"Log Out\":\n      - /url: /auth/logout\n- heading \"Posts\" [level=1]\n- link \"New\":\n  - /url: /create\n- article:\n  - heading \"Segundo QA\" [level=1]\n  - generic: by qa_autor_a on 2026-11-19\n  - link \"Edit\":\n    - /url: /2/update\n  - paragraph: Corpo do segundo\n- separator\n- article:\n  - heading \"Primeiro QA\" [level=1]\n  - generic: by qa_autor_a on 2026-11-19\n  - link \"Edit\":\n    - /url: /1/update\n  - paragraph: Corpo do primeiro",
+    "hora": "2026-11-19T16:41:08.574Z",
+    "navegador": "Chrome 157.0.8103.79",
+    "dataLocal": "2026-11-19"
+  },
+  "12": {
+    "resultado": "Aprovado",
+    "nota": "Posts foi exibida sem artigos e sem mensagem de erro em uma base vazia.",
+    "url": "http://127.0.0.1:56012/",
+    "capturas": [
+      "CT-012_2026-11-19.jpg"
+    ],
+    "snapshot": "- navigation:\n  - heading \"Flaskr\" [level=1]:\n    - link \"Flaskr\":\n      - /url: /\n  - list:\n    - link \"Register\":\n      - /url: /auth/register\n    - link \"Log In\":\n      - /url: /auth/login\n- heading \"Posts\" [level=1]",
+    "hora": "2026-11-19T16:41:08.914Z",
+    "navegador": "Chrome 157.0.8103.79",
+    "dataLocal": "2026-11-19"
+  },
+  "13": {
+    "resultado": "Aprovado",
+    "nota": "A conta B viu os dois posts. Edit apareceu apenas no Post B, da própria conta.",
+    "url": "http://127.0.0.1:56013/",
+    "capturas": [
+      "CT-013_2026-11-19.jpg"
+    ],
+    "snapshot": "- navigation:\n  - heading \"Flaskr\" [level=1]:\n    - link \"Flaskr\":\n      - /url: /\n  - list:\n    - generic: qa_autor_b\n    - link \"Log Out\":\n      - /url: /auth/logout\n- heading \"Posts\" [level=1]\n- link \"New\":\n  - /url: /create\n- article:\n  - heading \"Post B\" [level=1]\n  - generic: by qa_autor_b on 2026-01-10\n  - link \"Edit\":\n    - /url: /2/update\n  - paragraph: Corpo B\n- separator\n- article:\n  - heading \"Post A\" [level=1]\n  - generic: by qa_autor_a on 2026-01-10\n  - paragraph: Corpo A",
+    "hora": "2026-11-19T16:41:09.911Z",
+    "navegador": "Chrome 157.0.8103.79",
+    "dataLocal": "2026-11-19"
+  },
+  "14": {
+    "resultado": "Aprovado",
+    "nota": "Posts exibiu Rotina QA, o corpo esperado e autoria da conta A.",
+    "url": "http://127.0.0.1:56014/",
+    "capturas": [
+      "CT-014_2026-11-19.jpg"
+    ],
+    "snapshot": "- navigation:\n  - heading \"Flaskr\" [level=1]:\n    - link \"Flaskr\":\n      - /url: /\n  - list:\n    - generic: qa_autor_a\n    - link \"Log Out\":\n      - /url: /auth/logout\n- heading \"Posts\" [level=1]\n- link \"New\":\n  - /url: /create\n- article:\n  - heading \"Rotina QA\" [level=1]\n  - generic: by qa_autor_a on 2026-11-19\n  - link \"Edit\":\n    - /url: /1/update\n  - paragraph: Texto fictício da rotina.",
+    "hora": "2026-11-19T16:41:40.136Z",
+    "navegador": "Chrome 157.0.8103.79",
+    "dataLocal": "2026-11-19"
+  },
+  "15": {
+    "resultado": "Aprovado",
+    "nota": "A publicação com título de um caractere foi salva e mostrou o corpo Fronteira QA.",
+    "url": "http://127.0.0.1:56015/",
+    "capturas": [
+      "CT-015_2026-11-19.jpg"
+    ],
+    "snapshot": "- navigation:\n  - heading \"Flaskr\" [level=1]:\n    - link \"Flaskr\":\n      - /url: /\n  - list:\n    - generic: qa_autor_a\n    - link \"Log Out\":\n      - /url: /auth/logout\n- heading \"Posts\" [level=1]\n- link \"New\":\n  - /url: /create\n- article:\n  - heading \"X\" [level=1]\n  - generic: by qa_autor_a on 2026-11-19\n  - link \"Edit\":\n    - /url: /1/update\n  - paragraph: Fronteira QA.",
+    "hora": "2026-11-19T16:41:41.380Z",
+    "navegador": "Chrome 157.0.8103.79",
+    "dataLocal": "2026-11-19"
+  },
+  "16": {
+    "resultado": "Aprovado",
+    "nota": "A publicação foi salva com o título Sem corpo QA e o parágrafo do corpo ficou vazio.",
+    "url": "http://127.0.0.1:56016/",
+    "capturas": [
+      "CT-016_2026-11-19.jpg"
+    ],
+    "snapshot": "- navigation:\n  - heading \"Flaskr\" [level=1]:\n    - link \"Flaskr\":\n      - /url: /\n  - list:\n    - generic: qa_autor_a\n    - link \"Log Out\":\n      - /url: /auth/logout\n- heading \"Posts\" [level=1]\n- link \"New\":\n  - /url: /create\n- article:\n  - heading \"Sem corpo QA\" [level=1]\n  - generic: by qa_autor_a on 2026-11-19\n  - link \"Edit\":\n    - /url: /1/update\n  - paragraph",
+    "hora": "2026-11-19T16:41:42.503Z",
+    "navegador": "Chrome 157.0.8103.79",
+    "dataLocal": "2026-11-19"
+  },
+  "17": {
+    "resultado": "Aprovado",
+    "nota": "O formulário permaneceu em New Post, focou Title vazio e não publicou o rascunho. Posts permaneceu sem artigos.",
+    "url": "http://127.0.0.1:56017/",
+    "capturas": [
+      "CT-017_2026-11-19_01.jpg",
+      "CT-017_2026-11-19.jpg"
+    ],
+    "snapshot": "- navigation:\n  - heading \"Flaskr\" [level=1]:\n    - link \"Flaskr\":\n      - /url: /\n  - list:\n    - generic: qa_autor_a\n    - link \"Log Out\":\n      - /url: /auth/logout\n- heading \"Posts\" [level=1]\n- link \"New\":\n  - /url: /create",
+    "hora": "2026-11-19T16:41:43.986Z",
+    "validacaoNativa": {
+      "foco": "title",
+      "mensagem": "Please fill out this field.",
+      "obrigatorio": true,
+      "vazio": true
+    },
+    "navegador": "Chrome 157.0.8103.79",
+    "dataLocal": "2026-11-19"
+  },
+  "18": {
+    "resultado": "Aprovado",
+    "nota": "Posts exibiu Post A revisado e Corpo A revisado sob autoria de qa_autor_a. O título antigo não apareceu.",
+    "url": "http://127.0.0.1:56018/",
+    "capturas": [
+      "CT-018_2026-11-19.jpg"
+    ],
+    "snapshot": "- navigation:\n  - heading \"Flaskr\" [level=1]:\n    - link \"Flaskr\":\n      - /url: /\n  - list:\n    - generic: qa_autor_a\n    - link \"Log Out\":\n      - /url: /auth/logout\n- heading \"Posts\" [level=1]\n- link \"New\":\n  - /url: /create\n- article:\n  - heading \"Post A revisado\" [level=1]\n  - generic: by qa_autor_a on 2026-01-10\n  - link \"Edit\":\n    - /url: /1/update\n  - paragraph: Corpo A revisado",
+    "hora": "2026-11-19T16:41:45.109Z",
+    "navegador": "Chrome 157.0.8103.79",
+    "dataLocal": "2026-11-19"
+  },
+  "19": {
+    "resultado": "Aprovado",
+    "nota": "O formulário bloqueou o título vazio e manteve o editor aberto. A listagem conservou o título Post A e o corpo Corpo A.",
+    "url": "http://127.0.0.1:56019/",
+    "capturas": [
+      "CT-019_2026-11-19_01.jpg",
+      "CT-019_2026-11-19.jpg"
+    ],
+    "snapshot": "- navigation:\n  - heading \"Flaskr\" [level=1]:\n    - link \"Flaskr\":\n      - /url: /\n  - list:\n    - generic: qa_autor_a\n    - link \"Log Out\":\n      - /url: /auth/logout\n- heading \"Posts\" [level=1]\n- link \"New\":\n  - /url: /create\n- article:\n  - heading \"Post A\" [level=1]\n  - generic: by qa_autor_a on 2026-01-10\n  - link \"Edit\":\n    - /url: /1/update\n  - paragraph: Corpo A",
+    "hora": "2026-11-19T16:41:46.794Z",
+    "validacaoNativa": {
+      "foco": "title",
+      "mensagem": "Please fill out this field.",
+      "obrigatorio": true,
+      "vazio": true
+    },
+    "navegador": "Chrome 157.0.8103.79",
+    "dataLocal": "2026-11-19"
+  },
+  "20": {
+    "resultado": "Aprovado",
+    "nota": "Ao abrir o endereço Edit pela conta B, o Flaskr exibiu Forbidden. A conta A voltou a ver Post A e Corpo A intactos. Log HTTP confirmou 403.",
+    "url": "http://127.0.0.1:56020/",
+    "capturas": [
+      "CT-020_2026-11-19_01.jpg",
+      "CT-020_2026-11-19.jpg"
+    ],
+    "snapshot": "- navigation:\n  - heading \"Flaskr\" [level=1]:\n    - link \"Flaskr\":\n      - /url: /\n  - list:\n    - generic: qa_autor_a\n    - link \"Log Out\":\n      - /url: /auth/logout\n- heading \"Posts\" [level=1]\n- link \"New\":\n  - /url: /create\n- article:\n  - heading \"Post A\" [level=1]\n  - generic: by qa_autor_a on 2026-01-10\n  - link \"Edit\":\n    - /url: /1/update\n  - paragraph: Corpo A",
+    "hora": "2026-11-19T16:41:49.295Z",
+    "http": [
+      "56020 GET /favicon.ico 404",
+      "56020 GET /1/update 403"
+    ],
+    "navegador": "Chrome 157.0.8103.79",
+    "dataLocal": "2026-11-19"
+  },
+  "21": {
+    "resultado": "Aprovado",
+    "nota": "A rota /1/update para um post inexistente exibiu Not Found e não abriu o editor. Log HTTP confirmou 404.",
+    "url": "http://127.0.0.1:56021/1/update",
+    "capturas": [
+      "CT-021_2026-11-19.jpg"
+    ],
+    "snapshot": "- heading \"Not Found\" [level=1]\n- paragraph: Post id 1 doesn't exist.",
+    "hora": "2026-11-19T16:41:50.280Z",
+    "http": [
+      "56021 GET /favicon.ico 404",
+      "56021 GET /1/update 404"
+    ],
+    "navegador": "Chrome 157.0.8103.79",
+    "dataLocal": "2026-11-19"
+  },
+  "22": {
+    "resultado": "Aprovado",
+    "nota": "O diálogo de confirmação abriu e foi cancelado. O editor permaneceu aberto e Posts preservou Post A e Post B.",
+    "url": "http://127.0.0.1:56022/",
+    "capturas": [
+      "CT-022_2026-11-19_01.jpg",
+      "CT-022_2026-11-19_02.jpg",
+      "CT-022_2026-11-19.jpg"
+    ],
+    "snapshot": "- navigation:\n  - heading \"Flaskr\" [level=1]:\n    - link \"Flaskr\":\n      - /url: /\n  - list:\n    - generic: qa_autor_a\n    - link \"Log Out\":\n      - /url: /auth/logout\n- heading \"Posts\" [level=1]\n- link \"New\":\n  - /url: /create\n- article:\n  - heading \"Post B\" [level=1]\n  - generic: by qa_autor_a on 2026-01-10\n  - link \"Edit\":\n    - /url: /2/update\n  - paragraph: Corpo B\n- separator\n- article:\n  - heading \"Post A\" [level=1]\n  - generic: by qa_autor_a on 2026-01-10\n  - link \"Edit\":\n    - /url: /1/update\n  - paragraph: Corpo A",
+    "hora": "2026-11-19T16:42:08.509Z",
+    "dialogo": "confirm, cancelado",
+    "navegador": "Chrome 157.0.8103.79",
+    "dataLocal": "2026-11-19"
+  },
+  "23": {
+    "resultado": "Aprovado",
+    "nota": "Após confirmar, Post A saiu da lista. Post B permaneceu com Corpo B e a autoria original.",
+    "url": "http://127.0.0.1:56023/",
+    "capturas": [
+      "CT-023_2026-11-19_01.jpg",
+      "CT-023_2026-11-19.jpg"
+    ],
+    "snapshot": "- navigation:\n  - heading \"Flaskr\" [level=1]:\n    - link \"Flaskr\":\n      - /url: /\n  - list:\n    - generic: qa_autor_a\n    - link \"Log Out\":\n      - /url: /auth/logout\n- heading \"Posts\" [level=1]\n- link \"New\":\n  - /url: /create\n- article:\n  - heading \"Post B\" [level=1]\n  - generic: by qa_autor_a on 2026-01-10\n  - link \"Edit\":\n    - /url: /2/update\n  - paragraph: Corpo B",
+    "hora": "2026-11-19T16:42:55.591Z",
+    "dialogo": "confirm, aceito",
+    "navegador": "Chrome 157.0.8103.79",
+    "dataLocal": "2026-11-19"
+  },
+  "24": {
+    "resultado": "Aprovado",
+    "nota": "A primeira exclusão retirou Post A da lista. Confirmar pelo editor desatualizado exibiu Not Found e preservou Post B. Log HTTP confirmou 404.",
+    "url": "http://127.0.0.1:56024/",
+    "capturas": [
+      "CT-024_2026-11-19_01.jpg",
+      "CT-024_2026-11-19_02.jpg",
+      "CT-024_2026-11-19.jpg"
+    ],
+    "snapshot": "- navigation:\n  - heading \"Flaskr\" [level=1]:\n    - link \"Flaskr\":\n      - /url: /\n  - list:\n    - generic: qa_autor_a\n    - link \"Log Out\":\n      - /url: /auth/logout\n- heading \"Posts\" [level=1]\n- link \"New\":\n  - /url: /create\n- article:\n  - heading \"Post B\" [level=1]\n  - generic: by qa_autor_a on 2026-01-10\n  - link \"Edit\":\n    - /url: /2/update\n  - paragraph: Corpo B",
+    "hora": "2026-11-19T16:42:57.914Z",
+    "http": [
+      "56024 GET /favicon.ico 404",
+      "56024 POST /1/delete 404"
+    ],
+    "navegador": "Chrome 157.0.8103.79",
+    "dataLocal": "2026-11-19"
+  },
+  "25": {
+    "resultado": "Aprovado",
+    "nota": "Mudei para a conta B em outra aba da mesma sessão. O envio pelo editor antigo exibiu Forbidden. Post A e Corpo A permaneceram. Log HTTP confirmou 403.",
+    "url": "http://127.0.0.1:56025/",
+    "capturas": [
+      "CT-025_2026-11-19_01.jpg",
+      "CT-025_2026-11-19_02.jpg",
+      "CT-025_2026-11-19.jpg"
+    ],
+    "snapshot": "- navigation:\n  - heading \"Flaskr\" [level=1]:\n    - link \"Flaskr\":\n      - /url: /\n  - list:\n    - generic: qa_autor_b\n    - link \"Log Out\":\n      - /url: /auth/logout\n- heading \"Posts\" [level=1]\n- link \"New\":\n  - /url: /create\n- article:\n  - heading \"Post A\" [level=1]\n  - generic: by qa_autor_a on 2026-01-10\n  - paragraph: Corpo A",
+    "hora": "2026-11-19T16:43:00.718Z",
+    "http": [
+      "56025 GET /favicon.ico 404",
+      "56025 POST /1/delete 403"
+    ],
+    "navegador": "Chrome 157.0.8103.79",
+    "dataLocal": "2026-11-19"
+  },
+  "26": {
+    "resultado": "Aprovado",
+    "nota": "O cadastro redirecionou a Log In. O HTML retornado não continha a senha. SQLite confirmou um único registro, armazenamento diferente da entrada e hash verificável.",
+    "url": "http://127.0.0.1:56026/auth/login",
+    "capturas": [
+      "CT-026_2026-11-19.jpg"
+    ],
+    "snapshot": "- navigation:\n  - heading \"Flaskr\" [level=1]:\n    - link \"Flaskr\":\n      - /url: /\n  - list:\n    - link \"Register\":\n      - /url: /auth/register\n    - link \"Log In\":\n      - /url: /auth/login\n- heading \"Log In\" [level=1]\n- generic: Username\n- textbox \"Username\"\n- generic: Password\n- textbox \"Password\"\n- button \"Log In\"",
+    "hora": "2026-11-19T16:43:01.427Z",
+    "provaTecnica": "2026-11-19_CT-026_validacao_sqlite_html.txt",
+    "navegador": "Chrome 157.0.8103.79",
+    "dataLocal": "2026-11-19"
+  },
+  "27": {
+    "resultado": "Aprovado",
+    "nota": "Após encerrar e iniciar outro processo com o mesmo SQLite, Posts sem sessão exibiu Post A persistente, Corpo persistente e Post B com Corpo B.",
+    "url": "http://127.0.0.1:56027/",
+    "capturas": [
+      "CT-027_2026-11-19_01.jpg",
+      "CT-027_2026-11-19.jpg"
+    ],
+    "snapshot": "- navigation:\n  - heading \"Flaskr\" [level=1]:\n    - link \"Flaskr\":\n      - /url: /\n  - list:\n    - link \"Register\":\n      - /url: /auth/register\n    - link \"Log In\":\n      - /url: /auth/login\n- heading \"Posts\" [level=1]\n- article:\n  - heading \"Post B\" [level=1]\n  - generic: by qa_autor_a on 2026-01-10\n  - paragraph: Corpo B\n- separator\n- article:\n  - heading \"Post A persistente\" [level=1]\n  - generic: by qa_autor_a on 2026-01-10\n  - paragraph: Corpo persistente",
+    "hora": "2026-11-19T16:44:15.508Z",
+    "provaTecnica": [
+      "2026-11-19_CT-027_reinicio.txt",
+      "2026-11-19_CT-027_novo_processo.txt"
+    ],
+    "navegador": "Chrome 157.0.8103.79",
+    "dataLocal": "2026-11-19"
+  },
+  "28": {
+    "resultado": "Bloqueado",
+    "nota": "No Safari 26.4, Tab alcançou os campos, mas pulou links e o botão Register. Option+Tab deu foco visível aos controles e permitiu cadastro e login. A publicação usando Tab na configuração prevista ficou pendente.",
+    "url": "http://127.0.0.1:56028/",
+    "capturas": [
+      "CT-028_2026-11-19_04_register_botao.jpg",
+      "CT-028_2026-11-19_01_register_link.jpg",
+      "CT-028_2026-11-19_02_username.jpg",
+      "CT-028_2026-11-19_03_password.jpg",
+      "CT-028_2026-11-19_05_register_option_tab.jpg",
+      "CT-028_2026-11-19_06_login_botao.jpg"
+    ],
+    "hora": null,
+    "http": [
+      "56028 POST /auth/register 302",
+      "56028 POST /auth/login 302"
+    ],
+    "navegador": "Safari 26.4",
+    "dataLocal": "2026-11-19"
+  }
+}

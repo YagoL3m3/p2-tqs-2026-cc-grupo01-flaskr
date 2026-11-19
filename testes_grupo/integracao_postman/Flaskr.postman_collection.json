@@ -1,0 +1,2730 @@
+{
+  "info": {
+    "name": "Flaskr | Etapa 6 | Integração HTTP",
+    "description": "Validação do contrato HTTP e HTML das rotas do Flaskr com formulários URL-encoded, cookies reais de sessão e SQLite descartável. Cada pasta tem preparação própria e pode ser executada sozinha com uma instância local limpa.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "event": [
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "exec": [
+          "pm.test(\"Resposta com representação HTML\", () => {",
+          "  pm.response.to.have.header('Content-Type');",
+          "  pm.expect(pm.response.headers.get('Content-Type')).to.match(/^text\\/html(?:;|$)/i);",
+          "});"
+        ]
+      }
+    }
+  ],
+  "item": [
+    {
+      "name": "AUT-I-01 Cadastrar conta inédita",
+      "description": "CT-001 | RF-01. Confirma o redirecionamento e a possibilidade de autenticação com a nova conta.",
+      "item": [
+        {
+          "name": "Enviar cadastro válido",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 302\", () => {",
+                  "  pm.response.to.have.status(302);",
+                  "});",
+                  "pm.test(\"Location aponta para /auth/login\", () => {",
+                  "  pm.expect(pm.response.headers.get('Location')).to.eql(\"/auth/login\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/auth/register",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "register"
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "qa_i01_cadastro",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "{{senhaFicticia}}",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Autenticar com a conta recém-cadastrada",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 302\", () => {",
+                  "  pm.response.to.have.status(302);",
+                  "});",
+                  "pm.test(\"Location aponta para /\", () => {",
+                  "  pm.expect(pm.response.headers.get('Location')).to.eql(\"/\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/auth/login",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "qa_i01_cadastro",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "{{senhaFicticia}}",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Ver a conta recém-cadastrada na página inicial",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", () => {",
+                  "  pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"Posts mantém o nome e o link Log Out\", () => {",
+                  "  const html = pm.response.text();",
+                  "  pm.expect(html).to.include(\"<h1>Posts</h1>\");",
+                  "  pm.expect(html).to.include(\"<li><span>qa_i01_cadastro</span>\");",
+                  "  pm.expect(html).to.include(\"href=\\\"/auth/logout\\\"\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "AUT-I-02 Rejeitar cadastro duplicado",
+      "description": "CT-004 | RF-01. A restrição de unicidade preserva a credencial original.",
+      "item": [
+        {
+          "name": "Preparar conta fictícia",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 302\", () => {",
+                  "  pm.response.to.have.status(302);",
+                  "});",
+                  "pm.test(\"Location aponta para /auth/login\", () => {",
+                  "  pm.expect(pm.response.headers.get('Location')).to.eql(\"/auth/login\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/auth/register",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "register"
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "qa_i02_duplicado",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "{{senhaFicticia}}",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Enviar o mesmo nome com outra senha",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", () => {",
+                  "  pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"Register exibe a mensagem de duplicidade\", () => {",
+                  "  const html = pm.response.text();",
+                  "  pm.expect(html).to.include(\"<h1>Register</h1>\");",
+                  "  pm.expect(html).to.include(\"User qa_i02_duplicado is already registered.\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/auth/register",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "register"
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "qa_i02_duplicado",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "{{senhaIncorreta}}",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Autenticar com a senha do primeiro cadastro",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 302\", () => {",
+                  "  pm.response.to.have.status(302);",
+                  "});",
+                  "pm.test(\"Location aponta para /\", () => {",
+                  "  pm.expect(pm.response.headers.get('Location')).to.eql(\"/\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/auth/login",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "qa_i02_duplicado",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "{{senhaFicticia}}",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Conferir a sessão com a credencial original",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", () => {",
+                  "  pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"Posts mantém o nome e o link Log Out\", () => {",
+                  "  const html = pm.response.text();",
+                  "  pm.expect(html).to.include(\"<h1>Posts</h1>\");",
+                  "  pm.expect(html).to.include(\"<li><span>qa_i02_duplicado</span>\");",
+                  "  pm.expect(html).to.include(\"href=\\\"/auth/logout\\\"\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "AUT-I-03 Autenticar e manter a sessão",
+      "description": "CT-006 | RF-02. O cookie emitido no login mantém a conta visível em duas consultas consecutivas.",
+      "item": [
+        {
+          "name": "Preparar conta fictícia",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 302\", () => {",
+                  "  pm.response.to.have.status(302);",
+                  "});",
+                  "pm.test(\"Location aponta para /auth/login\", () => {",
+                  "  pm.expect(pm.response.headers.get('Location')).to.eql(\"/auth/login\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/auth/register",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "register"
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "qa_i03_login",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "{{senhaFicticia}}",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Enviar credenciais válidas",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 302\", () => {",
+                  "  pm.response.to.have.status(302);",
+                  "});",
+                  "pm.test(\"Location aponta para /\", () => {",
+                  "  pm.expect(pm.response.headers.get('Location')).to.eql(\"/\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/auth/login",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "qa_i03_login",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "{{senhaFicticia}}",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Consultar Posts após autenticação",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", () => {",
+                  "  pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"Posts mantém o nome e o link Log Out\", () => {",
+                  "  const html = pm.response.text();",
+                  "  pm.expect(html).to.include(\"<h1>Posts</h1>\");",
+                  "  pm.expect(html).to.include(\"<li><span>qa_i03_login</span>\");",
+                  "  pm.expect(html).to.include(\"href=\\\"/auth/logout\\\"\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Consultar Posts novamente com o cookie",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", () => {",
+                  "  pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"Posts mantém o nome e o link Log Out\", () => {",
+                  "  const html = pm.response.text();",
+                  "  pm.expect(html).to.include(\"<h1>Posts</h1>\");",
+                  "  pm.expect(html).to.include(\"<li><span>qa_i03_login</span>\");",
+                  "  pm.expect(html).to.include(\"href=\\\"/auth/logout\\\"\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "AUT-I-04 Rejeitar senha incorreta",
+      "description": "CT-008 | RF-02. A credencial incorreta exibe mensagem e mantém a rota de criação protegida.",
+      "item": [
+        {
+          "name": "Preparar conta fictícia",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 302\", () => {",
+                  "  pm.response.to.have.status(302);",
+                  "});",
+                  "pm.test(\"Location aponta para /auth/login\", () => {",
+                  "  pm.expect(pm.response.headers.get('Location')).to.eql(\"/auth/login\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/auth/register",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "register"
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "qa_i04_credencial",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "{{senhaFicticia}}",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Preparar sessão anônima",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 302\", () => {",
+                  "  pm.response.to.have.status(302);",
+                  "});",
+                  "pm.test(\"Location aponta para /\", () => {",
+                  "  pm.expect(pm.response.headers.get('Location')).to.eql(\"/\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/auth/logout",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "logout"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Enviar senha incorreta da conta cadastrada",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", () => {",
+                  "  pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"Log In exibe a mensagem de senha incorreta\", () => {",
+                  "  const html = pm.response.text();",
+                  "  pm.expect(html).to.include(\"<h1>Log In</h1>\");",
+                  "  pm.expect(html).to.include(\"Incorrect password.\");",
+                  "  pm.expect(html).not.to.include(\"href=\\\"/auth/logout\\\"\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/auth/login",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "qa_i04_credencial",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "{{senhaIncorreta}}",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Confirmar que New Post exige sessão",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 302\", () => {",
+                  "  pm.response.to.have.status(302);",
+                  "});",
+                  "pm.test(\"Location aponta para /auth/login\", () => {",
+                  "  pm.expect(pm.response.headers.get('Location')).to.eql(\"/auth/login\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/create",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "create"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "AUT-I-05 Publicar com título, corpo e autor",
+      "description": "CT-014 | RF-05. O POST grava uma publicação associada à sessão e a listagem exibe seus dados.",
+      "item": [
+        {
+          "name": "Preparar conta fictícia",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 302\", () => {",
+                  "  pm.response.to.have.status(302);",
+                  "});",
+                  "pm.test(\"Location aponta para /auth/login\", () => {",
+                  "  pm.expect(pm.response.headers.get('Location')).to.eql(\"/auth/login\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/auth/register",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "register"
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "qa_i05_publicacao",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "{{senhaFicticia}}",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Preparar sessão autenticada",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 302\", () => {",
+                  "  pm.response.to.have.status(302);",
+                  "});",
+                  "pm.test(\"Location aponta para /\", () => {",
+                  "  pm.expect(pm.response.headers.get('Location')).to.eql(\"/\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/auth/login",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "qa_i05_publicacao",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "{{senhaFicticia}}",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Enviar publicação válida",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 302\", () => {",
+                  "  pm.response.to.have.status(302);",
+                  "});",
+                  "pm.test(\"Location aponta para /\", () => {",
+                  "  pm.expect(pm.response.headers.get('Location')).to.eql(\"/\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/create",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "create"
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "title",
+                  "value": "I05 Rotina QA",
+                  "type": "text"
+                },
+                {
+                  "key": "body",
+                  "value": "Corpo ficticio I05",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Ler a publicação e a autoria em Posts",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", () => {",
+                  "  pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"Artigo I05 Rotina QA contém corpo e autoria esperados\", () => {",
+                  "  const html = pm.response.text();",
+                  "  const artigos = html.match(/<article\\b[^>]*>[\\s\\S]*?<\\/article>/g) || [];",
+                  "  const encontrados = artigos.filter(a => a.includes(\"<h1>I05 Rotina QA</h1>\"));",
+                  "  pm.expect(encontrados, 'artigo com o título esperado').to.have.lengthOf(1);",
+                  "  const artigo = encontrados[0];",
+                  "  pm.expect(artigo).to.include(\"<p class=\\\"body\\\">Corpo ficticio I05</p>\");",
+                  "  pm.expect(artigo).to.include(\"by qa_i05_publicacao on \");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "AUT-I-06 Rejeitar criação com título vazio",
+      "description": "CT-017 | RF-05. Verifica a validação do servidor, que complementa o bloqueio nativo do formulário.",
+      "item": [
+        {
+          "name": "Preparar conta fictícia",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 302\", () => {",
+                  "  pm.response.to.have.status(302);",
+                  "});",
+                  "pm.test(\"Location aponta para /auth/login\", () => {",
+                  "  pm.expect(pm.response.headers.get('Location')).to.eql(\"/auth/login\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/auth/register",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "register"
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "qa_i06_titulo",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "{{senhaFicticia}}",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Preparar sessão autenticada",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 302\", () => {",
+                  "  pm.response.to.have.status(302);",
+                  "});",
+                  "pm.test(\"Location aponta para /\", () => {",
+                  "  pm.expect(pm.response.headers.get('Location')).to.eql(\"/\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/auth/login",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "qa_i06_titulo",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "{{senhaFicticia}}",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Enviar título vazio e corpo preenchido",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", () => {",
+                  "  pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"New Post informa a obrigatoriedade do título\", () => {",
+                  "  const html = pm.response.text();",
+                  "  pm.expect(html).to.include(\"<h1>New Post</h1>\");",
+                  "  pm.expect(html).to.include(\"Title is required.\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/create",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "create"
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "title",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "body",
+                  "value": "Rascunho I06",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Conferir que o rascunho não foi publicado",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", () => {",
+                  "  pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"Posts não exibe o corpo do rascunho\", () => {",
+                  "  const html = pm.response.text();",
+                  "  pm.expect(html).to.include(\"<h1>Posts</h1>\");",
+                  "  pm.expect(html).not.to.include(\"Rascunho I06\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "AUT-I-07 Editar publicação como autor",
+      "description": "CT-018 | RF-06. O ID vem do HTML da listagem. A requisição salva título e corpo no artigo selecionado.",
+      "item": [
+        {
+          "name": "Preparar conta fictícia",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 302\", () => {",
+                  "  pm.response.to.have.status(302);",
+                  "});",
+                  "pm.test(\"Location aponta para /auth/login\", () => {",
+                  "  pm.expect(pm.response.headers.get('Location')).to.eql(\"/auth/login\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/auth/register",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "register"
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "qa_i07_edicao",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "{{senhaFicticia}}",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Preparar sessão autenticada",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 302\", () => {",
+                  "  pm.response.to.have.status(302);",
+                  "});",
+                  "pm.test(\"Location aponta para /\", () => {",
+                  "  pm.expect(pm.response.headers.get('Location')).to.eql(\"/\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/auth/login",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "qa_i07_edicao",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "{{senhaFicticia}}",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Preparar publicação do autor",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 302\", () => {",
+                  "  pm.response.to.have.status(302);",
+                  "});",
+                  "pm.test(\"Location aponta para /\", () => {",
+                  "  pm.expect(pm.response.headers.get('Location')).to.eql(\"/\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/create",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "create"
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "title",
+                  "value": "I07 Original QA",
+                  "type": "text"
+                },
+                {
+                  "key": "body",
+                  "value": "Corpo original I07",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obter o ID pelo link Edit do artigo preparado",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", () => {",
+                  "  pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"Artigo I07 Original QA contém corpo e autoria esperados\", () => {",
+                  "  const html = pm.response.text();",
+                  "  const artigos = html.match(/<article\\b[^>]*>[\\s\\S]*?<\\/article>/g) || [];",
+                  "  const encontrados = artigos.filter(a => a.includes(\"<h1>I07 Original QA</h1>\"));",
+                  "  pm.expect(encontrados, 'artigo com o título esperado').to.have.lengthOf(1);",
+                  "  const artigo = encontrados[0];",
+                  "  pm.expect(artigo).to.include(\"<p class=\\\"body\\\">Corpo original I07</p>\");",
+                  "  pm.expect(artigo).to.include(\"by qa_i07_edicao on \");",
+                  "  const link = artigo.match(/href=\"\\/(\\d+)\\/update\"/);",
+                  "  pm.expect(link, 'link Edit do artigo da preparação').not.to.be.null;",
+                  "  pm.variables.set(\"postIdI07\", link[1]);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Salvar novo título e novo corpo",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 302\", () => {",
+                  "  pm.response.to.have.status(302);",
+                  "});",
+                  "pm.test(\"Location aponta para /\", () => {",
+                  "  pm.expect(pm.response.headers.get('Location')).to.eql(\"/\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/{{postIdI07}}/update",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "{{postIdI07}}",
+                "update"
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "title",
+                  "value": "I07 Revisado QA",
+                  "type": "text"
+                },
+                {
+                  "key": "body",
+                  "value": "Corpo revisado I07",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Conferir a versão revisada em Posts",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", () => {",
+                  "  pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"Artigo I07 Revisado QA contém corpo e autoria esperados\", () => {",
+                  "  const html = pm.response.text();",
+                  "  const artigos = html.match(/<article\\b[^>]*>[\\s\\S]*?<\\/article>/g) || [];",
+                  "  const encontrados = artigos.filter(a => a.includes(\"<h1>I07 Revisado QA</h1>\"));",
+                  "  pm.expect(encontrados, 'artigo com o título esperado').to.have.lengthOf(1);",
+                  "  const artigo = encontrados[0];",
+                  "  pm.expect(artigo).to.include(\"<p class=\\\"body\\\">Corpo revisado I07</p>\");",
+                  "  pm.expect(artigo).to.include(\"by qa_i07_edicao on \");",
+                  "  pm.expect(html).not.to.include(\"<h1>I07 Original QA</h1>\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "AUT-I-08 Rejeitar edição com título vazio",
+      "description": "CT-019 | RF-06. A validação de servidor preserva os dados existentes ao receber título vazio.",
+      "item": [
+        {
+          "name": "Preparar conta fictícia",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 302\", () => {",
+                  "  pm.response.to.have.status(302);",
+                  "});",
+                  "pm.test(\"Location aponta para /auth/login\", () => {",
+                  "  pm.expect(pm.response.headers.get('Location')).to.eql(\"/auth/login\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/auth/register",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "register"
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "qa_i08_titulo",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "{{senhaFicticia}}",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Preparar sessão autenticada",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 302\", () => {",
+                  "  pm.response.to.have.status(302);",
+                  "});",
+                  "pm.test(\"Location aponta para /\", () => {",
+                  "  pm.expect(pm.response.headers.get('Location')).to.eql(\"/\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/auth/login",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "qa_i08_titulo",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "{{senhaFicticia}}",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Preparar publicação do autor",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 302\", () => {",
+                  "  pm.response.to.have.status(302);",
+                  "});",
+                  "pm.test(\"Location aponta para /\", () => {",
+                  "  pm.expect(pm.response.headers.get('Location')).to.eql(\"/\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/create",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "create"
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "title",
+                  "value": "I08 Original QA",
+                  "type": "text"
+                },
+                {
+                  "key": "body",
+                  "value": "Corpo original I08",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obter o ID pelo link Edit do artigo preparado",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", () => {",
+                  "  pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"Artigo I08 Original QA contém corpo e autoria esperados\", () => {",
+                  "  const html = pm.response.text();",
+                  "  const artigos = html.match(/<article\\b[^>]*>[\\s\\S]*?<\\/article>/g) || [];",
+                  "  const encontrados = artigos.filter(a => a.includes(\"<h1>I08 Original QA</h1>\"));",
+                  "  pm.expect(encontrados, 'artigo com o título esperado').to.have.lengthOf(1);",
+                  "  const artigo = encontrados[0];",
+                  "  pm.expect(artigo).to.include(\"<p class=\\\"body\\\">Corpo original I08</p>\");",
+                  "  pm.expect(artigo).to.include(\"by qa_i08_titulo on \");",
+                  "  const link = artigo.match(/href=\"\\/(\\d+)\\/update\"/);",
+                  "  pm.expect(link, 'link Edit do artigo da preparação').not.to.be.null;",
+                  "  pm.variables.set(\"postIdI08\", link[1]);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Enviar edição com título vazio",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", () => {",
+                  "  pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"O editor informa a obrigatoriedade do título\", () => {",
+                  "  const html = pm.response.text();",
+                  "  pm.expect(html).to.include(\"Title is required.\");",
+                  "  pm.expect(html).to.include(\"value=\\\"I08 Original QA\\\"\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/{{postIdI08}}/update",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "{{postIdI08}}",
+                "update"
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "title",
+                  "value": "",
+                  "type": "text"
+                },
+                {
+                  "key": "body",
+                  "value": "Rascunho I08",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Conferir o artigo original em Posts",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", () => {",
+                  "  pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"Artigo I08 Original QA contém corpo e autoria esperados\", () => {",
+                  "  const html = pm.response.text();",
+                  "  const artigos = html.match(/<article\\b[^>]*>[\\s\\S]*?<\\/article>/g) || [];",
+                  "  const encontrados = artigos.filter(a => a.includes(\"<h1>I08 Original QA</h1>\"));",
+                  "  pm.expect(encontrados, 'artigo com o título esperado').to.have.lengthOf(1);",
+                  "  const artigo = encontrados[0];",
+                  "  pm.expect(artigo).to.include(\"<p class=\\\"body\\\">Corpo original I08</p>\");",
+                  "  pm.expect(artigo).to.include(\"by qa_i08_titulo on \");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "AUT-I-09 Excluir somente o post selecionado",
+      "description": "CT-023 | RF-07. Verifica o POST da exclusão confirmada e a permanência do artigo de controle.",
+      "item": [
+        {
+          "name": "Preparar conta fictícia",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 302\", () => {",
+                  "  pm.response.to.have.status(302);",
+                  "});",
+                  "pm.test(\"Location aponta para /auth/login\", () => {",
+                  "  pm.expect(pm.response.headers.get('Location')).to.eql(\"/auth/login\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/auth/register",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "register"
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "qa_i09_exclusao",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "{{senhaFicticia}}",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Preparar sessão autenticada",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 302\", () => {",
+                  "  pm.response.to.have.status(302);",
+                  "});",
+                  "pm.test(\"Location aponta para /\", () => {",
+                  "  pm.expect(pm.response.headers.get('Location')).to.eql(\"/\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/auth/login",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "qa_i09_exclusao",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "{{senhaFicticia}}",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Preparar publicação alvo",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 302\", () => {",
+                  "  pm.response.to.have.status(302);",
+                  "});",
+                  "pm.test(\"Location aponta para /\", () => {",
+                  "  pm.expect(pm.response.headers.get('Location')).to.eql(\"/\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/create",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "create"
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "title",
+                  "value": "I09 Alvo QA",
+                  "type": "text"
+                },
+                {
+                  "key": "body",
+                  "value": "Corpo do alvo I09",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Preparar publicação de controle",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 302\", () => {",
+                  "  pm.response.to.have.status(302);",
+                  "});",
+                  "pm.test(\"Location aponta para /\", () => {",
+                  "  pm.expect(pm.response.headers.get('Location')).to.eql(\"/\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/create",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "create"
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "title",
+                  "value": "I09 Controle QA",
+                  "type": "text"
+                },
+                {
+                  "key": "body",
+                  "value": "Corpo de controle I09",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obter o ID pelo link Edit do artigo preparado",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", () => {",
+                  "  pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"Artigo I09 Alvo QA contém corpo e autoria esperados\", () => {",
+                  "  const html = pm.response.text();",
+                  "  const artigos = html.match(/<article\\b[^>]*>[\\s\\S]*?<\\/article>/g) || [];",
+                  "  const encontrados = artigos.filter(a => a.includes(\"<h1>I09 Alvo QA</h1>\"));",
+                  "  pm.expect(encontrados, 'artigo com o título esperado').to.have.lengthOf(1);",
+                  "  const artigo = encontrados[0];",
+                  "  pm.expect(artigo).to.include(\"<p class=\\\"body\\\">Corpo do alvo I09</p>\");",
+                  "  pm.expect(artigo).to.include(\"by qa_i09_exclusao on \");",
+                  "  const link = artigo.match(/href=\"\\/(\\d+)\\/update\"/);",
+                  "  pm.expect(link, 'link Edit do artigo da preparação').not.to.be.null;",
+                  "  pm.variables.set(\"postIdI09\", link[1]);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Excluir a publicação selecionada",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 302\", () => {",
+                  "  pm.response.to.have.status(302);",
+                  "});",
+                  "pm.test(\"Location aponta para /\", () => {",
+                  "  pm.expect(pm.response.headers.get('Location')).to.eql(\"/\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/{{postIdI09}}/delete",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "{{postIdI09}}",
+                "delete"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Conferir o controle preservado e o alvo ausente",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", () => {",
+                  "  pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"Artigo I09 Controle QA contém corpo e autoria esperados\", () => {",
+                  "  const html = pm.response.text();",
+                  "  const artigos = html.match(/<article\\b[^>]*>[\\s\\S]*?<\\/article>/g) || [];",
+                  "  const encontrados = artigos.filter(a => a.includes(\"<h1>I09 Controle QA</h1>\"));",
+                  "  pm.expect(encontrados, 'artigo com o título esperado').to.have.lengthOf(1);",
+                  "  const artigo = encontrados[0];",
+                  "  pm.expect(artigo).to.include(\"<p class=\\\"body\\\">Corpo de controle I09</p>\");",
+                  "  pm.expect(artigo).to.include(\"by qa_i09_exclusao on \");",
+                  "  pm.expect(html).not.to.include(\"<h1>I09 Alvo QA</h1>\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "AUT-I-10 Tratar nova exclusão do mesmo post",
+      "description": "CT-024 | RF-07. Uma segunda solicitação para o ID já removido recebe 404 e preserva o artigo de controle.",
+      "item": [
+        {
+          "name": "Preparar conta fictícia",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 302\", () => {",
+                  "  pm.response.to.have.status(302);",
+                  "});",
+                  "pm.test(\"Location aponta para /auth/login\", () => {",
+                  "  pm.expect(pm.response.headers.get('Location')).to.eql(\"/auth/login\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/auth/register",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "register"
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "qa_i10_exclusao",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "{{senhaFicticia}}",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Preparar sessão autenticada",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 302\", () => {",
+                  "  pm.response.to.have.status(302);",
+                  "});",
+                  "pm.test(\"Location aponta para /\", () => {",
+                  "  pm.expect(pm.response.headers.get('Location')).to.eql(\"/\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/auth/login",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "qa_i10_exclusao",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "{{senhaFicticia}}",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Preparar publicação alvo",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 302\", () => {",
+                  "  pm.response.to.have.status(302);",
+                  "});",
+                  "pm.test(\"Location aponta para /\", () => {",
+                  "  pm.expect(pm.response.headers.get('Location')).to.eql(\"/\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/create",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "create"
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "title",
+                  "value": "I10 Alvo QA",
+                  "type": "text"
+                },
+                {
+                  "key": "body",
+                  "value": "Corpo do alvo I10",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Preparar publicação de controle",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 302\", () => {",
+                  "  pm.response.to.have.status(302);",
+                  "});",
+                  "pm.test(\"Location aponta para /\", () => {",
+                  "  pm.expect(pm.response.headers.get('Location')).to.eql(\"/\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/create",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "create"
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "title",
+                  "value": "I10 Controle QA",
+                  "type": "text"
+                },
+                {
+                  "key": "body",
+                  "value": "Corpo de controle I10",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Obter o ID pelo link Edit do artigo preparado",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", () => {",
+                  "  pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"Artigo I10 Alvo QA contém corpo e autoria esperados\", () => {",
+                  "  const html = pm.response.text();",
+                  "  const artigos = html.match(/<article\\b[^>]*>[\\s\\S]*?<\\/article>/g) || [];",
+                  "  const encontrados = artigos.filter(a => a.includes(\"<h1>I10 Alvo QA</h1>\"));",
+                  "  pm.expect(encontrados, 'artigo com o título esperado').to.have.lengthOf(1);",
+                  "  const artigo = encontrados[0];",
+                  "  pm.expect(artigo).to.include(\"<p class=\\\"body\\\">Corpo do alvo I10</p>\");",
+                  "  pm.expect(artigo).to.include(\"by qa_i10_exclusao on \");",
+                  "  const link = artigo.match(/href=\"\\/(\\d+)\\/update\"/);",
+                  "  pm.expect(link, 'link Edit do artigo da preparação').not.to.be.null;",
+                  "  pm.variables.set(\"postIdI10\", link[1]);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Excluir o alvo na primeira solicitação",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 302\", () => {",
+                  "  pm.response.to.have.status(302);",
+                  "});",
+                  "pm.test(\"Location aponta para /\", () => {",
+                  "  pm.expect(pm.response.headers.get('Location')).to.eql(\"/\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/{{postIdI10}}/delete",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "{{postIdI10}}",
+                "delete"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Repetir a solicitação para o alvo já excluído",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 404\", () => {",
+                  "  pm.response.to.have.status(404);",
+                  "});",
+                  "pm.test(\"A mensagem Not Found identifica o post ausente\", () => {",
+                  "  const html = pm.response.text();",
+                  "  pm.expect(html).to.include(\"<h1>Not Found</h1>\");",
+                  "  pm.expect(html).to.include(\"<p>Post \");",
+                  "  pm.expect(html).to.include(\"doesn&#39;t exist.\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/{{postIdI10}}/delete",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "{{postIdI10}}",
+                "delete"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Conferir que apenas a publicação de controle permanece",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", () => {",
+                  "  pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"Artigo I10 Controle QA contém corpo e autoria esperados\", () => {",
+                  "  const html = pm.response.text();",
+                  "  const artigos = html.match(/<article\\b[^>]*>[\\s\\S]*?<\\/article>/g) || [];",
+                  "  const encontrados = artigos.filter(a => a.includes(\"<h1>I10 Controle QA</h1>\"));",
+                  "  pm.expect(encontrados, 'artigo com o título esperado').to.have.lengthOf(1);",
+                  "  const artigo = encontrados[0];",
+                  "  pm.expect(artigo).to.include(\"<p class=\\\"body\\\">Corpo de controle I10</p>\");",
+                  "  pm.expect(artigo).to.include(\"by qa_i10_exclusao on \");",
+                  "  pm.expect(html).not.to.include(\"<h1>I10 Alvo QA</h1>\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "AUT-I-11 Encerrar sessão e proteger a criação",
+      "description": "CT-009 | RF-03. A sessão autoriza New Post antes de Log Out e o mesmo cliente volta ao estado anônimo depois.",
+      "item": [
+        {
+          "name": "Preparar conta fictícia",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 302\", () => {",
+                  "  pm.response.to.have.status(302);",
+                  "});",
+                  "pm.test(\"Location aponta para /auth/login\", () => {",
+                  "  pm.expect(pm.response.headers.get('Location')).to.eql(\"/auth/login\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/auth/register",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "register"
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "qa_i11_logout",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "{{senhaFicticia}}",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Preparar sessão autenticada",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 302\", () => {",
+                  "  pm.response.to.have.status(302);",
+                  "});",
+                  "pm.test(\"Location aponta para /\", () => {",
+                  "  pm.expect(pm.response.headers.get('Location')).to.eql(\"/\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/auth/login",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "login"
+              ]
+            },
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "username",
+                  "value": "qa_i11_logout",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "{{senhaFicticia}}",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Abrir New Post no início da sessão",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", () => {",
+                  "  pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"New Post contém o campo Title\", () => {",
+                  "  const html = pm.response.text();",
+                  "  pm.expect(html).to.include(\"<h1>New Post</h1>\");",
+                  "  pm.expect(html).to.include(\"id=\\\"title\\\"\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/create",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "create"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Encerrar a sessão",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 302\", () => {",
+                  "  pm.response.to.have.status(302);",
+                  "});",
+                  "pm.test(\"Location aponta para /\", () => {",
+                  "  pm.expect(pm.response.headers.get('Location')).to.eql(\"/\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/auth/logout",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "auth",
+                "logout"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Conferir menu anônimo em Posts",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 200\", () => {",
+                  "  pm.response.to.have.status(200);",
+                  "});",
+                  "pm.test(\"Menu exibe Log In e Register\", () => {",
+                  "  const html = pm.response.text();",
+                  "  pm.expect(html).to.include(\"href=\\\"/auth/login\\\"\");",
+                  "  pm.expect(html).to.include(\"href=\\\"/auth/register\\\"\");",
+                  "  pm.expect(html).not.to.include(\"href=\\\"/auth/logout\\\"\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Reabrir New Post após Log Out",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"HTTP 302\", () => {",
+                  "  pm.response.to.have.status(302);",
+                  "});",
+                  "pm.test(\"Location aponta para /auth/login\", () => {",
+                  "  pm.expect(pm.response.headers.get('Location')).to.eql(\"/auth/login\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "protocolProfileBehavior": {
+            "followRedirects": false
+          },
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/create",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "create"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+2026-11-19T19:08:12-0300 | pysonar --sonar-host-url http://127.0.0.1:59387 --project-key p2-flaskr-grupo01-local --sonar-project-version d7c225cf16e504fdfb92c9235762bf6ba3f0dc19
+INFO: Starting the analysis...
+INFO: Starting SonarScanner Engine...
+INFO: Java 21.0.13 Eclipse Adoptium (64-bit)
+INFO: Load global settings
+INFO: Load global settings (done) | time=114ms
+INFO: Server id: 147B411E-AaH1FNuWXJ2ONU1JlJ7y
+INFO: Loading required plugins
+INFO: Load plugins index
+INFO: Load plugins index (done) | time=31ms
+INFO: Load/download plugins
+INFO: Load/download plugins (done) | time=6ms
+INFO: Load project settings for component key: 'p2-flaskr-grupo01-local'
+INFO: Load project settings for component key: 'p2-flaskr-grupo01-local' (done) | time=43ms
+INFO: Process project properties
+INFO: Process project properties (done) | time=8ms
+INFO: Project key: p2-flaskr-grupo01-local
+INFO: Base dir: /private/tmp/flaskr-p2-build/sonar-final
+INFO: Working dir: /private/tmp/flaskr-p2-build/sonar-final/.sonar
+INFO: Load quality profiles
+INFO: Load quality profiles (done) | time=300ms
+WARNING: SCM provider autodetection failed. Please use "sonar.scm.provider" to define SCM of your project, or disable the SCM Sensor in the project settings.
+INFO: Load active rules
+INFO: Load active rules (done) | time=296ms
+INFO: Load analysis cache
+INFO: Load analysis cache | time=31ms
+INFO: Preprocessing files...
+INFO: 3 languages detected in 20 preprocessed files (done) | time=37ms
+INFO: 10 files ignored because of inclusion/exclusion patterns
+INFO: Loading plugins for detected languages
+INFO: Load/download plugins
+INFO: Load/download plugins (done) | time=11ms
+INFO: Load project repositories
+INFO: Load project repositories (done) | time=103ms
+INFO: Indexing files...
+INFO: Project configuration:
+INFO:   Excluded sources: **/__pycache__/**, **/instance/**, **/test_*.py
+INFO:   Included tests: **/test_*.py
+INFO: 20 files indexed (done) | time=5ms
+INFO: Quality profile for css: Sonar way core
+INFO: Quality profile for py: Sonar way core
+INFO: Quality profile for web: Sonar way core
+INFO: ------------- Run sensors on module p2-flaskr-grupo01-local
+INFO: Load metrics repository
+INFO: Load metrics repository (done) | time=22ms
+INFO: Reflections took 37 ms to scan 1 urls, producing 30 keys and 313 values
+INFO: Sensor IaC YAML File Type Classification Sensor [iac]
+INFO: Sensor IaC YAML File Type Classification Sensor [iac] (done) | time=1ms
+INFO: Sensor IaC hadolint report Sensor [iac]
+INFO: Sensor IaC hadolint report Sensor [iac] (done) | time=0ms
+INFO: Sensor Java Config Sensor [iac]
+INFO: There are no files to be analyzed for the Java language
+INFO: Sensor Java Config Sensor [iac] (done) | time=0ms
+INFO: Sensor IaC Docker Sensor [iac]
+INFO: There are no files to be analyzed for the Docker language
+INFO: Sensor IaC Docker Sensor [iac] (done) | time=1ms
+INFO: Sensor Python Sensor [python]
+INFO: Starting global symbols computation
+INFO: 12 source files to be analyzed
+INFO: 12/12 source files have been analyzed
+INFO: Finished step global symbols computation in 286ms
+INFO: Starting rules execution
+INFO: 12 source files to be analyzed
+INFO: 12/12 source files have been analyzed
+INFO: Finished step rules execution in 265ms
+INFO: The Python analyzer was able to leverage cached data from previous analyses for 0 out of 12 files. These files were not parsed.
+INFO: Sensor Python Sensor [python] (done) | time=878ms
+INFO: Sensor Cobertura Sensor for Python coverage [python]
+INFO: Python test coverage
+INFO: Parsing report '/private/tmp/flaskr-p2-build/sonar-final/artefatos-ci/coverage.xml'
+INFO: Sensor Cobertura Sensor for Python coverage [python] (done) | time=36ms
+INFO: Sensor PythonXUnitSensor [python]
+INFO: Processing report '/private/tmp/flaskr-p2-build/sonar-final/artefatos-ci/junit.xml'
+WARNING: The resource for 'tests.test_auth' is not found, drilling down to the details of this test won't be possible
+WARNING: The resource for 'tests.test_auth' is not found, drilling down to the details of this test won't be possible
+WARNING: The resource for 'tests.test_auth' is not found, drilling down to the details of this test won't be possible
+WARNING: The resource for 'tests.test_auth' is not found, drilling down to the details of this test won't be possible
+WARNING: The resource for 'tests.test_auth' is not found, drilling down to the details of this test won't be possible
+WARNING: The resource for 'tests.test_auth' is not found, drilling down to the details of this test won't be possible
+WARNING: The resource for 'tests.test_auth' is not found, drilling down to the details of this test won't be possible
+WARNING: The resource for 'tests.test_auth' is not found, drilling down to the details of this test won't be possible
+WARNING: The resource for 'tests.test_blog' is not found, drilling down to the details of this test won't be possible
+WARNING: The resource for 'tests.test_blog' is not found, drilling down to the details of this test won't be possible
+WARNING: The resource for 'tests.test_blog' is not found, drilling down to the details of this test won't be possible
+WARNING: The resource for 'tests.test_blog' is not found, drilling down to the details of this test won't be possible
+WARNING: The resource for 'tests.test_blog' is not found, drilling down to the details of this test won't be possible
+WARNING: The resource for 'tests.test_blog' is not found, drilling down to the details of this test won't be possible
+WARNING: The resource for 'tests.test_blog' is not found, drilling down to the details of this test won't be possible
+WARNING: The resource for 'tests.test_blog' is not found, drilling down to the details of this test won't be possible
+WARNING: The resource for 'tests.test_blog' is not found, drilling down to the details of this test won't be possible
+WARNING: The resource for 'tests.test_blog' is not found, drilling down to the details of this test won't be possible
+WARNING: The resource for 'tests.test_blog' is not found, drilling down to the details of this test won't be possible
+WARNING: The resource for 'tests.test_blog' is not found, drilling down to the details of this test won't be possible
+WARNING: The resource for 'tests.test_db' is not found, drilling down to the details of this test won't be possible
+WARNING: The resource for 'tests.test_db' is not found, drilling down to the details of this test won't be possible
+WARNING: The resource for 'tests.test_factory' is not found, drilling down to the details of this test won't be possible
+WARNING: The resource for 'tests.test_factory' is not found, drilling down to the details of this test won't be possible
+WARNING: The resource for 'test_autenticacao' is not found, drilling down to the details of this test won't be possible
+WARNING: The resource for 'test_autenticacao' is not found, drilling down to the details of this test won't be possible
+WARNING: The resource for 'test_autenticacao' is not found, drilling down to the details of this test won't be possible
+WARNING: The resource for 'test_autenticacao' is not found, drilling down to the details of this test won't be possible
+WARNING: The resource for 'test_publicacoes' is not found, drilling down to the details of this test won't be possible
+WARNING: The resource for 'test_publicacoes' is not found, drilling down to the details of this test won't be possible
+WARNING: The resource for 'test_publicacoes' is not found, drilling down to the details of this test won't be possible
+WARNING: The resource for 'test_publicacoes' is not found, drilling down to the details of this test won't be possible
+WARNING: The resource for 'test_tdd_titulo' is not found, drilling down to the details of this test won't be possible
+WARNING: The resource for 'test_tdd_titulo' is not found, drilling down to the details of this test won't be possible
+INFO: Sensor PythonXUnitSensor [python] (done) | time=8ms
+INFO: Sensor Python Dependency Sensor [python]
+INFO: Sensor Python Dependency Sensor [python] (done) | time=1ms
+INFO: Sensor HTML [web]
+INFO: Sensor HTML [web] (done) | time=36ms
+INFO: Sensor TextAndSecretsSensor [text]
+INFO: Available processors: 12
+INFO: Using 12 threads for analysis.
+INFO: Start fetching files for the text and secrets analysis
+INFO: Using Git CLI to retrieve dirty files
+WARNING: Retrieving only language associated files, make sure to run the analysis inside a git repository to make use of inclusions specified via "sonar.text.inclusions"
+INFO: Starting the text and secrets analysis
+INFO: 19 source files to be analyzed for the text and secrets analysis
+INFO: 19/19 source files have been analyzed for the text and secrets analysis
+INFO: Sensor TextAndSecretsSensor [text] (done) | time=308ms
+INFO: ------------- Run sensors on project
+INFO: Sensor JavaScript/TypeScript/CSS analysis [javascript]
+INFO: Detected os: Mac OS X arch: aarch64 alpine: false. Platform: DARWIN_ARM64
+INFO: Deploy location /tmp/flaskr-p2-sonarcli/cache/js/node-runtime, tagetRuntime: /tmp/flaskr-p2-sonarcli/cache/js/node-runtime/node,  version: /tmp/flaskr-p2-sonarcli/cache/js/node-runtime/version.txt
+INFO: Using embedded Node.js runtime.
+INFO: Using Node.js executable: '/tmp/flaskr-p2-sonarcli/cache/js/node-runtime/node'.
+INFO: Memory configuration: OS (16384 MB), Node.js (4288 MB).
+INFO: gRPC analyze-project server listening on 127.0.0.1:56881
+INFO: Plugin version: [14.3.0.46350]
+INFO: Found 0 tsconfig.json file(s): []
+INFO: 7 source files to be analyzed
+INFO: 7/7 source files have been analyzed
+INFO: Hit the cache for 0 out of 6
+INFO: Miss the cache for 6 out of 6: ANALYSIS_MODE_INELIGIBLE [6/6]
+INFO: Sensor JavaScript/TypeScript/CSS analysis [javascript] (done) | time=3013ms
+INFO: Sensor IaC Project Sensor [iac]
+INFO: Sensor IaC Project Sensor [iac] (done) | time=2ms
+INFO: Sensor Zero Coverage Sensor
+INFO: Sensor Zero Coverage Sensor (done) | time=0ms
+INFO: ------------- Gather SCA dependencies on project
+INFO: Dependency analysis skipped
+INFO: SCM Publisher No SCM system was detected. You can use the 'sonar.scm.provider' property to explicitly specify it.
+INFO: CPD Executor 1 file had no CPD blocks
+INFO: CPD Executor Calculating CPD for 10 files
+INFO: CPD Executor CPD calculation finished (done) | time=5ms
+INFO: Analysis report generated in 48ms, dir size=228.3 kB
+INFO: Analysis report compressed in 27ms, zip size=71.4 kB
+INFO: Analysis report uploaded in 414ms
+INFO: ANALYSIS SUCCESSFUL, you can find the results at: http://127.0.0.1:59387/dashboard?id=p2-flaskr-grupo01-local
+INFO: Note that you will be able to access the updated dashboard once the server has processed the submitted analysis report
+INFO: More about the report processing at http://127.0.0.1:59387/api/ce/task?id=bc941d72-843b-4d47-90e1-6ff9aa941c41
+INFO: Analysis total time: 7.447 s
+INFO: SonarScanner Engine completed successfully

@@ -1,0 +1,58 @@
+Comando: FLASKR_SELENIUM_SCREENSHOTS=evidencias/etapa6/capturas /private/tmp/flaskr-etapa5-venv/bin/python -m pytest -v -s testes_grupo/sistema_selenium --junitxml=evidencias/etapa6/2026-11-19_selenium.xml | 2026-11-19T15:33:05-03:00 | Python 3.12.13
+ProductName:		macOS
+ProductVersion:		26.4
+BuildVersion:		25E246
+attrs==26.1.0
+blinker==1.9.0
+certifi==2026.10.23
+click==8.5.1
+coverage==7.17.3
+Flask==3.1.3
+-e git+https://github.com/YagoL3m3/p2-tqs-2026-cc-grupo01-flaskr.git@9d8d906af86ec82bc9e0e139994cda05b4264766#egg=flaskr&subdirectory=flaskr-app
+h11==0.16.0
+idna==3.20
+iniconfig==2.3.1
+itsdangerous==2.2.0
+Jinja2==3.1.6
+MarkupSafe==3.0.4
+outcome==1.3.0.post0
+packaging==26.3
+pluggy==1.7.0
+Pygments==2.21.0
+PySocks==1.7.1
+pytest==9.2.0
+pytest-cov==7.1.0
+selenium==4.53.0
+sniffio==1.3.1
+sortedcontainers==2.4.0
+trio==0.35.0
+trio-websocket==0.12.2
+typing_extensions==4.16.0
+urllib3==2.8.0
+websocket-client==1.9.2
+Werkzeug==3.1.9
+wsproto==1.3.2
+============================= test session starts ==============================
+platform darwin -- Python 3.12.13, pytest-9.2.0, pluggy-1.7.0 -- /private/tmp/flaskr-etapa5-venv/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/henrique/Desktop/Trabalho Elvio/p2-tqs-2026-cc-grupo01-flaskr
+plugins: cov-7.1.0
+collecting ... collected 7 items
+
+testes_grupo/sistema_selenium/test_fluxos.py::test_aut_s_01_cadastro_aceita_nova_conta Chrome 157.0.8103.79 | ChromeDriver 157.0.8103.78 (4b3d0dabb8250b6f152d2d85d79e7706e309d087-refs/branch-heads/8103@{#1573})
+PASSED
+testes_grupo/sistema_selenium/test_fluxos.py::test_aut_s_02_login_rejeita_senha_errada Chrome 157.0.8103.79 | ChromeDriver 157.0.8103.78 (4b3d0dabb8250b6f152d2d85d79e7706e309d087-refs/branch-heads/8103@{#1573})
+PASSED
+testes_grupo/sistema_selenium/test_fluxos.py::test_aut_s_03_publica_titulo_corpo_e_autoria Chrome 157.0.8103.79 | ChromeDriver 157.0.8103.78 (4b3d0dabb8250b6f152d2d85d79e7706e309d087-refs/branch-heads/8103@{#1573})
+PASSED
+testes_grupo/sistema_selenium/test_fluxos.py::test_aut_s_04_formulario_bloqueia_titulo_vazio Chrome 157.0.8103.79 | ChromeDriver 157.0.8103.78 (4b3d0dabb8250b6f152d2d85d79e7706e309d087-refs/branch-heads/8103@{#1573})
+PASSED
+testes_grupo/sistema_selenium/test_fluxos.py::test_aut_s_05_autor_edita_publicacao Chrome 157.0.8103.79 | ChromeDriver 157.0.8103.78 (4b3d0dabb8250b6f152d2d85d79e7706e309d087-refs/branch-heads/8103@{#1573})
+PASSED
+testes_grupo/sistema_selenium/test_fluxos.py::test_aut_s_06_cancelar_dialogo_conserva_publicacoes Chrome 157.0.8103.79 | ChromeDriver 157.0.8103.78 (4b3d0dabb8250b6f152d2d85d79e7706e309d087-refs/branch-heads/8103@{#1573})
+PASSED
+testes_grupo/sistema_selenium/test_fluxos.py::test_aut_s_07_confirmar_exclusao_remove_so_o_alvo Chrome 157.0.8103.79 | ChromeDriver 157.0.8103.78 (4b3d0dabb8250b6f152d2d85d79e7706e309d087-refs/branch-heads/8103@{#1573})
+PASSED
+
+- generated xml file: /Users/henrique/Desktop/Trabalho Elvio/p2-tqs-2026-cc-grupo01-flaskr/evidencias/etapa6/2026-11-19_selenium.xml -
+========================= 7 passed in 86.37s (0:01:26) =========================

@@ -1,0 +1,33 @@
+2026-11-19T15:40:38-0300 | /private/tmp/flaskr-etapa5-venv/bin/python -m pytest flaskr-app/tests testes_grupo/unitarios --cov --cov-config=.coveragerc --cov-report=term-missing --cov-report=xml:evidencias/etapa9/coverage.xml --junitxml=evidencias/etapa9/2026-11-19_tdd_refactor.xml
+Python 3.12.13
+Commit anterior 1c5577c3991a9ac1f84e726598b00cb5db26b61b [E9-GREEN] Valida conteúdo do título ao criar e editar posts
+============================= test session starts ==============================
+platform darwin -- Python 3.12.13, pytest-9.2.0, pluggy-1.7.0
+rootdir: /Users/henrique/Desktop/Trabalho Elvio/p2-tqs-2026-cc-grupo01-flaskr/flaskr-app
+configfile: pyproject.toml
+plugins: cov-7.1.0
+collected 34 items
+
+flaskr-app/tests/test_auth.py ........                                   [ 23%]
+flaskr-app/tests/test_blog.py ............                               [ 58%]
+flaskr-app/tests/test_db.py ..                                           [ 64%]
+flaskr-app/tests/test_factory.py ..                                      [ 70%]
+flaskr-app/test_autenticacao.py ....                                     [ 82%]
+flaskr-app/test_publicacoes.py ....                                      [ 94%]
+flaskr-app/test_tdd_titulo.py ..                                         [100%]
+
+- generated xml file: /Users/henrique/Desktop/Trabalho Elvio/p2-tqs-2026-cc-grupo01-flaskr/evidencias/etapa9/2026-11-19_tdd_refactor.xml -
+================================ tests coverage ================================
+______________ coverage: platform darwin, python 3.12.13-final-0 _______________
+
+Name                            Stmts   Miss Branch BrPart  Cover   Missing
+---------------------------------------------------------------------------
+flaskr-app/flaskr/__init__.py      20      0      2      0   100%
+flaskr-app/flaskr/auth.py          68      0     20      0   100%
+flaskr-app/flaskr/blog.py          64      0     14      0   100%
+flaskr-app/flaskr/db.py            26      0      4      0   100%
+---------------------------------------------------------------------------
+TOTAL                             178      0     40      0   100%
+Coverage XML written to file evidencias/etapa9/coverage.xml
+============================== 34 passed in 1.44s ==============================
+Código de saída pytest: 0

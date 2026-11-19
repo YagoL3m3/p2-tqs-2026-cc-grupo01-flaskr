@@ -1,0 +1,40 @@
+EX-029 · CT-028 · Aprovado · Safari 26.4 · Flaskr 1.0.0 / 2c6af97
+Executor: Codex (IA). Publicação observada em 2026-11-19T15:13:10.206000-03:00.
+
+Preferência Press Tab to highlight each item on a webpage. 0 = desmarcada, 1 = marcada.
+2026-11-19T18:07:59.213Z | original | 0
+2026-11-19T18:10:27.498Z | ativada | 1
+2026-11-19T18:13:19.217Z | restaurada | 0
+
+Foco registrado pelo Safari após Tab. A posição inicial na página foi preparada antes de começar o fluxo.
+Primeiro link da página | Tab | The focused UI element is 7 link Flaskr, Value: 127.0.0.1:56028/
+Link Register | Tab | The focused UI element is 9 link Register, Value: 127.0.0.1:56028/auth/register
+Username do cadastro | Tab | The focused UI element is 15 text field (settable) Username
+Password do cadastro | Tab | The focused UI element is 17 secure text field (settable) Password
+Botão Register | Tab | The focused UI element is 18 button Register
+Username no login | Tab | The focused UI element is 15 text field (settable) Username
+Password no login | Tab | The focused UI element is 17 secure text field (settable) Password
+Botão Log In | Tab | The focused UI element is 18 button Log In
+Link New | Tab | The focused UI element is 14 link New, Value: 127.0.0.1:56028/create
+Campo Title | Tab | The focused UI element is 15 text field (settable) Title
+Campo Body | Tab | The focused UI element is 17 text entry area (settable) Body, Value: [text entry area]
+Botão Save | Tab | The focused UI element is 19 button Save
+
+Listagem observada no Safari
+				4 HTML content Description: Posts - Flaskr, URL: 127.0.0.1:56028/
+					15 container Teclado QA
+							17 heading Teclado QA, Value: 1
+								18 text Teclado QA
+						21 text Publicado com teclado.
+The focused UI element is 4 HTML content Description: Posts - Flaskr, URL: 127.0.0.1:56028/
+
+Requisições registradas pelo servidor
+127.0.0.1 - - [19/Nov/2026 15:07:41] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [19/Nov/2026 15:11:42] "POST /auth/register HTTP/1.1" 302 -
+127.0.0.1 - - [19/Nov/2026 15:12:23] "POST /auth/login HTTP/1.1" 302 -
+127.0.0.1 - - [19/Nov/2026 15:12:23] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [19/Nov/2026 15:13:09] "POST /create HTTP/1.1" 302 -
+127.0.0.1 - - [19/Nov/2026 15:13:09] "GET / HTTP/1.1" 200 -
+
+SQLite, somente leitura: uma publicação com título Teclado QA, corpo Publicado com teclado. e autoria qa_autor_a.
+Capturas: CT-028_2026-11-19_EX-029_01_foco_save.jpg; CT-028_2026-11-19_EX-029_02_post_publicado.jpg

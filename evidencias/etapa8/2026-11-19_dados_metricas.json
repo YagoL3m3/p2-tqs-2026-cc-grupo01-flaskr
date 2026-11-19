@@ -1,0 +1,481 @@
+{
+  "casos": [
+    [
+      "CT-001",
+      "RF-01",
+      "Cadastrar conta inédita",
+      "EX-001",
+      "Aprovado",
+      "Sim",
+      "Integral",
+      "AUT-I-01, AUT-S-01"
+    ],
+    [
+      "CT-002",
+      "RF-01",
+      "Bloquear cadastro com nome vazio",
+      "EX-002",
+      "Aprovado",
+      "Não",
+      "Sem vínculo",
+      ""
+    ],
+    [
+      "CT-003",
+      "RF-01",
+      "Bloquear cadastro com senha vazia",
+      "EX-003",
+      "Aprovado",
+      "Não",
+      "Sem vínculo",
+      ""
+    ],
+    [
+      "CT-004",
+      "RF-01",
+      "Rejeitar nome de usuário duplicado",
+      "EX-004",
+      "Aprovado",
+      "Sim",
+      "Integral",
+      "AUT-I-02, AUT-U-02"
+    ],
+    [
+      "CT-005",
+      "RF-01",
+      "Cadastrar nome com um caractere",
+      "EX-005",
+      "Aprovado",
+      "Sim",
+      "Parcial",
+      "AUT-U-01"
+    ],
+    [
+      "CT-006",
+      "RF-02",
+      "Iniciar e manter sessão com credenciais válidas",
+      "EX-006",
+      "Aprovado",
+      "Sim",
+      "Integral",
+      "AUT-I-03, AUT-U-03"
+    ],
+    [
+      "CT-007",
+      "RF-02",
+      "Rejeitar login de conta inexistente",
+      "EX-007",
+      "Aprovado",
+      "Sim",
+      "Sem vínculo",
+      ""
+    ],
+    [
+      "CT-008",
+      "RF-02",
+      "Rejeitar senha errada de conta existente",
+      "EX-008",
+      "Aprovado",
+      "Sim",
+      "Integral",
+      "AUT-I-04, AUT-S-02"
+    ],
+    [
+      "CT-009",
+      "RF-03",
+      "Bloquear criação após encerrar a sessão",
+      "EX-009",
+      "Aprovado",
+      "Sim",
+      "Integral",
+      "AUT-I-11, AUT-U-04"
+    ],
+    [
+      "CT-010",
+      "RF-04",
+      "Ler uma publicação sem iniciar sessão",
+      "EX-010",
+      "Aprovado",
+      "Sim",
+      "Sem vínculo",
+      ""
+    ],
+    [
+      "CT-011",
+      "RF-04",
+      "Ordenar publicações da mais recente à mais antiga",
+      "EX-011",
+      "Aprovado",
+      "Sim",
+      "Parcial",
+      "AUT-U-05"
+    ],
+    [
+      "CT-012",
+      "RF-04",
+      "Abrir a listagem com banco sem publicações",
+      "EX-012",
+      "Aprovado",
+      "Sim",
+      "Sem vínculo",
+      ""
+    ],
+    [
+      "CT-013",
+      "RF-04",
+      "Exibir Edit somente nos posts da conta ativa",
+      "EX-013",
+      "Aprovado",
+      "Sim",
+      "Sem vínculo",
+      ""
+    ],
+    [
+      "CT-014",
+      "RF-05",
+      "Publicar título e corpo com autoria da sessão",
+      "EX-014",
+      "Aprovado",
+      "Sim",
+      "Integral",
+      "AUT-I-05, AUT-S-03, AUT-U-06"
+    ],
+    [
+      "CT-015",
+      "RF-05",
+      "Aceitar título com um caractere",
+      "EX-015",
+      "Aprovado",
+      "Sim",
+      "Sem vínculo",
+      ""
+    ],
+    [
+      "CT-016",
+      "RF-05",
+      "Publicar com corpo vazio",
+      "EX-016",
+      "Aprovado",
+      "Sim",
+      "Parcial",
+      "AUT-U-06"
+    ],
+    [
+      "CT-017",
+      "RF-05",
+      "Bloquear publicação sem título",
+      "EX-017",
+      "Aprovado",
+      "Não",
+      "Integral",
+      "AUT-S-04, AUT-I-06"
+    ],
+    [
+      "CT-018",
+      "RF-06",
+      "Editar título e corpo como autor",
+      "EX-018",
+      "Aprovado",
+      "Sim",
+      "Integral",
+      "AUT-I-07, AUT-S-05"
+    ],
+    [
+      "CT-019",
+      "RF-06",
+      "Impedir que edição deixe título vazio",
+      "EX-019",
+      "Aprovado",
+      "Não",
+      "Parcial",
+      "AUT-I-08, AUT-U-07"
+    ],
+    [
+      "CT-020",
+      "RF-06",
+      "Bloquear edição de post de outra conta",
+      "EX-020",
+      "Aprovado",
+      "Sim",
+      "Sem vínculo",
+      ""
+    ],
+    [
+      "CT-021",
+      "RF-06",
+      "Tratar a abertura de edição de post inexistente",
+      "EX-021",
+      "Aprovado",
+      "Sim",
+      "Sem vínculo",
+      ""
+    ],
+    [
+      "CT-022",
+      "RF-07",
+      "Cancelar diálogo de exclusão",
+      "EX-022",
+      "Aprovado",
+      "Sim",
+      "Integral",
+      "AUT-S-06"
+    ],
+    [
+      "CT-023",
+      "RF-07",
+      "Confirmar exclusão apenas do post selecionado",
+      "EX-023",
+      "Aprovado",
+      "Sim",
+      "Integral",
+      "AUT-S-07, AUT-I-09, AUT-U-08"
+    ],
+    [
+      "CT-024",
+      "RF-07",
+      "Tratar nova exclusão em editor desatualizado",
+      "EX-024",
+      "Aprovado",
+      "Sim",
+      "Parcial",
+      "AUT-I-10"
+    ],
+    [
+      "CT-025",
+      "RF-07",
+      "Bloquear exclusão após trocar para conta não autora",
+      "EX-025",
+      "Aprovado",
+      "Sim",
+      "Sem vínculo",
+      ""
+    ],
+    [
+      "CT-026",
+      "RNF-01",
+      "Verificar armazenamento e exibição da senha fictícia",
+      "EX-026",
+      "Aprovado",
+      "Sim",
+      "Parcial",
+      "AUT-U-01"
+    ],
+    [
+      "CT-027",
+      "RNF-02",
+      "Preservar criação e edição após reinício local",
+      "EX-027",
+      "Aprovado",
+      "Sim",
+      "Sem vínculo",
+      ""
+    ],
+    [
+      "CT-028",
+      "RNF-03",
+      "Concluir cadastro e publicação usando teclado",
+      "EX-029",
+      "Aprovado",
+      "Não",
+      "Sem vínculo",
+      ""
+    ]
+  ],
+  "requisitos": [
+    [
+      "RF-01",
+      "Funcional"
+    ],
+    [
+      "RF-02",
+      "Funcional"
+    ],
+    [
+      "RF-03",
+      "Funcional"
+    ],
+    [
+      "RF-04",
+      "Funcional"
+    ],
+    [
+      "RF-05",
+      "Funcional"
+    ],
+    [
+      "RF-06",
+      "Funcional"
+    ],
+    [
+      "RF-07",
+      "Funcional"
+    ],
+    [
+      "RNF-01",
+      "Não funcional"
+    ],
+    [
+      "RNF-02",
+      "Não funcional"
+    ],
+    [
+      "RNF-03",
+      "Não funcional"
+    ]
+  ],
+  "riscos": [
+    [
+      "R-01",
+      "Edição ou exclusão por usuário que não é autor",
+      "Alto"
+    ],
+    [
+      "R-02",
+      "Formulários aceitam campos obrigatórios vazios",
+      "Médio"
+    ],
+    [
+      "R-03",
+      "Publicação criada ou editada se perde após reinício",
+      "Alto"
+    ],
+    [
+      "R-04",
+      "Login inválido inicia sessão ou logout deixa operações protegidas acessíveis",
+      "Alto"
+    ],
+    [
+      "R-05",
+      "Senha gravada em texto puro ou exibida na interface",
+      "Alto"
+    ],
+    [
+      "R-06",
+      "Exclusão pelo autor remove a publicação errada ou ocorre após cancelar",
+      "Alto"
+    ],
+    [
+      "R-07",
+      "Cadastro duplicado grava duas contas ou falha sem mensagem",
+      "Médio"
+    ],
+    [
+      "R-08",
+      "Porta ocupada ou incompatibilidade entre navegador, driver e ambiente",
+      "Alto"
+    ],
+    [
+      "R-09",
+      "Massa compartilhada ou reinicialização apaga dados de outra execução",
+      "Alto"
+    ],
+    [
+      "R-10",
+      "Dependências ou serviços remotos indisponíveis atrasam evidências",
+      "Alto"
+    ],
+    [
+      "R-11",
+      "Ordem da listagem divergente para posts de datas distintas",
+      "Baixo"
+    ],
+    [
+      "R-12",
+      "Navegação por teclado dificulta concluir os fluxos principais",
+      "Médio"
+    ]
+  ],
+  "defeitos": [],
+  "historico_manual": 29,
+  "historico_bloqueado": 1,
+  "executados": 28,
+  "aprovados": 28,
+  "reprovados": 0,
+  "cobertura": 10,
+  "candidatos": 23,
+  "automatizados": 9,
+  "parciais": 5,
+  "retestados": 0,
+  "reabertos": 0,
+  "unitarios": {
+    "original": {
+      "junit_xml": "evidencias/etapa5/2026-11-19_pytest_original.xml",
+      "cobertura_xml": "evidencias/etapa5/coverage_original.xml",
+      "total": 24,
+      "aprovados": 24,
+      "falhas": 0,
+      "erros": 0,
+      "ignorados": 0,
+      "cobertura": {
+        "linhas": {
+          "cobertos": 178,
+          "total": 178,
+          "percentual": 100.0
+        },
+        "ramos": {
+          "cobertos": 42,
+          "total": 42,
+          "percentual": 100.0
+        }
+      }
+    },
+    "grupo": {
+      "junit_xml": "evidencias/etapa5/2026-11-19_pytest_grupo.xml",
+      "cobertura_xml": "evidencias/etapa5/coverage_grupo.xml",
+      "total": 8,
+      "aprovados": 8,
+      "falhas": 0,
+      "erros": 0,
+      "ignorados": 0,
+      "cobertura": {
+        "linhas": {
+          "cobertos": 154,
+          "total": 178,
+          "percentual": 86.52
+        },
+        "ramos": {
+          "cobertos": 22,
+          "total": 42,
+          "percentual": 52.38
+        }
+      }
+    },
+    "conjunto": {
+      "junit_xml": "evidencias/etapa5/2026-11-19_pytest_conjunto.xml",
+      "cobertura_xml": "evidencias/etapa5/coverage.xml",
+      "total": 32,
+      "aprovados": 32,
+      "falhas": 0,
+      "erros": 0,
+      "ignorados": 0,
+      "cobertura": {
+        "linhas": {
+          "cobertos": 178,
+          "total": 178,
+          "percentual": 100.0
+        },
+        "ramos": {
+          "cobertos": 42,
+          "total": 42,
+          "percentual": 100.0
+        }
+      }
+    },
+    "ids_do_grupo": [
+      "AUT-U-01",
+      "AUT-U-02",
+      "AUT-U-03",
+      "AUT-U-04",
+      "AUT-U-05",
+      "AUT-U-06",
+      "AUT-U-07",
+      "AUT-U-08"
+    ]
+  },
+  "integracao": {
+    "cenarios": 11,
+    "requisicoes": 56,
+    "assercoes": 168
+  },
+  "interface": 7
+}

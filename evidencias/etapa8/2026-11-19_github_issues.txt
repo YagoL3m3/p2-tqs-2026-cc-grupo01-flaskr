@@ -1,0 +1,2 @@
+2026-11-19T15:34:38-0300 | gh issue list --state all --limit 100 --json number,title,state,labels,url
+[]

@@ -1,0 +1,9 @@
+Comando: python -B (verificação dos links, cenários, fontes, amostras e registro) | 2026-11-19T15:36:54-0300 | Python 3.12.14
+Resultados_Nao_Funcionais_Flaskr.md: 14 links locais válidos.
+Roteiro_e_Registro_de_Aceitacao_Flaskr.md: 3 links locais válidos.
+Aceitação: quatro cenários distintos, critérios explícitos e campos humanos em branco.
+Não funcionais: seis resultados locais e o EX-029 do Safari conferidos. Tentativa inicial preservada.
+NF-04: 30 amostras válidas, p95=2.158875 ms e limite=200 ms.
+NF-05: 15 amostras válidas, p95=86.198500 ms e limite=750 ms.
+verificar_nao_funcionais.py: sintaxe Python válida.
+Nenhuma alteração no diretório flaskr-app em relação à revisão 9d8d906.

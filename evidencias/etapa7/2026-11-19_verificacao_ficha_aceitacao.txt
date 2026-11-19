@@ -1,0 +1,22 @@
+Comando: render_docx.py --emit_pdf e verificação da ficha DOCX | 2026-11-19T15:38:23-0300 | Python 3.12.14
+Title:           Ficha de aceitação do Flaskr
+Author:          Turma B · Grupo 1
+Creator:         Writer
+Producer:        LibreOfficeDev 26.8.0.0.alpha0 (AARCH64)
+CreationDate:    Thu Nov 19 15:37:55 2026 -03
+Custom Metadata: no
+Metadata Stream: yes
+Tagged:          yes
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           1
+Encrypted:       no
+Page size:       612 x 792 pts (letter)
+Page rot:        0
+File size:       63395 bytes
+Optimized:       no
+PDF version:     1.7
+DOCX: quatro opções de cenário, três opções de decisão, campos editáveis em branco e assinatura pendente.
+Roteiro: quatro links locais válidos, incluindo a ficha DOCX.
