@@ -1,0 +1,159 @@
+Comando: PYTHONPATH=flaskr-app python -u -B tools/verificar_nao_funcionais.py | 2026-11-19T15:33:53-0300 | Python 3.12.14
+ProductName:		macOS
+ProductVersion:		26.4
+BuildVersion:		25E246
+arm64
+9d8d906af86ec82bc9e0e139994cda05b4264766
+blinker==1.9.0
+click==8.5.1
+Flask==3.1.3
+iniconfig==2.3.1
+itsdangerous==2.2.0
+Jinja2==3.1.6
+MarkupSafe==3.0.4
+packaging==26.3
+pluggy==1.7.0
+Pygments==2.21.0
+pytest==9.2.0
+Werkzeug==3.1.9
+Código importado: flaskr-app/flaskr/__init__.py; SQLite 3.53.1
+
+NF-01 | Início
+Servidor iniciado: PID=32077, URL=http://127.0.0.1:60078, SQLite=flaskr.sqlite
+Servidor encerrado: PID=32077, código=-15
+Cadastro → /auth/login: HTTP 200; ocorrências da senha no HTML: 0
+Registros da conta: 1; hash diferente: True; verificável: True
+NF-01 | Atende
+
+NF-02 | Início
+Servidor iniciado: PID=32081, URL=http://127.0.0.1:60081, SQLite=flaskr.sqlite
+/create → /: HTTP 200; título e corpo presentes
+/1/update → /: HTTP 200; título e corpo presentes
+/create → /: HTTP 200; título e corpo presentes
+Servidor encerrado: PID=32081, código=-15
+Servidor iniciado: PID=32096, URL=http://127.0.0.1:60092, SQLite=flaskr.sqlite
+Processos: 32081 → 32096; inodes: 57955821 → 57955821
+GET /: HTTP 200; revisado=True; controle=True; original=False
+Servidor encerrado: PID=32096, código=-15
+NF-02 | Atende
+
+NF-04 | Início
+Servidor iniciado: PID=32097, URL=http://127.0.0.1:60094, SQLite=flaskr.sqlite
+Rota=/; aquecimentos=3; amostras=30; p95 limite=200 ms
+01 aquecimento: 4.763500 ms; HTTP 200; conteúdo=True
+02 aquecimento: 1.854041 ms; HTTP 200; conteúdo=True
+03 aquecimento: 1.462750 ms; HTTP 200; conteúdo=True
+04 amostra: 2.121500 ms; HTTP 200; conteúdo=True
+05 amostra: 1.415000 ms; HTTP 200; conteúdo=True
+06 amostra: 1.981542 ms; HTTP 200; conteúdo=True
+07 amostra: 1.605458 ms; HTTP 200; conteúdo=True
+08 amostra: 2.125792 ms; HTTP 200; conteúdo=True
+09 amostra: 1.571917 ms; HTTP 200; conteúdo=True
+10 amostra: 1.636083 ms; HTTP 200; conteúdo=True
+11 amostra: 1.224209 ms; HTTP 200; conteúdo=True
+12 amostra: 1.148583 ms; HTTP 200; conteúdo=True
+13 amostra: 1.155208 ms; HTTP 200; conteúdo=True
+14 amostra: 1.193958 ms; HTTP 200; conteúdo=True
+15 amostra: 1.604292 ms; HTTP 200; conteúdo=True
+16 amostra: 1.444000 ms; HTTP 200; conteúdo=True
+17 amostra: 1.950125 ms; HTTP 200; conteúdo=True
+18 amostra: 1.615500 ms; HTTP 200; conteúdo=True
+19 amostra: 1.304500 ms; HTTP 200; conteúdo=True
+20 amostra: 1.304417 ms; HTTP 200; conteúdo=True
+21 amostra: 1.356916 ms; HTTP 200; conteúdo=True
+22 amostra: 1.510916 ms; HTTP 200; conteúdo=True
+23 amostra: 1.810542 ms; HTTP 200; conteúdo=True
+24 amostra: 1.428750 ms; HTTP 200; conteúdo=True
+25 amostra: 2.101291 ms; HTTP 200; conteúdo=True
+26 amostra: 2.158875 ms; HTTP 200; conteúdo=True
+27 amostra: 1.530084 ms; HTTP 200; conteúdo=True
+28 amostra: 1.515750 ms; HTTP 200; conteúdo=True
+29 amostra: 1.392250 ms; HTTP 200; conteúdo=True
+30 amostra: 1.631666 ms; HTTP 200; conteúdo=True
+31 amostra: 1.638333 ms; HTTP 200; conteúdo=True
+32 amostra: 1.459084 ms; HTTP 200; conteúdo=True
+33 amostra: 5.255417 ms; HTTP 200; conteúdo=True
+Mínimo=1.148583 ms; mediana=1.551001 ms; p95=2.158875 ms; máximo=5.255417 ms
+Respostas conferidas=33/33
+Servidor encerrado: PID=32097, código=-15
+NF-04 | Atende
+
+NF-05 | Início
+Servidor iniciado: PID=32102, URL=http://127.0.0.1:60150, SQLite=flaskr.sqlite
+Rota=/auth/login; aquecimentos=3; amostras=15; p95 limite=750 ms
+01 aquecimento: 68.304875 ms; HTTP 200; conteúdo=True
+02 aquecimento: 66.748542 ms; HTTP 200; conteúdo=True
+03 aquecimento: 72.063375 ms; HTTP 200; conteúdo=True
+04 amostra: 70.822291 ms; HTTP 200; conteúdo=True
+05 amostra: 65.076958 ms; HTTP 200; conteúdo=True
+06 amostra: 66.706375 ms; HTTP 200; conteúdo=True
+07 amostra: 66.866333 ms; HTTP 200; conteúdo=True
+08 amostra: 63.517500 ms; HTTP 200; conteúdo=True
+09 amostra: 66.023209 ms; HTTP 200; conteúdo=True
+10 amostra: 68.259458 ms; HTTP 200; conteúdo=True
+11 amostra: 62.704459 ms; HTTP 200; conteúdo=True
+12 amostra: 69.596875 ms; HTTP 200; conteúdo=True
+13 amostra: 86.198500 ms; HTTP 200; conteúdo=True
+14 amostra: 69.501250 ms; HTTP 200; conteúdo=True
+15 amostra: 66.825834 ms; HTTP 200; conteúdo=True
+16 amostra: 64.384667 ms; HTTP 200; conteúdo=True
+17 amostra: 65.904459 ms; HTTP 200; conteúdo=True
+18 amostra: 68.912958 ms; HTTP 200; conteúdo=True
+Mínimo=62.704459 ms; mediana=66.825834 ms; p95=86.198500 ms; máximo=86.198500 ms
+Respostas conferidas=18/18
+Servidor encerrado: PID=32102, código=-15
+NF-05 | Atende
+
+NF-06 | Início
+Servidor iniciado: PID=32148, URL=http://127.0.0.1:60273, SQLite=flaskr.sqlite
+/create → /: HTTP 200; título e corpo presentes
+Servidor encerrado: PID=32148, código=-15
+GET /: HTTP 200; título e corpo exatos no HTML=True
+SQLite: [('São João — café ☕', 'Ação e coração em português.\nAté amanhã! 🌱')]
+NF-06 | Atende
+
+NF-07 | Início
+Google Chrome 157.0.8103.79
+Servidor iniciado: PID=32151, URL=http://127.0.0.1:60281, SQLite=flaskr.sqlite
+/create → /: HTTP 200; título e corpo presentes
+Servidor encerrado: PID=32151, código=-15
+DOM público observado pelo Chrome:
+<!DOCTYPE html>
+<html><head><title>Posts - Flaskr</title>
+<link rel="stylesheet" href="/static/style.css">
+</head><body><nav>
+  <h1><a href="/">Flaskr</a></h1>
+  <ul>
+    
+      <li><a href="/auth/register">Register</a>
+      </li><li><a href="/auth/login">Log In</a>
+    
+  </li></ul>
+</nav>
+<section class="content">
+  <header>
+    
+  <h1>Posts</h1>
+  
+
+  </header>
+  
+  
+  
+    <article class="post">
+      <header>
+        <div>
+          <h1>Teclado QA</h1>
+          <div class="about">by qa_etapa7 on 2026-11-19</div>
+        </div>
+        
+      </header>
+      <p class="body">Publicado com teclado.</p>
+    </article>
+    
+  
+
+</section></body></html>
+NF-07 | Atende
+
+Verificações locais que atendem ao critério: 6/6
