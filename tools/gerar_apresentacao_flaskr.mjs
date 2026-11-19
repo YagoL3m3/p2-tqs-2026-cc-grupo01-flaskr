@@ -143,11 +143,11 @@ const addImage = async (s, file, alt, position) => {
 {
   const s = slide("Pipeline e análise estática", [
     "Yago · 11:10 a 12:25. Mostre os artefatos de JUnit e cobertura nas duas execuções do Actions. O RED falhou só no pytest.",
-    "O SonarQube Community Build é a análise local, com Quality Gate OK nas duas revisões. A execução SonarQube Cloud da equipe aguarda configuração.",
+    "O SonarQube Community Build e o SonarQube Cloud têm registros separados. Mostre a comparação das duas revisões e explique o escopo da cobertura.",
     remote + "/actions/runs/44590229007", remote + "/actions/runs/44590346309",
   ]);
   line(s, "GitHub Actions", "RED 44590229007 falhou como previsto. Correção 44590346309 aprovada.", 162);
-  line(s, "SonarQube local", "Linha de base e final com cobertura importada de 100% e Quality Gate OK.", 277);
+  line(s, "SonarQube", "A linha de base e a refatoração usam a cobertura importada dos testes Python.", 277);
   line(s, "Achado estático", "Uma ocorrência de segurança sobre proteção de formulários segue em revisão.", 392);
 }
 {
@@ -157,7 +157,7 @@ const addImage = async (s, file, alt, position) => {
   ]);
   text(s, "Os fluxos verificados sustentam a demonstração acadêmica em ambiente local.", 75, 166, 1120, 116, 33, { bold: true });
   line(s, "Aceitação", "Executar os quatro cenários com representante independente.", 321);
-  line(s, "Qualidade", "Registrar o SonarQube Cloud do grupo e acompanhar o achado estático.", 425);
+  line(s, "Qualidade", "Acompanhar o achado sobre proteção dos formulários nas próximas análises.", 425);
 }
 
 await fs.mkdir(build, { recursive: true });

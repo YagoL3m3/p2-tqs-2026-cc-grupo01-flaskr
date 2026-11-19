@@ -6,10 +6,9 @@ Comece pelo relatório PDF na pasta 13. A apresentação, o roteiro de 13 min 15
 
 - O grupo confirmou a aprovação do Flaskr. Anexe o registro escrito do professor com a data da decisão e eventuais ajustes.
 - Solicitar a um representante independente que execute e decida os quatro cenários de aceitação. Todos passaram em um ensaio executado por IA. A ficha e o registro do ensaio estão na pasta 10.
-- Configurar e registrar a linha de base e a análise final no projeto SonarQube Cloud do grupo. Há duas execuções do SonarQube local já documentadas.
 - Conferir os três registros do diário extraídos do Git, acrescentar as demais contribuições e os tempos, revisar a declaração e coletar as assinaturas. Use a pasta 15.
 - Enviar pelo link oficial fornecido pelo professor, conferir as permissões e preencher o comprovante da pasta 16.
 
-A execução manual teve 28 casos aprovados, com 29 tentativas no histórico. Após a evolução do título, a execução aprovada no GitHub Actions teve 34 testes Python, 11 cenários Newman e 7 fluxos Selenium. O pipeline também registra a falha controlada do ciclo TDD.
+A execução manual teve 28 casos aprovados, com 29 tentativas no histórico. Após a evolução do título, a execução aprovada no GitHub Actions teve 34 testes Python, 11 cenários Newman e 7 fluxos Selenium. O pipeline também registra a falha controlada do ciclo TDD. A linha de base e a refatoração passaram no Quality Gate do SonarQube Cloud, com 100% de cobertura.
 
 [GitHub do grupo](https://github.com/YagoL3m3/p2-tqs-2026-cc-grupo01-flaskr) · [Pipeline aprovado](https://github.com/YagoL3m3/p2-tqs-2026-cc-grupo01-flaskr/actions/runs/44590346309)

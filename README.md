@@ -92,6 +92,6 @@ As pastas numeradas em [entrega](entrega) seguem a estrutura do manual. Os dados
 
 A execução manual mais recente aprovou 28 casos. A primeira tentativa de CT-028 ficou bloqueada pela configuração de navegação por Tab do Safari. O reteste EX-029 passou após ajuste temporário, posteriormente restaurado. As duas tentativas estão no [registro da Etapa 4B](evidencias/etapa4b/2026-11-19_indice_execucoes_atualizado.md).
 
-A aceitação aguarda um representante independente. Há duas análises Sonar locais verificadas e a execução na conta SonarQube Cloud do grupo depende de configuração. A implementação da regra de título e a análise estão na [pasta 12](entrega/12_TDD_CICD_MELHORIA) e na [pasta 11](entrega/11_METRICAS_E_QUALIDADE).
+A aceitação aguarda um representante independente. A linha de base e a refatoração foram analisadas no SonarQube local e no SonarQube Cloud. A implementação da regra de título e a análise estão na [pasta 12](entrega/12_TDD_CICD_MELHORIA) e na [pasta 11](entrega/11_METRICAS_E_QUALIDADE).
 
 [Contato do grupo no GitHub Issues](https://github.com/YagoL3m3/p2-tqs-2026-cc-grupo01-flaskr/issues)

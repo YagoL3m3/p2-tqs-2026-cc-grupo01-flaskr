@@ -324,7 +324,7 @@ def report(d, work):
     ], [3.5, 2.7, 10.1])
     doc.add_paragraph("O workflow instala dependências e publica JUnit e cobertura tanto nas rodadas aprovadas quanto no RED. Os arquivos baixados, os registros de console e os links de execução estão na pasta 12 e nas evidências da Etapa 9.")
     doc.add_heading("Análise de qualidade", level=2)
-    doc.add_paragraph("O SonarQube Community Build registrou cobertura de 100%, duplicação de 0%, zero bugs e uma ocorrência de segurança estática nas duas revisões. O Quality Gate retornou OK nas duas execuções. A ocorrência S4502 solicita revisão da proteção CSRF em formulários e permanece como ação de qualidade. O projeto SonarQube Cloud do grupo aguarda configuração.")
+    doc.add_paragraph("O SonarQube Community Build registrou cobertura de 100%, duplicação de 0%, zero bugs e uma ocorrência de segurança estática nas duas revisões. O Quality Gate retornou OK nas duas execuções. A ocorrência S4502 solicita revisão da proteção CSRF em formulários e permanece como ação de qualidade. No SonarQube Cloud, a linha de base e a refatoração tiveram cobertura de 100% e Quality Gate OK. Foram cobertas 178 linhas em cada revisão. As condições cobertas passaram de 42 para 40 após a refatoração. A pasta 11 reúne as medições e os links.")
     table(doc, ("Prioridade", "Ação", "Critério"), [
         ("Alta", "Revisar a proteção dos formulários.", "Revisão defensiva do código e nova análise estática."),
         ("Alta", "Concluir aceitação independente.", "Decisão e evidência registradas para cada cenário."),
@@ -336,7 +336,7 @@ def report(d, work):
             "Os cenários da rodada acompanharam os fluxos mais importantes da aplicação e geraram vínculos auditáveis. A execução de navegador inclui Chrome e Safari em versões específicas. O ambiente local, as massas pequenas e as sessões controladas limitam comparações com uma aplicação exposta ou com acessos concorrentes.",
             "O bloqueio e a reexecução do teclado mostram a influência da preparação do navegador. A ausência de defeitos no registro descreve apenas a rodada executada. O achado de análise estática, a cobertura parcial de candidatos e a aceitação pendente são riscos residuais.")
     section(doc, "13. Conclusão",
-            "Os cenários executados sustentam o uso didático do Flaskr em ambiente local. A suíte final e o pipeline comprovam a evolução de título e a regressão dos fluxos selecionados. A validação acadêmica final depende da aceitação, dos registros de participação, da confirmação do ambiente SonarQube Cloud do grupo e da submissão pelo canal oficial.")
+            "Os cenários executados sustentam o uso didático do Flaskr em ambiente local. A suíte final e o pipeline comprovam a evolução de título e a regressão dos fluxos selecionados. A validação acadêmica final depende da aceitação, dos registros de participação e da submissão pelo canal oficial.")
     section(doc, "Referências",
             "UNISAGRADO. Testes e Qualidade de Software. Manual do Projeto Integrado P2. Ciência da Computação, 2026.",
             "PALLETS. Flask 3.1.3, exemplo de tutorial Flaskr. " + UPSTREAM,

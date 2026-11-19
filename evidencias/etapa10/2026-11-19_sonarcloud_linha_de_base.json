@@ -1,0 +1,336 @@
+{
+  "fase": "linha-de-base-corrigida",
+  "projeto": "YagoL3m3_p2-tqs-2026-cc-grupo01-flaskr",
+  "organizacao": "yagol3m3",
+  "workflow": {
+    "conclusion": "success",
+    "createdAt": "2026-11-19T23:27:14Z",
+    "event": "workflow_dispatch",
+    "jobs": [
+      {
+        "completedAt": "2026-11-19T23:28:13Z",
+        "conclusion": "success",
+        "databaseId": 135960662077,
+        "name": "pytest, Newman e Selenium",
+        "startedAt": "2026-11-19T23:27:19Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-11-19T23:27:22Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-11-19T23:27:19Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-19T23:27:24Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@v7",
+            "number": 2,
+            "startedAt": "2026-11-19T23:27:22Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-19T23:27:24Z",
+            "conclusion": "success",
+            "name": "Registrar a revisão que será testada",
+            "number": 3,
+            "startedAt": "2026-11-19T23:27:24Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-19T23:27:28Z",
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v7",
+            "number": 4,
+            "startedAt": "2026-11-19T23:27:24Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-19T23:27:31Z",
+            "conclusion": "success",
+            "name": "Run actions/setup-node@v7",
+            "number": 5,
+            "startedAt": "2026-11-19T23:27:28Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-19T23:27:37Z",
+            "conclusion": "success",
+            "name": "Instalar dependências",
+            "number": 6,
+            "startedAt": "2026-11-19T23:27:31Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-19T23:27:39Z",
+            "conclusion": "success",
+            "name": "Registrar ferramentas",
+            "number": 7,
+            "startedAt": "2026-11-19T23:27:37Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-19T23:28:07Z",
+            "conclusion": "success",
+            "name": "Executar suítes",
+            "number": 8,
+            "startedAt": "2026-11-19T23:27:39Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-19T23:28:09Z",
+            "conclusion": "success",
+            "name": "Publicar JUnit, cobertura e capturas de falha",
+            "number": 9,
+            "startedAt": "2026-11-19T23:28:07Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-19T23:28:09Z",
+            "conclusion": "success",
+            "name": "Post Run actions/setup-node@v7",
+            "number": 16,
+            "startedAt": "2026-11-19T23:28:09Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-19T23:28:09Z",
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@v7",
+            "number": 17,
+            "startedAt": "2026-11-19T23:28:09Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-19T23:28:09Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v7",
+            "number": 18,
+            "startedAt": "2026-11-19T23:28:09Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-19T23:28:09Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 19,
+            "startedAt": "2026-11-19T23:28:09Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/YagoL3m3/p2-tqs-2026-cc-grupo01-flaskr/actions/runs/44637775144/job/135960662077"
+      },
+      {
+        "completedAt": "2026-11-19T23:29:07Z",
+        "conclusion": "success",
+        "databaseId": 135961124778,
+        "name": "SonarQube Cloud",
+        "startedAt": "2026-11-19T23:28:16Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-11-19T23:28:18Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-11-19T23:28:16Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-19T23:28:19Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@v7",
+            "number": 2,
+            "startedAt": "2026-11-19T23:28:18Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-19T23:28:20Z",
+            "conclusion": "success",
+            "name": "Run actions/download-artifact@v8",
+            "number": 3,
+            "startedAt": "2026-11-19T23:28:19Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-19T23:28:20Z",
+            "conclusion": "success",
+            "name": "Ajustar os caminhos do XML ao diretório analisado",
+            "number": 4,
+            "startedAt": "2026-11-19T23:28:20Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-19T23:29:05Z",
+            "conclusion": "success",
+            "name": "Analisar código e importar cobertura",
+            "number": 5,
+            "startedAt": "2026-11-19T23:28:20Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-19T23:29:05Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v7",
+            "number": 10,
+            "startedAt": "2026-11-19T23:29:05Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-19T23:29:05Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 11,
+            "startedAt": "2026-11-19T23:29:05Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/YagoL3m3/p2-tqs-2026-cc-grupo01-flaskr/actions/runs/44637775144/job/135961124778"
+      }
+    ],
+    "status": "completed",
+    "updatedAt": "2026-11-19T23:29:07Z",
+    "url": "https://github.com/YagoL3m3/p2-tqs-2026-cc-grupo01-flaskr/actions/runs/44637775144"
+  },
+  "analise": {
+    "key": "42909b9c-f5a9-40d0-b03f-092af359dffe",
+    "date": "2026-11-19T23:28:32+0000",
+    "events": [
+      {
+        "key": "AaH2JHj2pR8-p5niBTnw",
+        "category": "VERSION",
+        "name": "eae6f811c9ff3cdb8c2424a6be640a48a0c8fe60"
+      }
+    ],
+    "projectVersion": "eae6f811c9ff3cdb8c2424a6be640a48a0c8fe60",
+    "manualNewCodePeriodBaseline": false,
+    "revision": "eae6f811c9ff3cdb8c2424a6be640a48a0c8fe60",
+    "relativePathFromScmRoot": "flaskr-app/flaskr"
+  },
+  "quality_gate": {
+    "projectStatus": {
+      "status": "OK",
+      "conditions": [
+        {
+          "status": "OK",
+          "metricKey": "new_reliability_rating",
+          "comparator": "GT",
+          "periodIndex": 1,
+          "errorThreshold": "1",
+          "actualValue": "1"
+        },
+        {
+          "status": "OK",
+          "metricKey": "new_security_rating",
+          "comparator": "GT",
+          "periodIndex": 1,
+          "errorThreshold": "1",
+          "actualValue": "1"
+        },
+        {
+          "status": "OK",
+          "metricKey": "new_maintainability_rating",
+          "comparator": "GT",
+          "periodIndex": 1,
+          "errorThreshold": "1",
+          "actualValue": "1"
+        },
+        {
+          "status": "OK",
+          "metricKey": "new_security_hotspots_reviewed",
+          "comparator": "LT",
+          "periodIndex": 1,
+          "errorThreshold": "100",
+          "actualValue": "100.0"
+        }
+      ],
+      "periods": [
+        {
+          "index": 1,
+          "mode": "previous_version",
+          "date": "2026-11-19T23:06:18+0000",
+          "parameter": "not provided"
+        }
+      ],
+      "ignoredConditions": false
+    }
+  },
+  "medidas": {
+    "component": {
+      "id": "AaH2D3wk9d8Rc-CgkWnd",
+      "key": "YagoL3m3_p2-tqs-2026-cc-grupo01-flaskr",
+      "name": "p2-tqs-2026-cc-grupo01-flaskr",
+      "qualifier": "TRK",
+      "measures": [
+        {
+          "metric": "coverage",
+          "value": "100.0",
+          "bestValue": true
+        },
+        {
+          "metric": "duplicated_lines_density",
+          "value": "0.0",
+          "bestValue": true
+        },
+        {
+          "metric": "code_smells",
+          "value": "0",
+          "bestValue": true
+        },
+        {
+          "metric": "security_hotspots",
+          "value": "0",
+          "bestValue": true
+        },
+        {
+          "metric": "bugs",
+          "value": "1",
+          "bestValue": false
+        },
+        {
+          "metric": "alert_status",
+          "value": "OK"
+        },
+        {
+          "metric": "uncovered_conditions",
+          "value": "0",
+          "bestValue": true
+        },
+        {
+          "metric": "lines_to_cover",
+          "value": "178"
+        },
+        {
+          "metric": "branch_coverage",
+          "value": "100.0",
+          "bestValue": true
+        },
+        {
+          "metric": "uncovered_lines",
+          "value": "0",
+          "bestValue": true
+        },
+        {
+          "metric": "ncloc",
+          "value": "443"
+        },
+        {
+          "metric": "vulnerabilities",
+          "value": "1",
+          "bestValue": false
+        },
+        {
+          "metric": "line_coverage",
+          "value": "100.0",
+          "bestValue": true
+        },
+        {
+          "metric": "conditions_to_cover",
+          "value": "42"
+        }
+      ]
+    }
+  }
+}

@@ -35,4 +35,4 @@ Abra o repositório na branch final e instale as dependências indicadas no READ
 12. **Como são diferentes cobertura do código e cobertura de requisitos?** A primeira conta linhas e ramos exercitados. A segunda conta requisitos com pelo menos um caso executado.
 13. **Por que fazer o RED antes de alterar o código?** A falha registra que o teste detectava a ausência da nova regra.
 14. **O que o refactor alterou?** Criar e editar passaram a chamar uma função de validação comum. A saída e a persistência esperadas se mantiveram.
-15. **O que o Quality Gate indica?** O perfil utilizado aprovou as duas análises locais. A ocorrência estática sobre proteção de formulários continua registrada e o grupo precisa configurar o SonarQube Cloud.
+15. **O que o Quality Gate indica?** O Quality Gate passou na linha de base e na refatoração, tanto localmente quanto na nuvem. Os resultados e as ocorrências de análise estática estão no relatório da pasta 11.
