@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Flaskr | Etapa 6 | Integração HTTP" tests="56" time="1.836">
+  <testsuite name="AUT-I-01 Cadastrar conta inédita / Enviar cadastro válido" id="6ad7f8a0-4001-4c15-b6db-1fcd4dd2874b" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.099">
+    <testcase name="Resposta com representação HTML" time="0.099" classname="AutI01CadastrarContaIneditaEnviarCadastroValido"/>
+    <testcase name="HTTP 302" time="0.099" classname="AutI01CadastrarContaIneditaEnviarCadastroValido"/>
+    <testcase name="Location aponta para /auth/login" time="0.099" classname="AutI01CadastrarContaIneditaEnviarCadastroValido"/>
+  </testsuite>
+  <testsuite name="AUT-I-01 Cadastrar conta inédita / Autenticar com a conta recém-cadastrada" id="406eb3b5-932d-464d-aeb1-1f779d4d92ac" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.079">
+    <testcase name="Resposta com representação HTML" time="0.079" classname="AutI01CadastrarContaIneditaAutenticarComAContaRecemCadastrada"/>
+    <testcase name="HTTP 302" time="0.079" classname="AutI01CadastrarContaIneditaAutenticarComAContaRecemCadastrada"/>
+    <testcase name="Location aponta para /" time="0.079" classname="AutI01CadastrarContaIneditaAutenticarComAContaRecemCadastrada"/>
+  </testsuite>
+  <testsuite name="AUT-I-01 Cadastrar conta inédita / Ver a conta recém-cadastrada na página inicial" id="e1aa0080-da7d-4179-8f40-87cd75c73539" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.010">
+    <testcase name="Resposta com representação HTML" time="0.010" classname="AutI01CadastrarContaIneditaVerAContaRecemCadastradaNaPaginaInicial"/>
+    <testcase name="HTTP 200" time="0.010" classname="AutI01CadastrarContaIneditaVerAContaRecemCadastradaNaPaginaInicial"/>
+    <testcase name="Posts mantém o nome e o link Log Out" time="0.010" classname="AutI01CadastrarContaIneditaVerAContaRecemCadastradaNaPaginaInicial"/>
+  </testsuite>
+  <testsuite name="AUT-I-02 Rejeitar cadastro duplicado / Preparar conta fictícia" id="5bae03c6-c56b-449d-9d8b-40865380685f" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.075">
+    <testcase name="Resposta com representação HTML" time="0.075" classname="AutI02RejeitarCadastroDuplicadoPrepararContaFicticia"/>
+    <testcase name="HTTP 302" time="0.075" classname="AutI02RejeitarCadastroDuplicadoPrepararContaFicticia"/>
+    <testcase name="Location aponta para /auth/login" time="0.075" classname="AutI02RejeitarCadastroDuplicadoPrepararContaFicticia"/>
+  </testsuite>
+  <testsuite name="AUT-I-02 Rejeitar cadastro duplicado / Enviar o mesmo nome com outra senha" id="193c6e85-f54a-4911-9ee5-e937359fe628" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.078">
+    <testcase name="Resposta com representação HTML" time="0.078" classname="AutI02RejeitarCadastroDuplicadoEnviarOMesmoNomeComOutraSenha"/>
+    <testcase name="HTTP 200" time="0.078" classname="AutI02RejeitarCadastroDuplicadoEnviarOMesmoNomeComOutraSenha"/>
+    <testcase name="Register exibe a mensagem de duplicidade" time="0.078" classname="AutI02RejeitarCadastroDuplicadoEnviarOMesmoNomeComOutraSenha"/>
+  </testsuite>
+  <testsuite name="AUT-I-02 Rejeitar cadastro duplicado / Autenticar com a senha do primeiro cadastro" id="6cc3478d-e2cd-4c4c-95d2-b571708fec23" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.076">
+    <testcase name="Resposta com representação HTML" time="0.076" classname="AutI02RejeitarCadastroDuplicadoAutenticarComASenhaDoPrimeiroCadastro"/>
+    <testcase name="HTTP 302" time="0.076" classname="AutI02RejeitarCadastroDuplicadoAutenticarComASenhaDoPrimeiroCadastro"/>
+    <testcase name="Location aponta para /" time="0.076" classname="AutI02RejeitarCadastroDuplicadoAutenticarComASenhaDoPrimeiroCadastro"/>
+  </testsuite>
+  <testsuite name="AUT-I-02 Rejeitar cadastro duplicado / Conferir a sessão com a credencial original" id="3dff4d5f-dc94-4c5c-a807-c8624b350a07" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.003">
+    <testcase name="Resposta com representação HTML" time="0.003" classname="AutI02RejeitarCadastroDuplicadoConferirASessaoComACredencialOriginal"/>
+    <testcase name="HTTP 200" time="0.003" classname="AutI02RejeitarCadastroDuplicadoConferirASessaoComACredencialOriginal"/>
+    <testcase name="Posts mantém o nome e o link Log Out" time="0.003" classname="AutI02RejeitarCadastroDuplicadoConferirASessaoComACredencialOriginal"/>
+  </testsuite>
+  <testsuite name="AUT-I-03 Autenticar e manter a sessão / Preparar conta fictícia" id="b521f143-6f3d-48a6-aa91-d6233a2c1515" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.076">
+    <testcase name="Resposta com representação HTML" time="0.076" classname="AutI03AutenticarEManterASessaoPrepararContaFicticia"/>
+    <testcase name="HTTP 302" time="0.076" classname="AutI03AutenticarEManterASessaoPrepararContaFicticia"/>
+    <testcase name="Location aponta para /auth/login" time="0.076" classname="AutI03AutenticarEManterASessaoPrepararContaFicticia"/>
+  </testsuite>
+  <testsuite name="AUT-I-03 Autenticar e manter a sessão / Enviar credenciais válidas" id="d49af8e6-1946-4209-8d74-09d8617e1f1d" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.075">
+    <testcase name="Resposta com representação HTML" time="0.075" classname="AutI03AutenticarEManterASessaoEnviarCredenciaisValidas"/>
+    <testcase name="HTTP 302" time="0.075" classname="AutI03AutenticarEManterASessaoEnviarCredenciaisValidas"/>
+    <testcase name="Location aponta para /" time="0.075" classname="AutI03AutenticarEManterASessaoEnviarCredenciaisValidas"/>
+  </testsuite>
+  <testsuite name="AUT-I-03 Autenticar e manter a sessão / Consultar Posts após autenticação" id="61562d07-bdd8-4204-8830-ebf432ad6fee" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.003">
+    <testcase name="Resposta com representação HTML" time="0.003" classname="AutI03AutenticarEManterASessaoConsultarPostsAposAutenticacao"/>
+    <testcase name="HTTP 200" time="0.003" classname="AutI03AutenticarEManterASessaoConsultarPostsAposAutenticacao"/>
+    <testcase name="Posts mantém o nome e o link Log Out" time="0.003" classname="AutI03AutenticarEManterASessaoConsultarPostsAposAutenticacao"/>
+  </testsuite>
+  <testsuite name="AUT-I-03 Autenticar e manter a sessão / Consultar Posts novamente com o cookie" id="4cfecd27-f1f0-4554-8410-3ba425816365" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.002">
+    <testcase name="Resposta com representação HTML" time="0.002" classname="AutI03AutenticarEManterASessaoConsultarPostsNovamenteComOCookie"/>
+    <testcase name="HTTP 200" time="0.002" classname="AutI03AutenticarEManterASessaoConsultarPostsNovamenteComOCookie"/>
+    <testcase name="Posts mantém o nome e o link Log Out" time="0.002" classname="AutI03AutenticarEManterASessaoConsultarPostsNovamenteComOCookie"/>
+  </testsuite>
+  <testsuite name="AUT-I-04 Rejeitar senha incorreta / Preparar conta fictícia" id="31b4f0c6-31cd-409e-b292-d57d46aa8520" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.075">
+    <testcase name="Resposta com representação HTML" time="0.075" classname="AutI04RejeitarSenhaIncorretaPrepararContaFicticia"/>
+    <testcase name="HTTP 302" time="0.075" classname="AutI04RejeitarSenhaIncorretaPrepararContaFicticia"/>
+    <testcase name="Location aponta para /auth/login" time="0.075" classname="AutI04RejeitarSenhaIncorretaPrepararContaFicticia"/>
+  </testsuite>
+  <testsuite name="AUT-I-04 Rejeitar senha incorreta / Preparar sessão anônima" id="b9200672-ca18-4ee4-8034-620897ec9337" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.003">
+    <testcase name="Resposta com representação HTML" time="0.003" classname="AutI04RejeitarSenhaIncorretaPrepararSessaoAnonima"/>
+    <testcase name="HTTP 302" time="0.003" classname="AutI04RejeitarSenhaIncorretaPrepararSessaoAnonima"/>
+    <testcase name="Location aponta para /" time="0.003" classname="AutI04RejeitarSenhaIncorretaPrepararSessaoAnonima"/>
+  </testsuite>
+  <testsuite name="AUT-I-04 Rejeitar senha incorreta / Enviar senha incorreta da conta cadastrada" id="02a6ab85-4fab-4fb8-94e2-647944b68407" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.078">
+    <testcase name="Resposta com representação HTML" time="0.078" classname="AutI04RejeitarSenhaIncorretaEnviarSenhaIncorretaDaContaCadastrada"/>
+    <testcase name="HTTP 200" time="0.078" classname="AutI04RejeitarSenhaIncorretaEnviarSenhaIncorretaDaContaCadastrada"/>
+    <testcase name="Log In exibe a mensagem de senha incorreta" time="0.078" classname="AutI04RejeitarSenhaIncorretaEnviarSenhaIncorretaDaContaCadastrada"/>
+  </testsuite>
+  <testsuite name="AUT-I-04 Rejeitar senha incorreta / Confirmar que New Post exige sessão" id="0323f0f0-6543-44a5-bf66-3b17c97b4f10" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.002">
+    <testcase name="Resposta com representação HTML" time="0.002" classname="AutI04RejeitarSenhaIncorretaConfirmarQueNewPostExigeSessao"/>
+    <testcase name="HTTP 302" time="0.002" classname="AutI04RejeitarSenhaIncorretaConfirmarQueNewPostExigeSessao"/>
+    <testcase name="Location aponta para /auth/login" time="0.002" classname="AutI04RejeitarSenhaIncorretaConfirmarQueNewPostExigeSessao"/>
+  </testsuite>
+  <testsuite name="AUT-I-05 Publicar com título, corpo e autor / Preparar conta fictícia" id="b77a867a-2879-4e95-9dd8-dec5eb262549" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.074">
+    <testcase name="Resposta com representação HTML" time="0.074" classname="AutI05PublicarComTituloCorpoEAutorPrepararContaFicticia"/>
+    <testcase name="HTTP 302" time="0.074" classname="AutI05PublicarComTituloCorpoEAutorPrepararContaFicticia"/>
+    <testcase name="Location aponta para /auth/login" time="0.074" classname="AutI05PublicarComTituloCorpoEAutorPrepararContaFicticia"/>
+  </testsuite>
+  <testsuite name="AUT-I-05 Publicar com título, corpo e autor / Preparar sessão autenticada" id="03d2027c-3670-47e4-bbce-fbf80825abe5" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.074">
+    <testcase name="Resposta com representação HTML" time="0.074" classname="AutI05PublicarComTituloCorpoEAutorPrepararSessaoAutenticada"/>
+    <testcase name="HTTP 302" time="0.074" classname="AutI05PublicarComTituloCorpoEAutorPrepararSessaoAutenticada"/>
+    <testcase name="Location aponta para /" time="0.074" classname="AutI05PublicarComTituloCorpoEAutorPrepararSessaoAutenticada"/>
+  </testsuite>
+  <testsuite name="AUT-I-05 Publicar com título, corpo e autor / Enviar publicação válida" id="b6319a5a-d8bf-434e-b8b7-820a953e2a04" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.003">
+    <testcase name="Resposta com representação HTML" time="0.003" classname="AutI05PublicarComTituloCorpoEAutorEnviarPublicacaoValida"/>
+    <testcase name="HTTP 302" time="0.003" classname="AutI05PublicarComTituloCorpoEAutorEnviarPublicacaoValida"/>
+    <testcase name="Location aponta para /" time="0.003" classname="AutI05PublicarComTituloCorpoEAutorEnviarPublicacaoValida"/>
+  </testsuite>
+  <testsuite name="AUT-I-05 Publicar com título, corpo e autor / Ler a publicação e a autoria em Posts" id="6dd3b420-6650-4536-92a4-d12a6f468258" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.002">
+    <testcase name="Resposta com representação HTML" time="0.002" classname="AutI05PublicarComTituloCorpoEAutorLerAPublicacaoEAAutoriaEmPosts"/>
+    <testcase name="HTTP 200" time="0.002" classname="AutI05PublicarComTituloCorpoEAutorLerAPublicacaoEAAutoriaEmPosts"/>
+    <testcase name="Artigo I05 Rotina QA contém corpo e autoria esperados" time="0.002" classname="AutI05PublicarComTituloCorpoEAutorLerAPublicacaoEAAutoriaEmPosts"/>
+  </testsuite>
+  <testsuite name="AUT-I-06 Rejeitar criação com título vazio / Preparar conta fictícia" id="72ad0185-cddb-4a25-b566-d08d5a841c47" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.075">
+    <testcase name="Resposta com representação HTML" time="0.075" classname="AutI06RejeitarCriacaoComTituloVazioPrepararContaFicticia"/>
+    <testcase name="HTTP 302" time="0.075" classname="AutI06RejeitarCriacaoComTituloVazioPrepararContaFicticia"/>
+    <testcase name="Location aponta para /auth/login" time="0.075" classname="AutI06RejeitarCriacaoComTituloVazioPrepararContaFicticia"/>
+  </testsuite>
+  <testsuite name="AUT-I-06 Rejeitar criação com título vazio / Preparar sessão autenticada" id="c85a26f9-419d-4817-b0fd-2071ac514bc9" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.074">
+    <testcase name="Resposta com representação HTML" time="0.074" classname="AutI06RejeitarCriacaoComTituloVazioPrepararSessaoAutenticada"/>
+    <testcase name="HTTP 302" time="0.074" classname="AutI06RejeitarCriacaoComTituloVazioPrepararSessaoAutenticada"/>
+    <testcase name="Location aponta para /" time="0.074" classname="AutI06RejeitarCriacaoComTituloVazioPrepararSessaoAutenticada"/>
+  </testsuite>
+  <testsuite name="AUT-I-06 Rejeitar criação com título vazio / Enviar título vazio e corpo preenchido" id="7a9c3e43-2f3c-4b99-9589-a5c0f43ab40b" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.004">
+    <testcase name="Resposta com representação HTML" time="0.004" classname="AutI06RejeitarCriacaoComTituloVazioEnviarTituloVazioECorpoPreenchido"/>
+    <testcase name="HTTP 200" time="0.004" classname="AutI06RejeitarCriacaoComTituloVazioEnviarTituloVazioECorpoPreenchido"/>
+    <testcase name="New Post informa a obrigatoriedade do título" time="0.004" classname="AutI06RejeitarCriacaoComTituloVazioEnviarTituloVazioECorpoPreenchido"/>
+  </testsuite>
+  <testsuite name="AUT-I-06 Rejeitar criação com título vazio / Conferir que o rascunho não foi publicado" id="281dbd6d-0421-4b37-8162-aee028125505" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.002">
+    <testcase name="Resposta com representação HTML" time="0.002" classname="AutI06RejeitarCriacaoComTituloVazioConferirQueORascunhoNaoFoiPublicado"/>
+    <testcase name="HTTP 200" time="0.002" classname="AutI06RejeitarCriacaoComTituloVazioConferirQueORascunhoNaoFoiPublicado"/>
+    <testcase name="Posts não exibe o corpo do rascunho" time="0.002" classname="AutI06RejeitarCriacaoComTituloVazioConferirQueORascunhoNaoFoiPublicado"/>
+  </testsuite>
+  <testsuite name="AUT-I-07 Editar publicação como autor / Preparar conta fictícia" id="999775e8-29bd-4a99-9c54-9217661356dd" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.074">
+    <testcase name="Resposta com representação HTML" time="0.074" classname="AutI07EditarPublicacaoComoAutorPrepararContaFicticia"/>
+    <testcase name="HTTP 302" time="0.074" classname="AutI07EditarPublicacaoComoAutorPrepararContaFicticia"/>
+    <testcase name="Location aponta para /auth/login" time="0.074" classname="AutI07EditarPublicacaoComoAutorPrepararContaFicticia"/>
+  </testsuite>
+  <testsuite name="AUT-I-07 Editar publicação como autor / Preparar sessão autenticada" id="b5e7c448-5f8d-4449-b22a-f4754f55cf45" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.073">
+    <testcase name="Resposta com representação HTML" time="0.073" classname="AutI07EditarPublicacaoComoAutorPrepararSessaoAutenticada"/>
+    <testcase name="HTTP 302" time="0.073" classname="AutI07EditarPublicacaoComoAutorPrepararSessaoAutenticada"/>
+    <testcase name="Location aponta para /" time="0.073" classname="AutI07EditarPublicacaoComoAutorPrepararSessaoAutenticada"/>
+  </testsuite>
+  <testsuite name="AUT-I-07 Editar publicação como autor / Preparar publicação do autor" id="e8e279e0-b0de-4fe5-950b-25bf260ff00b" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.004">
+    <testcase name="Resposta com representação HTML" time="0.004" classname="AutI07EditarPublicacaoComoAutorPrepararPublicacaoDoAutor"/>
+    <testcase name="HTTP 302" time="0.004" classname="AutI07EditarPublicacaoComoAutorPrepararPublicacaoDoAutor"/>
+    <testcase name="Location aponta para /" time="0.004" classname="AutI07EditarPublicacaoComoAutorPrepararPublicacaoDoAutor"/>
+  </testsuite>
+  <testsuite name="AUT-I-07 Editar publicação como autor / Obter o ID pelo link Edit do artigo preparado" id="b61476c3-6f9e-466d-a0cc-d6ee7845da8e" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.002">
+    <testcase name="Resposta com representação HTML" time="0.002" classname="AutI07EditarPublicacaoComoAutorObterOIdPeloLinkEditDoArtigoPreparado"/>
+    <testcase name="HTTP 200" time="0.002" classname="AutI07EditarPublicacaoComoAutorObterOIdPeloLinkEditDoArtigoPreparado"/>
+    <testcase name="Artigo I07 Original QA contém corpo e autoria esperados" time="0.002" classname="AutI07EditarPublicacaoComoAutorObterOIdPeloLinkEditDoArtigoPreparado"/>
+  </testsuite>
+  <testsuite name="AUT-I-07 Editar publicação como autor / Salvar novo título e novo corpo" id="aecaf9a6-3fc8-4058-8458-1922ad1bfd55" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.003">
+    <testcase name="Resposta com representação HTML" time="0.003" classname="AutI07EditarPublicacaoComoAutorSalvarNovoTituloENovoCorpo"/>
+    <testcase name="HTTP 302" time="0.003" classname="AutI07EditarPublicacaoComoAutorSalvarNovoTituloENovoCorpo"/>
+    <testcase name="Location aponta para /" time="0.003" classname="AutI07EditarPublicacaoComoAutorSalvarNovoTituloENovoCorpo"/>
+  </testsuite>
+  <testsuite name="AUT-I-07 Editar publicação como autor / Conferir a versão revisada em Posts" id="d636be99-6aa2-4f90-a732-d3d3c1e8f7c0" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.002">
+    <testcase name="Resposta com representação HTML" time="0.002" classname="AutI07EditarPublicacaoComoAutorConferirAVersaoRevisadaEmPosts"/>
+    <testcase name="HTTP 200" time="0.002" classname="AutI07EditarPublicacaoComoAutorConferirAVersaoRevisadaEmPosts"/>
+    <testcase name="Artigo I07 Revisado QA contém corpo e autoria esperados" time="0.002" classname="AutI07EditarPublicacaoComoAutorConferirAVersaoRevisadaEmPosts"/>
+  </testsuite>
+  <testsuite name="AUT-I-08 Rejeitar edição com título vazio / Preparar conta fictícia" id="d68492d4-9e06-47cd-a852-a0f4add76b97" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.074">
+    <testcase name="Resposta com representação HTML" time="0.074" classname="AutI08RejeitarEdicaoComTituloVazioPrepararContaFicticia"/>
+    <testcase name="HTTP 302" time="0.074" classname="AutI08RejeitarEdicaoComTituloVazioPrepararContaFicticia"/>
+    <testcase name="Location aponta para /auth/login" time="0.074" classname="AutI08RejeitarEdicaoComTituloVazioPrepararContaFicticia"/>
+  </testsuite>
+  <testsuite name="AUT-I-08 Rejeitar edição com título vazio / Preparar sessão autenticada" id="db0b2b03-2386-450f-bf54-357b6309f35b" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.073">
+    <testcase name="Resposta com representação HTML" time="0.073" classname="AutI08RejeitarEdicaoComTituloVazioPrepararSessaoAutenticada"/>
+    <testcase name="HTTP 302" time="0.073" classname="AutI08RejeitarEdicaoComTituloVazioPrepararSessaoAutenticada"/>
+    <testcase name="Location aponta para /" time="0.073" classname="AutI08RejeitarEdicaoComTituloVazioPrepararSessaoAutenticada"/>
+  </testsuite>
+  <testsuite name="AUT-I-08 Rejeitar edição com título vazio / Preparar publicação do autor" id="655e38de-8869-4989-a446-20d36ec6381e" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.003">
+    <testcase name="Resposta com representação HTML" time="0.003" classname="AutI08RejeitarEdicaoComTituloVazioPrepararPublicacaoDoAutor"/>
+    <testcase name="HTTP 302" time="0.003" classname="AutI08RejeitarEdicaoComTituloVazioPrepararPublicacaoDoAutor"/>
+    <testcase name="Location aponta para /" time="0.003" classname="AutI08RejeitarEdicaoComTituloVazioPrepararPublicacaoDoAutor"/>
+  </testsuite>
+  <testsuite name="AUT-I-08 Rejeitar edição com título vazio / Obter o ID pelo link Edit do artigo preparado" id="553b820a-8210-4765-9905-d13884459e8e" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.002">
+    <testcase name="Resposta com representação HTML" time="0.002" classname="AutI08RejeitarEdicaoComTituloVazioObterOIdPeloLinkEditDoArtigoPreparado"/>
+    <testcase name="HTTP 200" time="0.002" classname="AutI08RejeitarEdicaoComTituloVazioObterOIdPeloLinkEditDoArtigoPreparado"/>
+    <testcase name="Artigo I08 Original QA contém corpo e autoria esperados" time="0.002" classname="AutI08RejeitarEdicaoComTituloVazioObterOIdPeloLinkEditDoArtigoPreparado"/>
+  </testsuite>
+  <testsuite name="AUT-I-08 Rejeitar edição com título vazio / Enviar edição com título vazio" id="df359d8d-ebfe-42f1-8ee0-ee403f51ee64" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.005">
+    <testcase name="Resposta com representação HTML" time="0.005" classname="AutI08RejeitarEdicaoComTituloVazioEnviarEdicaoComTituloVazio"/>
+    <testcase name="HTTP 200" time="0.005" classname="AutI08RejeitarEdicaoComTituloVazioEnviarEdicaoComTituloVazio"/>
+    <testcase name="O editor informa a obrigatoriedade do título" time="0.005" classname="AutI08RejeitarEdicaoComTituloVazioEnviarEdicaoComTituloVazio"/>
+  </testsuite>
+  <testsuite name="AUT-I-08 Rejeitar edição com título vazio / Conferir o artigo original em Posts" id="3c4ee794-c125-46a0-9e69-833767945d36" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.002">
+    <testcase name="Resposta com representação HTML" time="0.002" classname="AutI08RejeitarEdicaoComTituloVazioConferirOArtigoOriginalEmPosts"/>
+    <testcase name="HTTP 200" time="0.002" classname="AutI08RejeitarEdicaoComTituloVazioConferirOArtigoOriginalEmPosts"/>
+    <testcase name="Artigo I08 Original QA contém corpo e autoria esperados" time="0.002" classname="AutI08RejeitarEdicaoComTituloVazioConferirOArtigoOriginalEmPosts"/>
+  </testsuite>
+  <testsuite name="AUT-I-09 Excluir somente o post selecionado / Preparar conta fictícia" id="4ca58c2b-7df9-4bab-a98a-45c34f125cd1" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.073">
+    <testcase name="Resposta com representação HTML" time="0.073" classname="AutI09ExcluirSomenteOPostSelecionadoPrepararContaFicticia"/>
+    <testcase name="HTTP 302" time="0.073" classname="AutI09ExcluirSomenteOPostSelecionadoPrepararContaFicticia"/>
+    <testcase name="Location aponta para /auth/login" time="0.073" classname="AutI09ExcluirSomenteOPostSelecionadoPrepararContaFicticia"/>
+  </testsuite>
+  <testsuite name="AUT-I-09 Excluir somente o post selecionado / Preparar sessão autenticada" id="9be7091e-badd-45f6-ac75-4c52f915c6e9" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.075">
+    <testcase name="Resposta com representação HTML" time="0.075" classname="AutI09ExcluirSomenteOPostSelecionadoPrepararSessaoAutenticada"/>
+    <testcase name="HTTP 302" time="0.075" classname="AutI09ExcluirSomenteOPostSelecionadoPrepararSessaoAutenticada"/>
+    <testcase name="Location aponta para /" time="0.075" classname="AutI09ExcluirSomenteOPostSelecionadoPrepararSessaoAutenticada"/>
+  </testsuite>
+  <testsuite name="AUT-I-09 Excluir somente o post selecionado / Preparar publicação alvo" id="3ba1cd11-b31a-445f-b996-23c9c07b251f" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.003">
+    <testcase name="Resposta com representação HTML" time="0.003" classname="AutI09ExcluirSomenteOPostSelecionadoPrepararPublicacaoAlvo"/>
+    <testcase name="HTTP 302" time="0.003" classname="AutI09ExcluirSomenteOPostSelecionadoPrepararPublicacaoAlvo"/>
+    <testcase name="Location aponta para /" time="0.003" classname="AutI09ExcluirSomenteOPostSelecionadoPrepararPublicacaoAlvo"/>
+  </testsuite>
+  <testsuite name="AUT-I-09 Excluir somente o post selecionado / Preparar publicação de controle" id="8cf1753d-8623-4907-8f97-a6b17c899566" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.003">
+    <testcase name="Resposta com representação HTML" time="0.003" classname="AutI09ExcluirSomenteOPostSelecionadoPrepararPublicacaoDeControle"/>
+    <testcase name="HTTP 302" time="0.003" classname="AutI09ExcluirSomenteOPostSelecionadoPrepararPublicacaoDeControle"/>
+    <testcase name="Location aponta para /" time="0.003" classname="AutI09ExcluirSomenteOPostSelecionadoPrepararPublicacaoDeControle"/>
+  </testsuite>
+  <testsuite name="AUT-I-09 Excluir somente o post selecionado / Obter o ID pelo link Edit do artigo preparado" id="ba645825-1eed-4c15-b8bc-7abf2dab5aec" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.002">
+    <testcase name="Resposta com representação HTML" time="0.002" classname="AutI09ExcluirSomenteOPostSelecionadoObterOIdPeloLinkEditDoArtigoPreparado"/>
+    <testcase name="HTTP 200" time="0.002" classname="AutI09ExcluirSomenteOPostSelecionadoObterOIdPeloLinkEditDoArtigoPreparado"/>
+    <testcase name="Artigo I09 Alvo QA contém corpo e autoria esperados" time="0.002" classname="AutI09ExcluirSomenteOPostSelecionadoObterOIdPeloLinkEditDoArtigoPreparado"/>
+  </testsuite>
+  <testsuite name="AUT-I-09 Excluir somente o post selecionado / Excluir a publicação selecionada" id="e60b0113-de51-4551-a763-7c103fb09d76" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.003">
+    <testcase name="Resposta com representação HTML" time="0.003" classname="AutI09ExcluirSomenteOPostSelecionadoExcluirAPublicacaoSelecionada"/>
+    <testcase name="HTTP 302" time="0.003" classname="AutI09ExcluirSomenteOPostSelecionadoExcluirAPublicacaoSelecionada"/>
+    <testcase name="Location aponta para /" time="0.003" classname="AutI09ExcluirSomenteOPostSelecionadoExcluirAPublicacaoSelecionada"/>
+  </testsuite>
+  <testsuite name="AUT-I-09 Excluir somente o post selecionado / Conferir o controle preservado e o alvo ausente" id="6656f2fe-92b4-4258-bfec-f5fcd51bd6c5" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.002">
+    <testcase name="Resposta com representação HTML" time="0.002" classname="AutI09ExcluirSomenteOPostSelecionadoConferirOControlePreservadoEOAlvoAusente"/>
+    <testcase name="HTTP 200" time="0.002" classname="AutI09ExcluirSomenteOPostSelecionadoConferirOControlePreservadoEOAlvoAusente"/>
+    <testcase name="Artigo I09 Controle QA contém corpo e autoria esperados" time="0.002" classname="AutI09ExcluirSomenteOPostSelecionadoConferirOControlePreservadoEOAlvoAusente"/>
+  </testsuite>
+  <testsuite name="AUT-I-10 Tratar nova exclusão do mesmo post / Preparar conta fictícia" id="09851dd4-43af-4171-a154-b872c9ba7fb0" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.075">
+    <testcase name="Resposta com representação HTML" time="0.075" classname="AutI10TratarNovaExclusaoDoMesmoPostPrepararContaFicticia"/>
+    <testcase name="HTTP 302" time="0.075" classname="AutI10TratarNovaExclusaoDoMesmoPostPrepararContaFicticia"/>
+    <testcase name="Location aponta para /auth/login" time="0.075" classname="AutI10TratarNovaExclusaoDoMesmoPostPrepararContaFicticia"/>
+  </testsuite>
+  <testsuite name="AUT-I-10 Tratar nova exclusão do mesmo post / Preparar sessão autenticada" id="64a16cbb-edfc-4993-9c15-543525df38b8" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.072">
+    <testcase name="Resposta com representação HTML" time="0.072" classname="AutI10TratarNovaExclusaoDoMesmoPostPrepararSessaoAutenticada"/>
+    <testcase name="HTTP 302" time="0.072" classname="AutI10TratarNovaExclusaoDoMesmoPostPrepararSessaoAutenticada"/>
+    <testcase name="Location aponta para /" time="0.072" classname="AutI10TratarNovaExclusaoDoMesmoPostPrepararSessaoAutenticada"/>
+  </testsuite>
+  <testsuite name="AUT-I-10 Tratar nova exclusão do mesmo post / Preparar publicação alvo" id="718f103c-c463-4cfb-a424-86a40d70f93f" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.004">
+    <testcase name="Resposta com representação HTML" time="0.004" classname="AutI10TratarNovaExclusaoDoMesmoPostPrepararPublicacaoAlvo"/>
+    <testcase name="HTTP 302" time="0.004" classname="AutI10TratarNovaExclusaoDoMesmoPostPrepararPublicacaoAlvo"/>
+    <testcase name="Location aponta para /" time="0.004" classname="AutI10TratarNovaExclusaoDoMesmoPostPrepararPublicacaoAlvo"/>
+  </testsuite>
+  <testsuite name="AUT-I-10 Tratar nova exclusão do mesmo post / Preparar publicação de controle" id="47bf3242-6b99-49c9-8305-5b0915e2e82d" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.003">
+    <testcase name="Resposta com representação HTML" time="0.003" classname="AutI10TratarNovaExclusaoDoMesmoPostPrepararPublicacaoDeControle"/>
+    <testcase name="HTTP 302" time="0.003" classname="AutI10TratarNovaExclusaoDoMesmoPostPrepararPublicacaoDeControle"/>
+    <testcase name="Location aponta para /" time="0.003" classname="AutI10TratarNovaExclusaoDoMesmoPostPrepararPublicacaoDeControle"/>
+  </testsuite>
+  <testsuite name="AUT-I-10 Tratar nova exclusão do mesmo post / Obter o ID pelo link Edit do artigo preparado" id="ec8da3de-eabb-40ba-b256-ea0f967ad452" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.002">
+    <testcase name="Resposta com representação HTML" time="0.002" classname="AutI10TratarNovaExclusaoDoMesmoPostObterOIdPeloLinkEditDoArtigoPreparado"/>
+    <testcase name="HTTP 200" time="0.002" classname="AutI10TratarNovaExclusaoDoMesmoPostObterOIdPeloLinkEditDoArtigoPreparado"/>
+    <testcase name="Artigo I10 Alvo QA contém corpo e autoria esperados" time="0.002" classname="AutI10TratarNovaExclusaoDoMesmoPostObterOIdPeloLinkEditDoArtigoPreparado"/>
+  </testsuite>
+  <testsuite name="AUT-I-10 Tratar nova exclusão do mesmo post / Excluir o alvo na primeira solicitação" id="c6e054cf-b6b4-4b80-94e6-a1c0b542ae6d" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.004">
+    <testcase name="Resposta com representação HTML" time="0.004" classname="AutI10TratarNovaExclusaoDoMesmoPostExcluirOAlvoNaPrimeiraSolicitacao"/>
+    <testcase name="HTTP 302" time="0.004" classname="AutI10TratarNovaExclusaoDoMesmoPostExcluirOAlvoNaPrimeiraSolicitacao"/>
+    <testcase name="Location aponta para /" time="0.004" classname="AutI10TratarNovaExclusaoDoMesmoPostExcluirOAlvoNaPrimeiraSolicitacao"/>
+  </testsuite>
+  <testsuite name="AUT-I-10 Tratar nova exclusão do mesmo post / Repetir a solicitação para o alvo já excluído" id="800b61bb-e323-4c83-a6c3-bbdcd1338384" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.002">
+    <testcase name="Resposta com representação HTML" time="0.002" classname="AutI10TratarNovaExclusaoDoMesmoPostRepetirASolicitacaoParaOAlvoJaExcluido"/>
+    <testcase name="HTTP 404" time="0.002" classname="AutI10TratarNovaExclusaoDoMesmoPostRepetirASolicitacaoParaOAlvoJaExcluido"/>
+    <testcase name="A mensagem Not Found identifica o post ausente" time="0.002" classname="AutI10TratarNovaExclusaoDoMesmoPostRepetirASolicitacaoParaOAlvoJaExcluido"/>
+  </testsuite>
+  <testsuite name="AUT-I-10 Tratar nova exclusão do mesmo post / Conferir que apenas a publicação de controle permanece" id="f02f7e39-ab1b-4b42-a920-23a5ba3b7d2c" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.003">
+    <testcase name="Resposta com representação HTML" time="0.003" classname="AutI10TratarNovaExclusaoDoMesmoPostConferirQueApenasAPublicacaoDeControlePermanece"/>
+    <testcase name="HTTP 200" time="0.003" classname="AutI10TratarNovaExclusaoDoMesmoPostConferirQueApenasAPublicacaoDeControlePermanece"/>
+    <testcase name="Artigo I10 Controle QA contém corpo e autoria esperados" time="0.003" classname="AutI10TratarNovaExclusaoDoMesmoPostConferirQueApenasAPublicacaoDeControlePermanece"/>
+  </testsuite>
+  <testsuite name="AUT-I-11 Encerrar sessão e proteger a criação / Preparar conta fictícia" id="8b21b0c7-143e-45b5-aa8e-6874b66f8fdd" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.073">
+    <testcase name="Resposta com representação HTML" time="0.073" classname="AutI11EncerrarSessaoEProtegerACriacaoPrepararContaFicticia"/>
+    <testcase name="HTTP 302" time="0.073" classname="AutI11EncerrarSessaoEProtegerACriacaoPrepararContaFicticia"/>
+    <testcase name="Location aponta para /auth/login" time="0.073" classname="AutI11EncerrarSessaoEProtegerACriacaoPrepararContaFicticia"/>
+  </testsuite>
+  <testsuite name="AUT-I-11 Encerrar sessão e proteger a criação / Preparar sessão autenticada" id="06a331b1-824d-40c9-8196-af7c0ca970e1" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.073">
+    <testcase name="Resposta com representação HTML" time="0.073" classname="AutI11EncerrarSessaoEProtegerACriacaoPrepararSessaoAutenticada"/>
+    <testcase name="HTTP 302" time="0.073" classname="AutI11EncerrarSessaoEProtegerACriacaoPrepararSessaoAutenticada"/>
+    <testcase name="Location aponta para /" time="0.073" classname="AutI11EncerrarSessaoEProtegerACriacaoPrepararSessaoAutenticada"/>
+  </testsuite>
+  <testsuite name="AUT-I-11 Encerrar sessão e proteger a criação / Abrir New Post no início da sessão" id="92da3175-da07-463e-9a73-275fe4c28404" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.002">
+    <testcase name="Resposta com representação HTML" time="0.002" classname="AutI11EncerrarSessaoEProtegerACriacaoAbrirNewPostNoInicioDaSessao"/>
+    <testcase name="HTTP 200" time="0.002" classname="AutI11EncerrarSessaoEProtegerACriacaoAbrirNewPostNoInicioDaSessao"/>
+    <testcase name="New Post contém o campo Title" time="0.002" classname="AutI11EncerrarSessaoEProtegerACriacaoAbrirNewPostNoInicioDaSessao"/>
+  </testsuite>
+  <testsuite name="AUT-I-11 Encerrar sessão e proteger a criação / Encerrar a sessão" id="78cc5d3c-b477-4d1f-8799-1b7a2d10d221" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.001">
+    <testcase name="Resposta com representação HTML" time="0.001" classname="AutI11EncerrarSessaoEProtegerACriacaoEncerrarASessao"/>
+    <testcase name="HTTP 302" time="0.001" classname="AutI11EncerrarSessaoEProtegerACriacaoEncerrarASessao"/>
+    <testcase name="Location aponta para /" time="0.001" classname="AutI11EncerrarSessaoEProtegerACriacaoEncerrarASessao"/>
+  </testsuite>
+  <testsuite name="AUT-I-11 Encerrar sessão e proteger a criação / Conferir menu anônimo em Posts" id="58e864b5-cf75-4b1d-b921-fa73124538a9" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.001">
+    <testcase name="Resposta com representação HTML" time="0.001" classname="AutI11EncerrarSessaoEProtegerACriacaoConferirMenuAnonimoEmPosts"/>
+    <testcase name="HTTP 200" time="0.001" classname="AutI11EncerrarSessaoEProtegerACriacaoConferirMenuAnonimoEmPosts"/>
+    <testcase name="Menu exibe Log In e Register" time="0.001" classname="AutI11EncerrarSessaoEProtegerACriacaoConferirMenuAnonimoEmPosts"/>
+  </testsuite>
+  <testsuite name="AUT-I-11 Encerrar sessão e proteger a criação / Reabrir New Post após Log Out" id="fa9fcd5c-b1df-4fd3-8e7c-328d1bcceb47" timestamp="2026-11-19T18:40:49.140Z" tests="3" failures="0" errors="0" time="0.001">
+    <testcase name="Resposta com representação HTML" time="0.001" classname="AutI11EncerrarSessaoEProtegerACriacaoReabrirNewPostAposLogOut"/>
+    <testcase name="HTTP 302" time="0.001" classname="AutI11EncerrarSessaoEProtegerACriacaoReabrirNewPostAposLogOut"/>
+    <testcase name="Location aponta para /auth/login" time="0.001" classname="AutI11EncerrarSessaoEProtegerACriacaoReabrirNewPostAposLogOut"/>
+  </testsuite>
+</testsuites>
