@@ -1,0 +1,2 @@
+Comando: flask --app flaskr init-db | 2026-11-19T10:14:01-03:00 | Python 3.13.15
+Initialized the database.

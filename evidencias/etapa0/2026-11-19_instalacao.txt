@@ -1,0 +1,73 @@
+Comando: python3.13 -m venv; python -m pip install Flask==3.1.3 pytest; python -m pip install -e . | 2026-11-19T10:13:31-03:00 | Python 3.13.15
+WARNING: The directory '/Users/yagoleme/Library/Caches/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+Collecting Flask==3.1.3
+  Downloading flask-3.1.3-py3-none-any.whl.metadata (3.2 kB)
+Collecting pytest
+  Downloading pytest-9.2.0-py3-none-any.whl.metadata (7.9 kB)
+Collecting blinker>=1.9.0 (from Flask==3.1.3)
+  Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+Collecting click>=8.1.3 (from Flask==3.1.3)
+  Downloading click-8.5.1-py3-none-any.whl.metadata (2.6 kB)
+Collecting itsdangerous>=2.2.0 (from Flask==3.1.3)
+  Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+Collecting jinja2>=3.1.2 (from Flask==3.1.3)
+  Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting markupsafe>=2.1.1 (from Flask==3.1.3)
+  Downloading markupsafe-3.0.4-cp313-cp313-macosx_11_0_arm64.whl.metadata (2.7 kB)
+Collecting werkzeug>=3.1.0 (from Flask==3.1.3)
+  Downloading werkzeug-3.1.9-py3-none-any.whl.metadata (4.1 kB)
+Collecting iniconfig>=2 (from pytest)
+  Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+Collecting packaging>=24 (from pytest)
+  Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting pluggy<2,>=1.6 (from pytest)
+  Downloading pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+Collecting pygments>=2.15 (from pytest)
+  Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+Downloading flask-3.1.3-py3-none-any.whl (103 kB)
+Downloading pytest-9.2.0-py3-none-any.whl (411 kB)
+Downloading pluggy-1.7.0-py3-none-any.whl (27 kB)
+Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB)
+Downloading click-8.5.1-py3-none-any.whl (126 kB)
+Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+Downloading markupsafe-3.0.4-cp313-cp313-macosx_11_0_arm64.whl (12 kB)
+Downloading packaging-26.3-py3-none-any.whl (129 kB)
+Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 24.0 MB/s  0:00:00
+Downloading werkzeug-3.1.9-py3-none-any.whl (228 kB)
+Installing collected packages: pygments, pluggy, packaging, markupsafe, itsdangerous, iniconfig, click, blinker, werkzeug, pytest, jinja2, Flask
+
+Successfully installed Flask-3.1.3 blinker-1.9.0 click-8.5.1 iniconfig-2.3.1 itsdangerous-2.2.0 jinja2-3.1.6 markupsafe-3.0.4 packaging-26.3 pluggy-1.7.0 pygments-2.21.0 pytest-9.2.0 werkzeug-3.1.9
+
+[notice] A new release of pip is available: 26.2.1 -> 26.3
+[notice] To update, run: /Users/yagoleme/Documents/Codex/2026-11-19/new-chat/work/flaskr-etapa0-venv/bin/python -m pip install --upgrade pip
+WARNING: The directory '/Users/yagoleme/Library/Caches/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+Obtaining file:///Users/yagoleme/Documents/Codex/2026-11-19/new-chat/work/p2-tqs-2026-cc-grupo01-flaskr/flaskr-app
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: flask in /Users/yagoleme/Documents/Codex/2026-11-19/new-chat/work/flaskr-etapa0-venv/lib/python3.13/site-packages (from flaskr==1.0.0) (3.1.3)
+Requirement already satisfied: blinker>=1.9.0 in /Users/yagoleme/Documents/Codex/2026-11-19/new-chat/work/flaskr-etapa0-venv/lib/python3.13/site-packages (from flask->flaskr==1.0.0) (1.9.0)
+Requirement already satisfied: click>=8.1.3 in /Users/yagoleme/Documents/Codex/2026-11-19/new-chat/work/flaskr-etapa0-venv/lib/python3.13/site-packages (from flask->flaskr==1.0.0) (8.5.1)
+Requirement already satisfied: itsdangerous>=2.2.0 in /Users/yagoleme/Documents/Codex/2026-11-19/new-chat/work/flaskr-etapa0-venv/lib/python3.13/site-packages (from flask->flaskr==1.0.0) (2.2.0)
+Requirement already satisfied: jinja2>=3.1.2 in /Users/yagoleme/Documents/Codex/2026-11-19/new-chat/work/flaskr-etapa0-venv/lib/python3.13/site-packages (from flask->flaskr==1.0.0) (3.1.6)
+Requirement already satisfied: markupsafe>=2.1.1 in /Users/yagoleme/Documents/Codex/2026-11-19/new-chat/work/flaskr-etapa0-venv/lib/python3.13/site-packages (from flask->flaskr==1.0.0) (3.0.4)
+Requirement already satisfied: werkzeug>=3.1.0 in /Users/yagoleme/Documents/Codex/2026-11-19/new-chat/work/flaskr-etapa0-venv/lib/python3.13/site-packages (from flask->flaskr==1.0.0) (3.1.9)
+Building wheels for collected packages: flaskr
+  Building editable for flaskr (pyproject.toml): started
+  Building editable for flaskr (pyproject.toml): finished with status 'done'
+  Created wheel for flaskr: filename=flaskr-1.0.0-py2.py3-none-any.whl size=2676 sha256=0ce2a95060e8522c29fdae3483502a3adeff5e8bdfe6510b403098cd57d91590
+  Stored in directory: /private/var/folders/44/0xv_z9dj4xq6m7yj35pgd5_h0000gn/T/pip-ephem-wheel-cache-0jwjsl2g/wheels/61/21/a5/476e568c9547f5782b845a7696d0e29fac607ed75e19fc8c6d
+Successfully built flaskr
+Installing collected packages: flaskr
+Successfully installed flaskr-1.0.0
+
+[notice] A new release of pip is available: 26.2.1 -> 26.3
+[notice] To update, run: /Users/yagoleme/Documents/Codex/2026-11-19/new-chat/work/flaskr-etapa0-venv/bin/python -m pip install --upgrade pip

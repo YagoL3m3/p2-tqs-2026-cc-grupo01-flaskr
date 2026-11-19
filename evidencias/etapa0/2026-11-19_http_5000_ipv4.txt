@@ -1,0 +1,43 @@
+Comandos: lsof; flask --app flaskr run --port 5000; curl --ipv4 http://localhost:5000/ | 2026-11-19T10:14:10-03:00 | Python 3.13.15
+COMMAND    PID     USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+ControlCe 1242 yagoleme   12u  IPv4 0x887e06f6dc137e96      0t0  TCP *:5000 (LISTEN)
+ControlCe 1242 yagoleme   13u  IPv6 0x5d82ebf1edbce96a      0t0  TCP *:5000 (LISTEN)
+ * Serving Flask app 'flaskr'
+ * Debug mode: off
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+[33mPress CTRL+C to quit[0m
+127.0.0.1 - - [19/Nov/2026 10:14:10] "GET / HTTP/1.1" 200 -
+HTTP/1.1 200 OK
+Server: Werkzeug/3.1.9 Python/3.13.15
+Date: Thu, 19 Nov 2026 13:14:10 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 353
+Vary: Cookie
+Connection: close
+
+<!doctype html>
+<title>Posts - Flaskr</title>
+<link rel="stylesheet" href="/static/style.css">
+<nav>
+  <h1><a href="/">Flaskr</a></h1>
+  <ul>
+    
+      <li><a href="/auth/register">Register</a>
+      <li><a href="/auth/login">Log In</a>
+    
+  </ul>
+</nav>
+<section class="content">
+  <header>
+    
+  <h1>Posts</h1>
+  
+
+  </header>
+  
+  
+  
+
+</section>work/etapa0-http-ipv4.sh: line 26: 16328 Terminated: 15          "$venv/bin/flask" --app flaskr run --port "$port"
+Servidor Flaskr encerrado.

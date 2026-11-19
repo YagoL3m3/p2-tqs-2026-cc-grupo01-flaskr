@@ -1,0 +1,15 @@
+Comando: pytest -p no:cacheprovider --junitxml=... | 2026-11-19T10:13:37-03:00 | Python 3.13.15
+============================= test session starts ==============================
+platform darwin -- Python 3.13.15, pytest-9.2.0, pluggy-1.7.0
+rootdir: /Users/yagoleme/Documents/Codex/2026-11-19/new-chat/work/p2-tqs-2026-cc-grupo01-flaskr/flaskr-app
+configfile: pyproject.toml
+testpaths: tests
+collected 24 items
+
+tests/test_auth.py ........                                              [ 33%]
+tests/test_blog.py ............                                          [ 83%]
+tests/test_db.py ..                                                      [ 91%]
+tests/test_factory.py ..                                                 [100%]
+
+- generated xml file: /Users/yagoleme/Documents/Codex/2026-11-19/new-chat/work/p2-tqs-2026-cc-grupo01-flaskr/evidencias/etapa0/2026-11-19_pytest_original.xml -
+============================== 24 passed in 0.33s ==============================

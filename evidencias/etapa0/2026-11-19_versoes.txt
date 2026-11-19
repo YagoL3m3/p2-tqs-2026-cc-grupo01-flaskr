@@ -1,0 +1,38 @@
+Comando: sw_vers; python --version; python -m pip --version; python -m pip freeze; git describe; git rev-parse | 2026-11-19T10:13:36-03:00 | Python 3.13.15
+ProductName:		macOS
+ProductVersion:		27.2
+BuildVersion:		26B123
+Python 3.13.15
+pip 26.2.1 from /Users/yagoleme/Documents/Codex/2026-11-19/new-chat/work/flaskr-etapa0-venv/lib/python3.13/site-packages/pip (python 3.13)
+WARNING: The directory '/Users/yagoleme/Library/Caches/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.
+error: subprocess-exited-with-error
+
+× git rev-parse HEAD did not run successfully.
+│ exit code: 128
+╰─> [2 lines of output]
+    HEAD
+    fatal: ambiguous argument 'HEAD': unknown revision or path not in the working tree.
+    Use '--' to separate paths from revisions, like this:
+    'git <command> [<revision>...] -- [<file>...]'
+    [end of output]
+
+note: This error originates from a subprocess, and is likely not a problem with pip.
+WARNING: Error when trying to get requirement for VCS system git rev-parse HEAD exited with 128
+WARNING: Could not determine repository location of /Users/yagoleme/Documents/Codex/2026-11-19/new-chat/work/p2-tqs-2026-cc-grupo01-flaskr/flaskr-app
+blinker==1.9.0
+click==8.5.1
+Flask==3.1.3
+## !! Could not determine repository location
+-e /Users/yagoleme/Documents/Codex/2026-11-19/new-chat/work/p2-tqs-2026-cc-grupo01-flaskr/flaskr-app
+iniconfig==2.3.1
+itsdangerous==2.2.0
+Jinja2==3.1.6
+MarkupSafe==3.0.4
+packaging==26.3
+pluggy==1.7.0
+Pygments==2.21.0
+pytest==9.2.0
+Werkzeug==3.1.9
+https://github.com/pallets/flask.git
+3.1.3
+22d924701a6ae2e4cd01e9a15bbaf3946094af65
