@@ -74,7 +74,7 @@ def montar(saida):
         raise FileExistsError(f"O arquivo de destino já existe: {saida}")
     revisao = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
     with tempfile.TemporaryDirectory(prefix="p2-flaskr-pacote-") as temp:
-        raiz = Path(temp)
+        raiz = Path(temp).resolve()
         repositorio = raiz / "repositorio"
         repositorio.mkdir()
         pacote = raiz / NOME
