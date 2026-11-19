@@ -190,7 +190,10 @@ def figures(doc, d, work):
     chart = work / "indicadores.png"
     img = Image.new("RGB", (1230, 425), "white")
     draw = ImageDraw.Draw(img)
-    font = ImageFont.load_default(size=29)
+    try:
+        font = ImageFont.truetype("Arial.ttf", size=29)
+    except OSError:
+        font = ImageFont.truetype("DejaVuSans.ttf", size=29)
     axes = 421, 1104
     values = [
         ("Execução", d["executados"] / len(d["casos"])),
@@ -292,7 +295,7 @@ def report(d, work):
 
     doc.add_page_break()
     section(doc, "9. Aceitação e não funcionais",
-            "AC-01 a AC-04 propõem ao representante publicar o primeiro aviso, encontrar o aviso mais recente como visitante, corrigir um aviso e remover somente o aviso selecionado. As quatro fichas aguardam execução e decisão independente.",
+            "AC-01 a AC-04 propõem ao representante publicar o primeiro aviso, encontrar o aviso mais recente como visitante, corrigir um aviso e remover somente o aviso selecionado. O ensaio por IA verificou os quatro fluxos no navegador e todos atenderam aos critérios. A pasta 10 traz as capturas e os resultados. A decisão e a assinatura de um representante independente aguardam registro.",
             "Sete verificações em cinco categorias atenderam aos critérios. Foram observados armazenamento da senha como hash, preservação de posts após reinício, teclado no Safari, integridade de UTF-8 e listagem em Chrome e Safari. As medições locais registraram p95 de 2,159 ms na listagem de 50 posts (30 amostras, limite de 200 ms) e 86,199 ms no login (15 amostras, limite de 750 ms).")
     section(doc, "10. Métricas e indicadores")
     table(doc, ("Indicador", "Cálculo", "Resultado"), [

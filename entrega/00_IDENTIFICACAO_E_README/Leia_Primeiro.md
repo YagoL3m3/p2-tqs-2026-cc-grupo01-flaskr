@@ -5,7 +5,7 @@ Comece pelo relatório PDF na pasta 13. A apresentação, o roteiro de 13 min 15
 ## Registros que o grupo precisa completar
 
 - O grupo confirmou a aprovação do Flaskr. Anexe o registro escrito do professor com a data da decisão e eventuais ajustes.
-- Solicitar a um representante independente que execute e decida os quatro cenários de aceitação. Use a ficha da pasta 10.
+- Solicitar a um representante independente que execute e decida os quatro cenários de aceitação. Todos passaram em um ensaio executado por IA. A ficha e o registro do ensaio estão na pasta 10.
 - Configurar e registrar a linha de base e a análise final no projeto SonarQube Cloud do grupo. Há duas execuções do SonarQube local já documentadas.
 - Conferir os três registros do diário extraídos do Git, acrescentar as demais contribuições e os tempos, revisar a declaração e coletar as assinaturas. Use a pasta 15.
 - Enviar pelo link oficial fornecido pelo professor, conferir as permissões e preencher o comprovante da pasta 16.

@@ -2,7 +2,7 @@
 
 UNISAGRADO · Projeto Integrado P2 · Turma B, Grupo 1 · Etapa 7
 
-Em 19/11/2026, quatro cenários estavam preparados. A execução, as decisões e as assinaturas estão pendentes.
+O ensaio executado por IA verificou os quatro cenários no navegador. A execução com representante independente, as decisões e as assinaturas ainda aguardam registro. [Resultados do ensaio](Ensaio_de_Aceitacao_Flaskr.md)
 
 [PENDENTE-HUMANO: convidar uma pessoa que não elaborou os testes e combinar a execução dos quatro cenários | Grupo 1]
 
