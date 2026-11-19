@@ -1,0 +1,3 @@
+Comandos: Python com openpyxl e git diff | 2026-11-19T15:16:11-0300 | Python 3.12.14
+EX-029 aprovado e EX-028 preservado. 28 casos aprovados pelo último resultado, 29 registros e 52 capturas.
+Planilhas mantêm filtros e validações. RNF-03 atualizado para Aprovado e ligado aos dois registros.
