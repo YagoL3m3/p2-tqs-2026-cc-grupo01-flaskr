@@ -1,0 +1,91 @@
+Comando: /private/tmp/flaskr-etapa5-venv/bin/python tools/executar_postman.py --pasta "AUT-I-10 Tratar nova exclusão do mesmo post" | 2026-11-19T15:35:36-03:00 | Python 3.12.13
+ProductName:		macOS
+ProductVersion:		26.4
+BuildVersion:		25E246
+v24.18.0
+11.16.0
+6.2.1
+Flask 3.1.3 | Werkzeug 3.1.9 | SQLite 3.53.4 | http://127.0.0.1:61021
+npx --yes newman@6.2.1 run '/Users/henrique/Desktop/Trabalho Elvio/p2-tqs-2026-cc-grupo01-flaskr/testes_grupo/integracao_postman/Flaskr.postman_collection.json' --environment '/Users/henrique/Desktop/Trabalho Elvio/p2-tqs-2026-cc-grupo01-flaskr/testes_grupo/integracao_postman/Flaskr_Local.postman_environment.json' --env-var baseUrl=http://127.0.0.1:61021 --ignore-redirects --timeout-request 10000 --color off --reporters cli --folder 'AUT-I-10 Tratar nova exclusão do mesmo post' --bail folder
+(node:33253) [DEP0176] DeprecationWarning: fs.F_OK is deprecated, use fs.constants.F_OK instead
+(Use `node --trace-deprecation ...` to show where the warning was created)
+newman
+
+Flaskr | Etapa 6 | Integração HTTP
+
+❏ AUT-I-10 Tratar nova exclusão do mesmo post
+↳ Preparar conta fictícia
+  POST http://127.0.0.1:61021/auth/register 127.0.0.1 - - [19/Nov/2026 15:35:39] "[32mPOST /auth/register HTTP/1.1[0m" 302 -
+[302 FOUND, 424B, 96ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /auth/login
+
+↳ Preparar sessão autenticada
+  POST http://127.0.0.1:61021/auth/login 127.0.0.1 - - [19/Nov/2026 15:35:39] "[32mPOST /auth/login HTTP/1.1[0m" 302 -
+[302 FOUND, 487B, 75ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /
+
+↳ Preparar publicação alvo
+  POST http://127.0.0.1:61021/create 127.0.0.1 - - [19/Nov/2026 15:35:39] "[32mPOST /create HTTP/1.1[0m" 302 -
+[302 FOUND, 394B, 3ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /
+
+↳ Preparar publicação de controle
+  POST http://127.0.0.1:61021/create 127.0.0.1 - - [19/Nov/2026 15:35:39] "[32mPOST /create HTTP/1.1[0m" 302 -
+[302 FOUND, 394B, 5ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /
+
+↳ Obter o ID pelo link Edit do artigo preparado
+  GET http://127.0.0.1:61021/ 127.0.0.1 - - [19/Nov/2026 15:35:39] "GET / HTTP/1.1" 200 -
+[200 OK, 1.26kB, 8ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 200
+  ✓  Artigo I10 Alvo QA contém corpo e autoria esperados
+
+↳ Excluir o alvo na primeira solicitação
+  POST http://127.0.0.1:61021/1/delete 127.0.0.1 - - [19/Nov/2026 15:35:39] "[32mPOST /1/delete HTTP/1.1[0m" 302 -
+[302 FOUND, 394B, 2ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 302
+  ✓  Location aponta para /
+
+↳ Repetir a solicitação para o alvo já excluído
+  POST http://127.0.0.1:61021/1/delete 127.0.0.1 - - [19/Nov/2026 15:35:39] "[33mPOST /1/delete HTTP/1.1[0m" 404 -
+[404 NOT FOUND, 311B, 2ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 404
+  ✓  A mensagem Not Found identifica o post ausente
+
+↳ Conferir que apenas a publicação de controle permanece
+  GET http://127.0.0.1:61021/ 127.0.0.1 - - [19/Nov/2026 15:35:39] "GET / HTTP/1.1" 200 -
+[200 OK, 916B, 2ms]
+  ✓  Resposta com representação HTML
+  ✓  HTTP 200
+  ✓  Artigo I10 Controle QA contém corpo e autoria esperados
+
+┌─────────────────────────┬──────────────────┬──────────────────┐
+│                         │         executed │           failed │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│              iterations │                1 │                0 │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│                requests │                8 │                0 │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│            test-scripts │               16 │                0 │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│      prerequest-scripts │                0 │                0 │
+├─────────────────────────┼──────────────────┼──────────────────┤
+│              assertions │               24 │                0 │
+├─────────────────────────┴──────────────────┴──────────────────┤
+│ total run duration: 308ms                                     │
+├───────────────────────────────────────────────────────────────┤
+│ total data received: 2.88kB (approx)                          │
+├───────────────────────────────────────────────────────────────┤
+│ average response time: 24ms [min: 2ms, max: 96ms, s.d.: 35ms] │
+└───────────────────────────────────────────────────────────────┘
