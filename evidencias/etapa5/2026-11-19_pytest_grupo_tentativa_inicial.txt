@@ -1,0 +1,34 @@
+Comando: python -m pytest -q -p no:cacheprovider -c flaskr-app/pyproject.toml --rootdir=. testes_grupo/unitarios | 2026-11-19T15:33:00-03:00 | Python 3.12.13
+......FF                                                                 [100%]
+=================================== FAILURES ===================================
+_____________ test_aut_u_07_edicao_sem_titulo_preserva_publicacao ______________
+
+banco_blog = <Flask 'flaskr'>
+
+    def test_aut_u_07_edicao_sem_titulo_preserva_publicacao(banco_blog):
+        """AUT-U-07 · CT-019 / RF-06."""
+        with banco_blog.test_request_context(
+            "/21/update", method="POST", data={"title": "", "body": "Rascunho alterado"}
+        ):
+            g.user = get_db().execute("SELECT id FROM user WHERE id = 41").fetchone()
+>           blog.update(21)
+E           TypeError: update() takes 0 positional arguments but 1 was given
+
+testes_grupo/unitarios/test_publicacoes.py:61: TypeError
+____________ test_aut_u_08_exclusao_preserva_publicacao_de_controle ____________
+
+banco_blog = <Flask 'flaskr'>
+
+    def test_aut_u_08_exclusao_preserva_publicacao_de_controle(banco_blog):
+        """AUT-U-08 · CT-023 / RF-07."""
+        with banco_blog.test_request_context("/21/delete", method="POST"):
+            g.user = get_db().execute("SELECT id FROM user WHERE id = 41").fetchone()
+>           resposta = blog.delete(21)
+                       ^^^^^^^^^^^^^^^
+E           TypeError: delete() takes 0 positional arguments but 1 was given
+
+testes_grupo/unitarios/test_publicacoes.py:75: TypeError
+=========================== short test summary info ============================
+FAILED testes_grupo/unitarios/test_publicacoes.py::test_aut_u_07_edicao_sem_titulo_preserva_publicacao
+FAILED testes_grupo/unitarios/test_publicacoes.py::test_aut_u_08_exclusao_preserva_publicacao_de_controle
+2 failed, 6 passed in 0.65s

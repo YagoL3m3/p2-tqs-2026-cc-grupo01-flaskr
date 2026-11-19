@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.coverage
+.coverage.*
+artefatos-ci/
+.scannerwork/
+# Relatórios reproduzíveis ficam em evidencias/ quando versionados.
+coverage.xml
+!evidencias/**/coverage.xml

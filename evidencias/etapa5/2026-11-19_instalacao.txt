@@ -1,0 +1,110 @@
+Comando: /private/tmp/flaskr-etapa5-venv/bin/python -m pip install -r requirements-test.txt -e ./flaskr-app | 2026-11-19T15:31:13-03:00 | Python 3.12.13
+Obtaining file:///Users/henrique/Desktop/Trabalho%20Elvio/p2-tqs-2026-cc-grupo01-flaskr/flaskr-app
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'done'
+  Preparing editable metadata (pyproject.toml): started
+  Preparing editable metadata (pyproject.toml): finished with status 'done'
+Collecting Flask==3.1.3 (from -r requirements-test.txt (line 1))
+  Using cached flask-3.1.3-py3-none-any.whl.metadata (3.2 kB)
+Collecting pytest==9.2.0 (from -r requirements-test.txt (line 2))
+  Using cached pytest-9.2.0-py3-none-any.whl.metadata (7.9 kB)
+Collecting pytest-cov==7.1.0 (from -r requirements-test.txt (line 3))
+  Downloading pytest_cov-7.1.0-py3-none-any.whl.metadata (32 kB)
+Collecting selenium==4.53.0 (from -r requirements-test.txt (line 4))
+  Downloading selenium-4.53.0-py3-none-any.whl.metadata (7.5 kB)
+Collecting blinker>=1.9.0 (from Flask==3.1.3->-r requirements-test.txt (line 1))
+  Using cached blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB)
+Collecting click>=8.1.3 (from Flask==3.1.3->-r requirements-test.txt (line 1))
+  Using cached click-8.5.1-py3-none-any.whl.metadata (2.6 kB)
+Collecting itsdangerous>=2.2.0 (from Flask==3.1.3->-r requirements-test.txt (line 1))
+  Using cached itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+Collecting jinja2>=3.1.2 (from Flask==3.1.3->-r requirements-test.txt (line 1))
+  Using cached jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting markupsafe>=2.1.1 (from Flask==3.1.3->-r requirements-test.txt (line 1))
+  Using cached markupsafe-3.0.4-cp312-cp312-macosx_11_0_arm64.whl.metadata (2.7 kB)
+Collecting werkzeug>=3.1.0 (from Flask==3.1.3->-r requirements-test.txt (line 1))
+  Using cached werkzeug-3.1.9-py3-none-any.whl.metadata (4.1 kB)
+Collecting iniconfig>=2 (from pytest==9.2.0->-r requirements-test.txt (line 2))
+  Using cached iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+Collecting packaging>=24 (from pytest==9.2.0->-r requirements-test.txt (line 2))
+  Using cached packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+Collecting pluggy<2,>=1.6 (from pytest==9.2.0->-r requirements-test.txt (line 2))
+  Using cached pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+Collecting pygments>=2.15 (from pytest==9.2.0->-r requirements-test.txt (line 2))
+  Using cached pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting coverage>=7.10.6 (from coverage[toml]>=7.10.6->pytest-cov==7.1.0->-r requirements-test.txt (line 3))
+  Downloading coverage-7.17.3-cp312-cp312-macosx_11_0_arm64.whl.metadata (8.3 kB)
+Collecting certifi>=2026.10.23 (from selenium==4.53.0->-r requirements-test.txt (line 4))
+  Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+Collecting trio<1.0,>=0.31.0 (from selenium==4.53.0->-r requirements-test.txt (line 4))
+  Downloading trio-0.35.0-py3-none-any.whl.metadata (8.5 kB)
+Collecting trio-websocket<1.0,>=0.12.2 (from selenium==4.53.0->-r requirements-test.txt (line 4))
+  Downloading trio_websocket-0.12.2-py3-none-any.whl.metadata (5.1 kB)
+Collecting typing_extensions<5.0,>=4.15.0 (from selenium==4.53.0->-r requirements-test.txt (line 4))
+  Using cached typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting urllib3<3.0,>=2.6.3 (from urllib3[socks]<3.0,>=2.6.3->selenium==4.53.0->-r requirements-test.txt (line 4))
+  Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+Collecting websocket-client<2.0,>=1.8.0 (from selenium==4.53.0->-r requirements-test.txt (line 4))
+  Downloading websocket_client-1.9.2-py3-none-any.whl.metadata (8.3 kB)
+Collecting attrs>=23.2.0 (from trio<1.0,>=0.31.0->selenium==4.53.0->-r requirements-test.txt (line 4))
+  Using cached attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting sortedcontainers (from trio<1.0,>=0.31.0->selenium==4.53.0->-r requirements-test.txt (line 4))
+  Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl.metadata (10 kB)
+Collecting idna (from trio<1.0,>=0.31.0->selenium==4.53.0->-r requirements-test.txt (line 4))
+  Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Collecting outcome (from trio<1.0,>=0.31.0->selenium==4.53.0->-r requirements-test.txt (line 4))
+  Downloading outcome-1.3.0.post0-py2.py3-none-any.whl.metadata (2.6 kB)
+Collecting sniffio>=1.3.0 (from trio<1.0,>=0.31.0->selenium==4.53.0->-r requirements-test.txt (line 4))
+  Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting wsproto>=0.14 (from trio-websocket<1.0,>=0.12.2->selenium==4.53.0->-r requirements-test.txt (line 4))
+  Downloading wsproto-1.3.2-py3-none-any.whl.metadata (5.2 kB)
+Collecting pysocks!=1.5.7,<2.0,>=1.5.6 (from urllib3[socks]<3.0,>=2.6.3->selenium==4.53.0->-r requirements-test.txt (line 4))
+  Downloading PySocks-1.7.1-py3-none-any.whl.metadata (13 kB)
+Collecting h11<1,>=0.16.0 (from wsproto>=0.14->trio-websocket<1.0,>=0.12.2->selenium==4.53.0->-r requirements-test.txt (line 4))
+  Using cached h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Using cached flask-3.1.3-py3-none-any.whl (103 kB)
+Using cached pytest-9.2.0-py3-none-any.whl (411 kB)
+Downloading pytest_cov-7.1.0-py3-none-any.whl (22 kB)
+Downloading selenium-4.53.0-py3-none-any.whl (12.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.2/12.2 MB 1.1 MB/s  0:00:11
+Using cached pluggy-1.7.0-py3-none-any.whl (27 kB)
+Downloading trio-0.35.0-py3-none-any.whl (513 kB)
+Downloading trio_websocket-0.12.2-py3-none-any.whl (21 kB)
+Using cached typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+Downloading PySocks-1.7.1-py3-none-any.whl (16 kB)
+Downloading websocket_client-1.9.2-py3-none-any.whl (95 kB)
+Using cached attrs-26.1.0-py3-none-any.whl (67 kB)
+Using cached blinker-1.9.0-py3-none-any.whl (8.5 kB)
+Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+Using cached click-8.5.1-py3-none-any.whl (126 kB)
+Downloading coverage-7.17.3-cp312-cp312-macosx_11_0_arm64.whl (228 kB)
+Using cached iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+Using cached itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Using cached jinja2-3.1.6-py3-none-any.whl (134 kB)
+Using cached markupsafe-3.0.4-cp312-cp312-macosx_11_0_arm64.whl (12 kB)
+Downloading outcome-1.3.0.post0-py2.py3-none-any.whl (10 kB)
+Using cached packaging-26.3-py3-none-any.whl (129 kB)
+Using cached pygments-2.21.0-py3-none-any.whl (1.3 MB)
+Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+Using cached werkzeug-3.1.9-py3-none-any.whl (228 kB)
+Downloading wsproto-1.3.2-py3-none-any.whl (24 kB)
+Using cached h11-0.16.0-py3-none-any.whl (37 kB)
+Downloading idna-3.20-py3-none-any.whl (69 kB)
+Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+Building wheels for collected packages: flaskr
+  Building editable for flaskr (pyproject.toml): started
+  Building editable for flaskr (pyproject.toml): finished with status 'done'
+  Created wheel for flaskr: filename=flaskr-1.0.0-py2.py3-none-any.whl size=2666 sha256=ee421273ae9ac5fac6f3f20ef566d3690d0a9814f19e2cdf33bb1d8cddbada92
+  Stored in directory: /private/var/folders/sr/_94htdgs3cxbrnblvt3vg9vh0000gn/T/pip-ephem-wheel-cache-z_vg_eay/wheels/4b/12/69/dfc098b054839d0309290a5995f13d48d6478ff6612e4df18b
+Successfully built flaskr
+Installing collected packages: sortedcontainers, websocket-client, urllib3, typing_extensions, sniffio, pysocks, pygments, pluggy, packaging, markupsafe, itsdangerous, iniconfig, idna, h11, coverage, click, certifi, blinker, attrs, wsproto, werkzeug, pytest, outcome, jinja2, trio, pytest-cov, Flask, trio-websocket, flaskr, selenium
+
+Successfully installed Flask-3.1.3 attrs-26.1.0 blinker-1.9.0 certifi-2026.10.23 click-8.5.1 coverage-7.17.3 flaskr-1.0.0 h11-0.16.0 idna-3.20 iniconfig-2.3.1 itsdangerous-2.2.0 jinja2-3.1.6 markupsafe-3.0.4 outcome-1.3.0.post0 packaging-26.3 pluggy-1.7.0 pygments-2.21.0 pysocks-1.7.1 pytest-9.2.0 pytest-cov-7.1.0 selenium-4.53.0 sniffio-1.3.1 sortedcontainers-2.4.0 trio-0.35.0 trio-websocket-0.12.2 typing_extensions-4.16.0 urllib3-2.8.0 websocket-client-1.9.2 werkzeug-3.1.9 wsproto-1.3.2
+
+[notice] A new release of pip is available: 26.1.2 -> 26.3
+[notice] To update, run: /private/tmp/flaskr-etapa5-venv/bin/python -m pip install --upgrade pip

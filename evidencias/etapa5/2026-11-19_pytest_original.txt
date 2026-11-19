@@ -1,0 +1,15 @@
+Comando: python -m pytest -q -ra -p no:cacheprovider -c flaskr-app/pyproject.toml --rootdir=. --cov --cov-config=.coveragerc --cov-report=term-missing --cov-report=xml:evidencias/etapa5/coverage_original.xml --junitxml=evidencias/etapa5/2026-11-19_pytest_original.xml flaskr-app/tests | 2026-11-19T15:33:17-03:00 | Python 3.12.13
+........................                                                 [100%]
+================================ tests coverage ================================
+______________ coverage: platform darwin, python 3.12.13-final-0 _______________
+
+Name                            Stmts   Miss Branch BrPart  Cover   Missing
+---------------------------------------------------------------------------
+flaskr-app/flaskr/__init__.py      20      0      2      0   100%
+flaskr-app/flaskr/auth.py          68      0     20      0   100%
+flaskr-app/flaskr/blog.py          64      0     16      0   100%
+flaskr-app/flaskr/db.py            26      0      4      0   100%
+---------------------------------------------------------------------------
+TOTAL                             178      0     42      0   100%
+Coverage XML written to file evidencias/etapa5/coverage_original.xml
+24 passed in 0.68s

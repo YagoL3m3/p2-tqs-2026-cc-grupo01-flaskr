@@ -1,0 +1,4 @@
+[run]
+source = flaskr-app/flaskr
+relative_files = True
+branch = True

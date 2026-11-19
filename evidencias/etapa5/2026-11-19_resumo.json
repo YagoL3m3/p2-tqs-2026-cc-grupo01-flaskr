@@ -1,0 +1,75 @@
+{
+  "original": {
+    "junit_xml": "evidencias/etapa5/2026-11-19_pytest_original.xml",
+    "cobertura_xml": "evidencias/etapa5/coverage_original.xml",
+    "total": 24,
+    "aprovados": 24,
+    "falhas": 0,
+    "erros": 0,
+    "ignorados": 0,
+    "cobertura": {
+      "linhas": {
+        "cobertos": 178,
+        "total": 178,
+        "percentual": 100.0
+      },
+      "ramos": {
+        "cobertos": 42,
+        "total": 42,
+        "percentual": 100.0
+      }
+    }
+  },
+  "grupo": {
+    "junit_xml": "evidencias/etapa5/2026-11-19_pytest_grupo.xml",
+    "cobertura_xml": "evidencias/etapa5/coverage_grupo.xml",
+    "total": 8,
+    "aprovados": 8,
+    "falhas": 0,
+    "erros": 0,
+    "ignorados": 0,
+    "cobertura": {
+      "linhas": {
+        "cobertos": 154,
+        "total": 178,
+        "percentual": 86.52
+      },
+      "ramos": {
+        "cobertos": 22,
+        "total": 42,
+        "percentual": 52.38
+      }
+    }
+  },
+  "conjunto": {
+    "junit_xml": "evidencias/etapa5/2026-11-19_pytest_conjunto.xml",
+    "cobertura_xml": "evidencias/etapa5/coverage.xml",
+    "total": 32,
+    "aprovados": 32,
+    "falhas": 0,
+    "erros": 0,
+    "ignorados": 0,
+    "cobertura": {
+      "linhas": {
+        "cobertos": 178,
+        "total": 178,
+        "percentual": 100.0
+      },
+      "ramos": {
+        "cobertos": 42,
+        "total": 42,
+        "percentual": 100.0
+      }
+    }
+  },
+  "ids_do_grupo": [
+    "AUT-U-01",
+    "AUT-U-02",
+    "AUT-U-03",
+    "AUT-U-04",
+    "AUT-U-05",
+    "AUT-U-06",
+    "AUT-U-07",
+    "AUT-U-08"
+  ]
+}
