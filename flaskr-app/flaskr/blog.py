@@ -57,6 +57,13 @@ def get_post(id, check_author=True):
     return post
 
 
+def _title_error(title):
+    """Return the validation message for a title without visible content."""
+    if not title.strip():
+        return "Title is required."
+    return None
+
+
 @bp.route("/create", methods=("GET", "POST"))
 @login_required
 def create():
@@ -64,10 +71,7 @@ def create():
     if request.method == "POST":
         title = request.form["title"]
         body = request.form["body"]
-        error = None
-
-        if not title.strip():
-            error = "Title is required."
+        error = _title_error(title)
 
         if error is not None:
             flash(error)
@@ -92,10 +96,7 @@ def update(id):
     if request.method == "POST":
         title = request.form["title"]
         body = request.form["body"]
-        error = None
-
-        if not title.strip():
-            error = "Title is required."
+        error = _title_error(title)
 
         if error is not None:
             flash(error)
