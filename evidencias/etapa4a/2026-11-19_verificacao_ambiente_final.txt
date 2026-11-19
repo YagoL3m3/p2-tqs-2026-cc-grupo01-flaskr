@@ -1,0 +1,7 @@
+Comando: python tools/verificar_ambiente_etapa4.py | 2026-11-19T13:23:06-0300 | Python 3.12.14
+Massa vazia: sem usuários e publicações.
+Massa contas: duas contas fictícias com hashes válidos e nenhum post.
+Massa publicações: a preparação criou um terceiro banco com dois posts ordenáveis.
+Uma pasta fora do padrão foi rejeitada sem criar banco.
+Inicialização 1: HTTP 200 e as mesmas publicações na mesma ordem.
+Inicialização 2: HTTP 200 e as mesmas publicações na mesma ordem.

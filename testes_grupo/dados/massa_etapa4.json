@@ -1,0 +1,26 @@
+{
+  "usuarios": [
+    {
+      "nome": "qa_autor_a",
+      "senha": "Senha-QA-A-2026!"
+    },
+    {
+      "nome": "qa_autor_b",
+      "senha": "Senha-QA-B-2026!"
+    }
+  ],
+  "publicacoes": [
+    {
+      "autor": "qa_autor_a",
+      "titulo": "Post A",
+      "corpo": "Corpo A",
+      "criacao": "2026-01-10 09:00:00"
+    },
+    {
+      "autor": "qa_autor_a",
+      "titulo": "Post B",
+      "corpo": "Corpo B",
+      "criacao": "2026-01-10 09:00:02"
+    }
+  ]
+}

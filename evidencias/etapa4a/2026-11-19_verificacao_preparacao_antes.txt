@@ -1,0 +1,9 @@
+Comando: python /tmp/flaskr-etapa4a.l2BegGku/verificar_ambiente.py | 2026-11-19T13:20:15-0300 | Python 3.12.14
+Traceback (most recent call last):
+  File "/tmp/flaskr-etapa4a.l2BegGku/verificar_ambiente.py", line 34, in <module>
+    vazia = preparar("vazia")
+            ^^^^^^^^^^^^^^^^^
+  File "/tmp/flaskr-etapa4a.l2BegGku/verificar_ambiente.py", line 29, in preparar
+    assert result.returncode == 0, f"Preparar {massa} falhou: {result.stderr.strip()}"
+           ^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Preparar vazia falhou: /tmp/flaskr-etapa3.8dRKpS9x/venv/bin/python: can't open file '/Users/henrique/Desktop/Trabalho Elvio/p2-tqs-2026-cc-grupo01-flaskr/tools/resetar_banco_etapa4.py': [Errno 2] No such file or directory

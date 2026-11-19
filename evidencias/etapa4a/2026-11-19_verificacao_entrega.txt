@@ -1,0 +1,13 @@
+Comandos: Python com openpyxl e git diff | 2026-11-19T13:23:53-0300 | Python 3.12.14
+Apêndice F verificado: 28 execuções ligadas a 28 casos. Resultados, evidências e demais campos estão em branco.
+Guia validado: links locais válidos e instruções específicas de hash, reinício e evidências. Modelo do Apêndice G conferido.
+Código e testes originais do Flaskr conferidos contra a main.
+## etapa-4a-preparacao-manual
+?? .github/ISSUE_TEMPLATE/defeito.md
+?? entrega/05_EXECUCAO_MANUAL/Guia_de_Execucao_Manual.md
+?? entrega/05_EXECUCAO_MANUAL/Registro_de_Execucao_Manual_Flaskr.xlsx
+?? evidencias/etapa4a/
+?? testes_grupo/dados/
+?? tools/gerar_registro_etapa4.mjs
+?? tools/resetar_banco_etapa4.py
+?? tools/verificar_ambiente_etapa4.py
