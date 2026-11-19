@@ -63,7 +63,9 @@ jobs:
     name: SonarQube Cloud
     if: >-
       github.event_name == 'workflow_dispatch' &&
-      github.ref == format('refs/heads/{0}', github.event.repository.default_branch) &&
+      (github.ref_name == github.event.repository.default_branch ||
+       inputs.revisao_sonar == 'linha-de-base' ||
+       inputs.revisao_sonar == 'refatoracao') &&
       vars.SONAR_ORGANIZATION != '' &&
       vars.SONAR_PROJECT_KEY != ''
     needs: testar
@@ -79,13 +81,29 @@ jobs:
         with:
           name: testes-flaskr
           path: artefatos-ci
+      - name: Ajustar os caminhos do XML ao diretório analisado
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import xml.etree.ElementTree as ET
+
+          app = Path("flaskr-app/flaskr").resolve()
+          cobertura = ET.parse("artefatos-ci/coverage.xml")
+          for origem in cobertura.findall("sources/source"):
+              origem.text = Path(origem.text).resolve().relative_to(app).as_posix()
+          cobertura.write("artefatos-ci/coverage-sonar.xml", encoding="utf-8", xml_declaration=True)
+          PY
       - name: Analisar código e importar cobertura
         uses: SonarSource/sonarqube-scan-action@v8
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
+          projectBaseDir: flaskr-app/flaskr
           args: >
             -Dsonar.organization=${{ vars.SONAR_ORGANIZATION }}
             -Dsonar.projectKey=${{ vars.SONAR_PROJECT_KEY }}
+            -Dsonar.branch.name=${{ github.event.repository.default_branch }}
+            -Dsonar.python.version=3.12
+            -Dsonar.python.coverage.reportPaths=${{ github.workspace }}/artefatos-ci/coverage-sonar.xml
             -Dsonar.projectVersion=${{ needs.testar.outputs.revisao }}
             -Dsonar.scm.revision=${{ needs.testar.outputs.revisao }}

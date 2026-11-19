@@ -18,18 +18,29 @@ A ocorrência é a regra Python S4502, sobre revisão da proteção CSRF. Trata-
 
 ## SonarQube Cloud
 
-[PENDENTE-HUMANO: importar o repositório no projeto SonarQube Cloud do grupo, configurar acesso e validar as duas análises na conta oficial | responsável pelo repositório e pela qualidade]
+A linha de base e a refatoração foram analisadas na nuvem pelo GitHub Actions. O scanner usou o diretório `flaskr-app/flaskr` como base e importou o XML dos testes Python. As métricas abaixo comparam as duas revisões com o mesmo escopo no Cloud.
 
-A análise local documenta a linha de base e a versão final. Para repetir as duas medições na nuvem, o proprietário do repositório precisa conectar o projeto ao SonarQube Cloud e selecionar a análise por CI. Configure `SONAR_ORGANIZATION` e `SONAR_PROJECT_KEY` nas variáveis do repositório e adicione `SONAR_TOKEN` como secret do Actions. Se o projeto estiver com análise automática habilitada, desative-a antes de iniciar a análise por CI.
+| Medida do SonarQube Cloud | Linha de base `eae6f81` | Refatoração `d7c225c` |
+| --- | ---: | ---: |
+| Quality Gate | OK | OK |
+| Cobertura | 100% | 100% |
+| Linhas a cobrir | 178 | 178 |
+| Condições a cobrir | 42 | 40 |
+| Linhas descobertas | 0 | 0 |
+| Condições descobertas | 0 | 0 |
+| Duplicação de linhas | 0% | 0% |
+| Ocorrências na categoria Bugs | 1 | 1 |
+| Ocorrências na categoria Vulnerabilidades | 1 | 1 |
 
-Quando o workflow estiver integrado à `main`, execute **Testes Flaskr** manualmente na própria `main` com a opção `linha-de-base`. Aguarde o resultado antes de repetir com `refatoracao`. O pipeline usa a mesma revisão para gerar a cobertura e rodar o scanner.
+A primeira execução da linha de base ampliou o escopo para o repositório inteiro e registrou 0% de cobertura porque o scanner não conseguiu associar os caminhos do XML aos arquivos. A correção delimitou o diretório analisado e ajustou os caminhos em uma cópia do XML. Os contadores gerados pelo pytest foram preservados.
 
-| Opção | Revisão analisada | Relação com a análise local |
-| --- | --- | --- |
-| `linha-de-base` | `eae6f81` | Mesmo código do Flaskr presente em `9db2f3c`, com as suítes de integração e interface já configuradas. |
-| `refatoracao` | `d7c225c` | Revisão usada na análise local final. |
+[SonarQube Cloud do Flaskr](https://sonarcloud.io/project/overview?id=YagoL3m3_p2-tqs-2026-cc-grupo01-flaskr) · [Linha de base no GitHub Actions](https://github.com/YagoL3m3/p2-tqs-2026-cc-grupo01-flaskr/actions/runs/44637775144) · [Refatoração no GitHub Actions](https://github.com/YagoL3m3/p2-tqs-2026-cc-grupo01-flaskr/actions/runs/44638085612)
 
-[Importar o repositório para o SonarQube Cloud](https://docs.sonarsource.com/sonarqube-cloud/administering-sonarcloud/managing-organization/creating-organization/importing-github-organization) · [GitHub Actions do grupo](https://github.com/YagoL3m3/p2-tqs-2026-cc-grupo01-flaskr/actions)
+[Dados públicos da linha de base](../../evidencias/etapa10/2026-11-19_sonarcloud_linha_de_base.json) · [Dados públicos da refatoração](../../evidencias/etapa10/2026-11-19_sonarcloud_refatoracao.json) · [Histórico do escopo inicial](../../evidencias/etapa10/2026-11-19_sonarcloud_escopo_inicial.json)
+
+### Reprodução da análise
+
+O workflow utiliza as variáveis `SONAR_ORGANIZATION` e `SONAR_PROJECT_KEY` e o secret `SONAR_TOKEN` do GitHub Actions. Execute **Testes Flaskr** manualmente com a opção `linha-de-base` e aguarde o resultado antes de escolher `refatoracao`. Cada opção seleciona a revisão indicada na tabela tanto para os testes quanto para a análise.
 
 ## Ações priorizadas
 
@@ -38,4 +49,4 @@ Quando o workflow estiver integrado à `main`, execute **Testes Flaskr** manualm
 | Alta | Revisar a proteção de formulários identificada pela análise estática. Automação e qualidade. | Revisão do código e nova análise. Registre o tratamento do achado sob o perfil definido pelo grupo. |
 | Alta | Conduzir aceitação independente. Coordenação. | Registrar execução, observação e decisão nos quatro cenários. |
 | Média | Ampliar a automação dos candidatos que hoje são parciais. Automação e qualidade. | Atualizar rastreabilidade e comprovar aprovação também no Actions. |
-| Média | Publicar a análise no projeto SonarQube Cloud do grupo. Responsável do repositório. | Guardar os dois resultados com revisão, data e identificação da análise. |
+| Média | Reexecutar a análise do SonarQube Cloud após alterações relevantes. Automação e qualidade. | Guardar os dois resultados com revisão, data e identificação da análise. |

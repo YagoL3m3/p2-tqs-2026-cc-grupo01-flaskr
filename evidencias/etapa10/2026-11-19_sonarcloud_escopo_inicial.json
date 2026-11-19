@@ -1,0 +1,312 @@
+{
+  "fase": "linha-de-base",
+  "projeto": "YagoL3m3_p2-tqs-2026-cc-grupo01-flaskr",
+  "organizacao": "yagol3m3",
+  "workflow": {
+    "conclusion": "success",
+    "createdAt": "2026-11-19T23:21:38Z",
+    "event": "workflow_dispatch",
+    "jobs": [
+      {
+        "completedAt": "2026-11-19T23:22:48Z",
+        "conclusion": "success",
+        "databaseId": 135957899042,
+        "name": "pytest, Newman e Selenium",
+        "startedAt": "2026-11-19T23:21:43Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-11-19T23:21:46Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-11-19T23:21:44Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-19T23:21:50Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@v7",
+            "number": 2,
+            "startedAt": "2026-11-19T23:21:46Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-19T23:21:51Z",
+            "conclusion": "success",
+            "name": "Registrar a revisão que será testada",
+            "number": 3,
+            "startedAt": "2026-11-19T23:21:50Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-19T23:21:56Z",
+            "conclusion": "success",
+            "name": "Run actions/setup-python@v7",
+            "number": 4,
+            "startedAt": "2026-11-19T23:21:51Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-19T23:22:00Z",
+            "conclusion": "success",
+            "name": "Run actions/setup-node@v7",
+            "number": 5,
+            "startedAt": "2026-11-19T23:21:56Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-19T23:22:07Z",
+            "conclusion": "success",
+            "name": "Instalar dependências",
+            "number": 6,
+            "startedAt": "2026-11-19T23:22:00Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-19T23:22:11Z",
+            "conclusion": "success",
+            "name": "Registrar ferramentas",
+            "number": 7,
+            "startedAt": "2026-11-19T23:22:07Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-19T23:22:43Z",
+            "conclusion": "success",
+            "name": "Executar suítes",
+            "number": 8,
+            "startedAt": "2026-11-19T23:22:11Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-19T23:22:45Z",
+            "conclusion": "success",
+            "name": "Publicar JUnit, cobertura e capturas de falha",
+            "number": 9,
+            "startedAt": "2026-11-19T23:22:43Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-19T23:22:45Z",
+            "conclusion": "success",
+            "name": "Post Run actions/setup-node@v7",
+            "number": 16,
+            "startedAt": "2026-11-19T23:22:45Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-19T23:22:45Z",
+            "conclusion": "success",
+            "name": "Post Run actions/setup-python@v7",
+            "number": 17,
+            "startedAt": "2026-11-19T23:22:45Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-19T23:22:45Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v7",
+            "number": 18,
+            "startedAt": "2026-11-19T23:22:45Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-19T23:22:45Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 19,
+            "startedAt": "2026-11-19T23:22:45Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/YagoL3m3/p2-tqs-2026-cc-grupo01-flaskr/actions/runs/44636980764/job/135957899042"
+      },
+      {
+        "completedAt": "2026-11-19T23:24:14Z",
+        "conclusion": "success",
+        "databaseId": 135958468756,
+        "name": "SonarQube Cloud",
+        "startedAt": "2026-11-19T23:22:52Z",
+        "status": "completed",
+        "steps": [
+          {
+            "completedAt": "2026-11-19T23:22:56Z",
+            "conclusion": "success",
+            "name": "Set up job",
+            "number": 1,
+            "startedAt": "2026-11-19T23:22:52Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-19T23:22:59Z",
+            "conclusion": "success",
+            "name": "Run actions/checkout@v7",
+            "number": 2,
+            "startedAt": "2026-11-19T23:22:56Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-19T23:23:00Z",
+            "conclusion": "success",
+            "name": "Run actions/download-artifact@v8",
+            "number": 3,
+            "startedAt": "2026-11-19T23:22:59Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-19T23:24:11Z",
+            "conclusion": "success",
+            "name": "Analisar código e importar cobertura",
+            "number": 4,
+            "startedAt": "2026-11-19T23:23:00Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-19T23:24:11Z",
+            "conclusion": "success",
+            "name": "Post Run actions/checkout@v7",
+            "number": 8,
+            "startedAt": "2026-11-19T23:24:11Z",
+            "status": "completed"
+          },
+          {
+            "completedAt": "2026-11-19T23:24:11Z",
+            "conclusion": "success",
+            "name": "Complete job",
+            "number": 9,
+            "startedAt": "2026-11-19T23:24:11Z",
+            "status": "completed"
+          }
+        ],
+        "url": "https://github.com/YagoL3m3/p2-tqs-2026-cc-grupo01-flaskr/actions/runs/44636980764/job/135958468756"
+      }
+    ],
+    "status": "completed",
+    "updatedAt": "2026-11-19T23:24:15Z",
+    "url": "https://github.com/YagoL3m3/p2-tqs-2026-cc-grupo01-flaskr/actions/runs/44636980764"
+  },
+  "analise": {
+    "key": "38e989a6-863a-4847-b6ca-3196f66636d7",
+    "date": "2026-11-19T23:23:10+0000",
+    "events": [
+      {
+        "key": "AaH2H_Z7rNJJDmBR2Rj1",
+        "category": "VERSION",
+        "name": "eae6f811c9ff3cdb8c2424a6be640a48a0c8fe60"
+      }
+    ],
+    "projectVersion": "eae6f811c9ff3cdb8c2424a6be640a48a0c8fe60",
+    "manualNewCodePeriodBaseline": false,
+    "revision": "eae6f811c9ff3cdb8c2424a6be640a48a0c8fe60"
+  },
+  "quality_gate": {
+    "projectStatus": {
+      "status": "OK",
+      "conditions": [
+        {
+          "status": "OK",
+          "metricKey": "new_reliability_rating",
+          "comparator": "GT",
+          "periodIndex": 1,
+          "errorThreshold": "1",
+          "actualValue": "1"
+        },
+        {
+          "status": "OK",
+          "metricKey": "new_security_rating",
+          "comparator": "GT",
+          "periodIndex": 1,
+          "errorThreshold": "1",
+          "actualValue": "1"
+        },
+        {
+          "status": "OK",
+          "metricKey": "new_maintainability_rating",
+          "comparator": "GT",
+          "periodIndex": 1,
+          "errorThreshold": "1",
+          "actualValue": "1"
+        },
+        {
+          "status": "OK",
+          "metricKey": "new_security_hotspots_reviewed",
+          "comparator": "LT",
+          "periodIndex": 1,
+          "errorThreshold": "100",
+          "actualValue": "100.0"
+        }
+      ],
+      "periods": [
+        {
+          "index": 1,
+          "mode": "previous_version",
+          "date": "2026-11-19T23:06:18+0000"
+        }
+      ],
+      "ignoredConditions": false
+    }
+  },
+  "medidas": {
+    "component": {
+      "id": "AaH2D3wk9d8Rc-CgkWnd",
+      "key": "YagoL3m3_p2-tqs-2026-cc-grupo01-flaskr",
+      "name": "p2-tqs-2026-cc-grupo01-flaskr",
+      "qualifier": "TRK",
+      "measures": [
+        {
+          "metric": "coverage",
+          "value": "0.0",
+          "bestValue": false
+        },
+        {
+          "metric": "duplicated_lines_density",
+          "value": "0.0",
+          "bestValue": true
+        },
+        {
+          "metric": "code_smells",
+          "value": "0",
+          "bestValue": true
+        },
+        {
+          "metric": "security_hotspots",
+          "value": "0",
+          "bestValue": true
+        },
+        {
+          "metric": "bugs",
+          "value": "0",
+          "bestValue": true
+        },
+        {
+          "metric": "alert_status",
+          "value": "OK"
+        },
+        {
+          "metric": "lines_to_cover",
+          "value": "1263"
+        },
+        {
+          "metric": "uncovered_lines",
+          "value": "1263",
+          "bestValue": false
+        },
+        {
+          "metric": "ncloc",
+          "value": "3404"
+        },
+        {
+          "metric": "vulnerabilities",
+          "value": "10",
+          "bestValue": false
+        },
+        {
+          "metric": "line_coverage",
+          "value": "0.0",
+          "bestValue": false
+        }
+      ]
+    }
+  }
+}
