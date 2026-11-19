@@ -20,7 +20,16 @@ A ocorrência é a regra Python S4502, sobre revisão da proteção CSRF. Trata-
 
 [PENDENTE-HUMANO: importar o repositório no projeto SonarQube Cloud do grupo, configurar acesso e validar as duas análises na conta oficial | responsável pelo repositório e pela qualidade]
 
-A análise local documenta a linha de base e a versão final. O job de nuvem do workflow fica disponível para execução manual após a configuração de `SONAR_ORGANIZATION` e `SONAR_PROJECT_KEY` nas variáveis do repositório e `SONAR_TOKEN` nos secrets do Actions. O proprietário deve definir o processo que aceite as duas revisões de referência no plano contratado. Se o dispatch pelo portal ainda não estiver disponível, a configuração do workflow precisa estar primeiro na branch padrão.
+A análise local documenta a linha de base e a versão final. Para repetir as duas medições na nuvem, o proprietário do repositório precisa conectar o projeto ao SonarQube Cloud e selecionar a análise por CI. Configure `SONAR_ORGANIZATION` e `SONAR_PROJECT_KEY` nas variáveis do repositório e adicione `SONAR_TOKEN` como secret do Actions. Se o projeto estiver com análise automática habilitada, desative-a antes de iniciar a análise por CI.
+
+Quando o workflow estiver integrado à `main`, execute **Testes Flaskr** manualmente na própria `main` com a opção `linha-de-base`. Aguarde o resultado antes de repetir com `refatoracao`. O pipeline usa a mesma revisão para gerar a cobertura e rodar o scanner.
+
+| Opção | Revisão analisada | Relação com a análise local |
+| --- | --- | --- |
+| `linha-de-base` | `eae6f81` | Mesmo código do Flaskr presente em `9db2f3c`, com as suítes de integração e interface já configuradas. |
+| `refatoracao` | `d7c225c` | Revisão usada na análise local final. |
+
+[Importar o repositório para o SonarQube Cloud](https://docs.sonarsource.com/sonarqube-cloud/administering-sonarcloud/managing-organization/creating-organization/importing-github-organization) · [GitHub Actions do grupo](https://github.com/YagoL3m3/p2-tqs-2026-cc-grupo01-flaskr/actions)
 
 ## Ações priorizadas
 
