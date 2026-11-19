@@ -4,10 +4,10 @@ Comece pelo relatório PDF na pasta 13. A apresentação, o roteiro de 13 min 15
 
 ## Registros que o grupo precisa completar
 
-- Confirmar e anexar a aprovação formal do Flaskr registrada pelo professor, com data e eventuais ajustes.
+- O grupo confirmou a aprovação do Flaskr. Anexe o registro escrito do professor com a data da decisão e eventuais ajustes.
 - Solicitar a um representante independente que execute e decida os quatro cenários de aceitação. Use a ficha da pasta 10.
 - Configurar e registrar a linha de base e a análise final no projeto SonarQube Cloud do grupo. Há duas execuções do SonarQube local já documentadas.
-- Completar o diário com contribuições reais, revisar a declaração e coletar as assinaturas. Use a pasta 15.
+- Conferir os três registros do diário extraídos do Git, acrescentar as demais contribuições e os tempos, revisar a declaração e coletar as assinaturas. Use a pasta 15.
 - Enviar pelo link oficial fornecido pelo professor, conferir as permissões e preencher o comprovante da pasta 16.
 
 A execução manual teve 28 casos aprovados, com 29 tentativas no histórico. Após a evolução do título, a execução aprovada no GitHub Actions teve 34 testes Python, 11 cenários Newman e 7 fluxos Selenium. O pipeline também registra a falha controlada do ciclo TDD.

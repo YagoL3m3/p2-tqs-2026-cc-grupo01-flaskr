@@ -103,7 +103,23 @@ def save(doc, folder, name):
     doc.save(output)
 
 
-def forms():
+def diary():
+    doc = document()
+    title(doc, "Diário de participação do Grupo 1")
+    doc.add_paragraph("O quadro reúne as contribuições identificadas no histórico do Git. Cada integrante deve confirmar suas atividades e acrescentar colaboradores, tempo aproximado e evidências das contribuições que ficaram fora do repositório.")
+    doc.add_paragraph(" · ".join(GRUPO))
+    table(doc, ("Data", "Atividade", "Autor registrado", "Colaboradores", "Tempo", "Evidência"), [
+        ("19/11/2026", "Registro da linha de base do Flaskr", GRUPO[1], "", "", "9ff093a"),
+        ("19/11/2026", "Documentação dos fundamentos de teste", GRUPO[1], "", "", "6782d42"),
+        ("19/11/2026", "Definição do escopo, dos riscos e do plano de testes", GRUPO[1], "", "", "f46a52b"),
+        *[("", "", "", "", "", "") for _ in range(6)],
+    ], [2.4, 3.8, 2.9, 2.9, 1.7, 2.6])
+    doc.add_paragraph("Os commits identificados como assistência de IA constam no histórico do projeto. A revisão e a validação pelos integrantes podem ser acrescentadas ao diário quando houver evidência.")
+    doc.add_paragraph("[PENDENTE-HUMANO: confirmar a autoria e completar as contribuições, os colaboradores e os tempos | quatro integrantes]")
+    save(doc, "15_DIARIO_DE_PARTICIPACAO", "Diario_de_Participacao_Flaskr")
+
+
+def proposal():
     doc = document()
     title(doc, "Ficha de proposta e aprovação do Flaskr")
     doc.add_paragraph(f"UNISAGRADO · Ciência da Computação · Turma B · Grupo 1 · {PROFESSOR}")
@@ -119,19 +135,15 @@ def forms():
         ("Integrações", "Rotas HTTP e formulários HTML, sessão Flask e persistência em SQLite."),
         ("Justificativa", "Aplicação pequena, com regras verificáveis, banco local e código disponível."),
         ("Viabilidade", "Dados fictícios e banco descartável. O navegador e o driver de interface precisam ser compatíveis."),
-        ("Decisão e data", "[PENDENTE-HUMANO: anexar a decisão, a data e eventuais ajustes registrados pelo professor | grupo]"),
+        ("Decisão", "Aprovado, conforme confirmação do grupo."),
+        ("Registro da decisão", "[PENDENTE-HUMANO: anexar a comprovação escrita, a data da decisão e eventuais ajustes | grupo]"),
     ], [4.2, 12.1])
     save(doc, "00_IDENTIFICACAO_E_README", "Ficha_de_Proposta_e_Aprovacao_Flaskr")
 
-    doc = document()
-    title(doc, "Diário de participação do Grupo 1")
-    doc.add_paragraph("Preencha uma linha por contribuição efetiva. Registre autor, colaboração, duração e uma evidência que permita localizar o trabalho, como commit, documento ou execução. A relação de integrantes identifica o grupo.")
-    doc.add_paragraph(" · ".join(GRUPO))
-    table(doc, ("Data", "Atividade", "Responsável", "Colaboradores", "Tempo", "Evidência"), [
-        ("", "", "", "", "", "") for _ in range(9)
-    ], [1.7, 4.1, 2.9, 2.9, 1.4, 3.3])
-    doc.add_paragraph("[PENDENTE-HUMANO: registrar e revisar as contribuições reais e os tempos | quatro integrantes]")
-    save(doc, "15_DIARIO_DE_PARTICIPACAO", "Diario_de_Participacao_Flaskr")
+
+def forms():
+    proposal()
+    diary()
 
     doc = document()
     title(doc, "Declaração final do grupo")
